@@ -72,6 +72,9 @@
         Poison: -0.2
         Cold: -0.4
         Blunt: -0.2
+        Piercing: -0.2
+        Slash: -0.2
+        Heat: -0.1
   - type: Construction
     graph: bed
     node: medicalbed
