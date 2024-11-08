@@ -26,7 +26,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 30
+        Structural: 40
   - type: Item
     size: Normal
     shape:
