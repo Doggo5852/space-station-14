@@ -226,7 +226,7 @@
 - type: entity
   name: HammerBurst
   parent: [BaseWeaponRifle, BaseRestrictedContraband]
-  id: Hammerburst
+  id: HammerBurst
   description: An old rifle, looks to have been here for a while. Used to be the standard issue rifle in CLF ranks before the year 2182 when it got replaced by superior rifles. It fires .20 rounds and has a decent firerate.
   components:
   - type: Sprite
@@ -237,7 +237,7 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
-    fireRate: 2.2
+    fireRate: 2.6
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -253,7 +253,7 @@
         priority: 2
         whitelist:
           tags:
-            - CartridgeRifle
+            - MagazineRifle
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
