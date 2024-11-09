@@ -669,6 +669,7 @@
     Glass: 500
 
 - type: latheRecipe
+  parent: BaseWeaponRecipe
   id: HammerBurst
   result: HammerBurst
   completetime: 40
