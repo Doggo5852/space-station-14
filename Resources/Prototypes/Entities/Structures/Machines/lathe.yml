@@ -736,9 +736,9 @@
       - BoxShotgunSlug
       - ClothingEyesHudSecurity
       - CombatKnife
-      - HammerBurst
       - Flash
       - ForensicPad
+      - HammerBurst
       - Handcuffs
       - MagazineBoxLightRifle
       - MagazineBoxLightRiflePractice
@@ -905,6 +905,7 @@
       - Brutepack
       - Ointment
       - Gauze
+      - EmergencyMedipen
       - HandLabeler
       - Defibrillator
       - HandheldHealthAnalyzer
