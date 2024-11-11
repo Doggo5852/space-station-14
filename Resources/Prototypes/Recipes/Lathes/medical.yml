@@ -8,6 +8,13 @@
     Steel: 200
 
 # Recipes
+- type: latheRecipe
+  id: EmergencyMedipen
+  result: EmergencyMedipen
+  materials:
+    Steel: 50
+    Plastic: 50
+
 
 - type: latheRecipe
   parent: BaseSurgicalRecipe
