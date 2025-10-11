@@ -368,7 +368,7 @@
       - statusEffect: StatusEffectHeartStrainEpinephrine
       effects:
       - !type:StartHeart
-        probability: 0.03
+        probability: 0.08
       # End Offbrand
       - !type:AdjustReagent
         conditions:
@@ -1149,13 +1149,13 @@
   color: "#b9bf93"
   metabolisms:
     Medicine:
-      metabolismRate: 0.25
+      metabolismRate: 0.12
       effects:
       - !type:HealthChange
         damage:
           types:
-            Piercing: -2.5 # 10 per u
-            Radiation: 0.05 # 0.2 per u, 3 for 15u
+            Piercing: -1.3 # 10 per u
+            Radiation: 0.01 # 0.2 per u, 3 for 15u
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
