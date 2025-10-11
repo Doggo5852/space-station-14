@@ -168,7 +168,7 @@
     diastolicBase: 80
     heartRateDeviation: 15
     heartRateBase: 75
-    heartRateStrainFactor: 200
+    heartRateStrainFactor: 300
     heartRateStrainDivisor: 6
     maximumStrain: 6
     heartStoppedEffect: StatusEffectHeartStopped
