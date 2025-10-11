@@ -290,9 +290,14 @@ public sealed partial class GunSystem : SharedGunSystem
     {
         if (gun.Target is { } target && !TerminatingOrDeleted(target))
         {
-            var targeted = EnsureComp<TargetedProjectileComponent>(uid);
-            targeted.Target = target;
-            Dirty(uid, targeted);
+            Random rnd = new Random();
+            int hitOrNotHit = rnd.Next(1, 11);
+            if (hitOrNotHit >= 7)
+            {
+                var targeted = EnsureComp<TargetedProjectileComponent>(uid);
+                targeted.Target = target;
+                Dirty(uid, targeted);
+            }
         }
 
         // Do a throw
