@@ -33,7 +33,7 @@
         - MobLayer
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
-    baseSprintSpeed : 4.5
+    baseSprintSpeed : 3.5
   - type: Sprite
     sprite: Mobs/Silicon/chassis.rsi
   - type: RotationVisuals
@@ -46,8 +46,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
-      200: Dead
+      600: Critical
+      800: Dead
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -105,7 +105,7 @@
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
-    allowSelfRepair: false
+    allowSelfRepair: true
   - type: BorgChassis
   - type: LockingWhitelist
     blacklist:

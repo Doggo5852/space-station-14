@@ -2,15 +2,17 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   id: BulletAntiMateriel
-  name: bullet (.60 anti-materiel)
+  name: bullet (12.7x99mm AP)
+  description: oh shit
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 75
+        Piercing: 50
         Structural: 226
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural
+    ignoreResistances: true
   - type: StaminaDamageOnCollide
-    damage: 60
+    damage: 75

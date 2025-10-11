@@ -1,7 +1,7 @@
 # Empty mags
 - type: entity
   id: BaseMagazineLightRifle
-  name: "magazine (.30 rifle)"
+  name: "magazine (7.62x39mm)"
   parent: [ BaseItem, BaseSecurityContraband ]
   abstract: true
   components:
@@ -36,7 +36,7 @@
 # Magazines
 - type: entity
   id: MagazineLightRifleBox
-  name: "L6 SAW magazine box (.30 rifle)"
+  name: "L6 SAW magazine box (7.62x39mm)"
   parent: BaseMagazineLightRifle
   description: Box containing a 100-round belt of linked .30 rifle rounds, used by light machine guns such as the L6. Intended to hold general-purpose kinetic ammunition.
   components:
@@ -56,8 +56,18 @@
   - type: Appearance
 
 - type: entity
+  id: MoeL6Mag
+  name: "extended L6 SAW magazine box (7.62x39mm)"
+  parent: MagazineLightRifleBox
+  description: "Produced shortly after numerous complaints from gorlex machinegunners having to yell 'I NEED MORE BOOLETS' far too often"
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 150
+
+- type: entity
   id: MagazineLightRifle
-  name: "magazine (.30 rifle)"
+  name: "magazine (7.62 x 39 mm)"
   parent: BaseMagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold general-purpose kinetic ammunition.
   components:
@@ -78,7 +88,7 @@
 
 - type: entity
   id: MagazineLightRifleEmpty
-  name: "magazine (.30 rifle any)"
+  name: "magazine (7.62x39mm)"
   suffix: empty
   parent: MagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles.
@@ -100,7 +110,7 @@
 
 - type: entity
   id: MagazineLightRiflePractice
-  name: "magazine (.30 rifle practice)"
+  name: "magazine (7.62x39mm practice)"
   parent: BaseMagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold non-harmful chalk ammunition.
   components:
@@ -127,7 +137,7 @@
 
 - type: entity
   id: MagazineLightRifleUranium
-  name: "magazine (.30 rifle uranium)"
+  name: "magazine (7.62x39mm uranium)"
   parent: BaseMagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold exotic uranium-core ammunition.
   components:
@@ -154,7 +164,7 @@
 
 - type: entity
   id: MagazineLightRifleIncendiary
-  name: "magazine (.30 rifle incendiary)"
+  name: "magazine (7.62x39mm incendiary)"
   parent: MagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold self-igniting incendiary ammunition.
   components:

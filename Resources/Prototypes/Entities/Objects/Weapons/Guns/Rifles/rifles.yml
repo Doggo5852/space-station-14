@@ -19,6 +19,7 @@
   - type: AmmoCounter
   - type: Gun
     fireRate: 5
+    projectileSpeed: 30
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -208,8 +209,8 @@
     sprite: Objects/Weapons/Guns/Rifles/XL8.rsi
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 2
-    pvsIncrease: 0.2
+    maxOffset: 5
+    pvsIncrease: 0.6
   - type: StaticPrice
     price: 1500 #3x lecter
   - type: Gun
@@ -243,6 +244,7 @@
       path: /Audio/Weapons/Guns/Gunshots/estocshot.ogg
     minAngle: 30
     maxAngle: 43
+    projectileSpeed: 35
     shotsPerBurst: 3
     selectedMode: Burst
     availableModes:
@@ -276,8 +278,8 @@
     sprintModifier: 0.75
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 2
-    pvsIncrease: 0.2
+    maxOffset: 8
+    pvsIncrease: 0.9
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

@@ -63,7 +63,7 @@
     - 0,0,19,9
     quickInsert: true
     areaInsert: true
-    areaInsertRadius: 5
+    areaInsertRadius: 8
 
 - type: entity
   parent: TrashBag

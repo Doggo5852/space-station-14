@@ -93,6 +93,11 @@
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: TimedDespawn
     lifetime: 10
+  - type: PointLight
+    enabled: true
+    color: "#b0ab1c"
+    radius: 3.0
+    energy: 7.0
 
 - type: entity
   id: BaseBulletTrigger # Trigger-on-collide bullets
@@ -181,6 +186,11 @@
     damage:
       types:
         Radiation: 11
+  - type: PointLight
+    enabled: true
+    color: "#347a0f"
+    radius: 1.5
+    energy: 7.0
 
 # Energy projectiles
 - type: entity

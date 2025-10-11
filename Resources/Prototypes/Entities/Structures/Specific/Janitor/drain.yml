@@ -27,6 +27,9 @@
       sound:
         path: /Audio/Ambience/Objects/drain.ogg
     - type: Drain
+      range: 30
+      unitsDestroyedPerSecond: 1.2
+      unitsPerSecond: 1.4
     - type: DumpableSolution
       solution: drainBuffer
     - type: Appearance

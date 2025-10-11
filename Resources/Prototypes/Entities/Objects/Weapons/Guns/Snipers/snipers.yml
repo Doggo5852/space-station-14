@@ -20,6 +20,7 @@
   - type: AmmoCounter
   - type: Gun
     fireRate: 0.75
+    projectileSpeed: 35
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -96,7 +97,7 @@
   description: For when you absolutely, positively need to make someone regret their life choices from a safe distance. Uses .60 anti-materiel ammo.
   components:
   - type: Item
-    size: Huge
+    size: Ginormous
     shape:
     - 0,0,5,1
   - type: Sprite
@@ -111,6 +112,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+    projectileSpeed: 40
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -122,10 +124,14 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 20
+    pvsIncrease: 1
   - type: StaticPrice
     price: 3500
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.8
+    walkModifier: 0.8
+  - type: HeldSpeedModifier
 
 - type: entity
   name: musket
