@@ -2,7 +2,7 @@
   abstract: true
   parent: [ BaseItem, BaseSecurityContraband ]
   id: BaseMagazineBoxAntiMateriel
-  name: ammunition box (.60 anti-materiel)
+  name: ammunition box (12.7x99mm)
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -10,7 +10,7 @@
       tags:
         - CartridgeAntiMateriel
     proto: CartridgeAntiMateriel
-    capacity: 10
+    capacity: 15
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -28,10 +28,25 @@
 - type: entity
   parent: BaseMagazineBoxAntiMateriel
   id: MagazineBoxAntiMateriel
-  name: ammunition box (.60 anti-materiel)
+  name: ammunition box (12.7x99mm AP)
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMateriel
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMaterielFMJ
+  name: ammunition box (12.7x99mm FMJ)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielFMJ
   - type: Sprite
     layers:
     - state: base

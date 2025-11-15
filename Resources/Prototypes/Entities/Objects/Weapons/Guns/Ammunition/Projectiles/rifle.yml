@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 11
 
 - type: entity
   id: BulletRiflePractice
@@ -30,7 +30,7 @@
     damage:
       types:
         Blunt: 2
-        Heat: 15
+        Heat: 9
 
 - type: entity
   id: BulletRifleUranium
@@ -42,5 +42,60 @@
     damage:
       types:
         Radiation: 5
-        Piercing: 8
+        Piercing: 2
 
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BulletExplosiveLightRifle
+  id: BulletExplosiveRifleLight
+  name: bullet (5.56×45mm HE)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+        Heat: 1
+        Structural: 10
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BulletExplosiveLightRifle
+  id: BulletExplosiveAPRifleLight
+  name: bullet (5.56×45mm APHE)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+        Structural: 10
+    ignoreResistances: true
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BulletExplosiveLightRifle
+  id: BulletExplosiveIncendiaryRifleLight
+  name: bullet (5.56×45mm HEI)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1
+        Heat: 1
+        Structural: 10
+  - type: IgniteOnCollide
+    fireStacks: 0.1
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BulletRifle
+  id: BulletAPRifleLight
+  name: bullet (5.56×45mm AP)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 4
+        
+    ignoreResistances: true

@@ -27,6 +27,20 @@
   - type: CartridgeAmmo
     proto: BulletLightRifle
 
+
+- type: entity
+  id: CartridgeMosin
+  name: cartridge (7.62x54mmR)
+  parent: CartridgeLightRifle
+  description: High velocity round often used in sniper rifles.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleMosin
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeMosin
+
 - type: entity
   id: CartridgeLightRiflePractice
   name: cartridge (7.62x39mm practice)

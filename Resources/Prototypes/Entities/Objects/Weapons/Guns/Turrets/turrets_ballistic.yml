@@ -8,6 +8,16 @@
     - Syndicate
 
 - type: entity
+  parent: [BaseWeaponTurretMoeStaticMG, BaseSyndicateContraband]
+  id: WeaponTurretMoeM2HB
+  suffix: Syndicate
+  name: M2HB
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+- type: entity
   parent: BaseWeaponBallisticTurret
   id: WeaponTurretSyndicateDisposable
   name: disposable ballistic turret

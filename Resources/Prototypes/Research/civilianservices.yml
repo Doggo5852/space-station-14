@@ -8,7 +8,7 @@
     state: seedextractor
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 1250
   recipeUnlocks:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
@@ -22,7 +22,7 @@
     state: hamtr
   discipline: CivilianServices
   tier: 1
-  cost: 7500
+  cost: 1250
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -61,7 +61,7 @@
     state: television
   discipline: CivilianServices
   tier: 1
-  cost: 7500
+  cost: 3000
   recipeUnlocks:
     - ComputerTelevisionCircuitboard
     - SynthesizerInstrument
@@ -93,7 +93,7 @@
     state: astroice
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 1000
   recipeUnlocks:
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -128,7 +128,7 @@
     state: medical
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 1500
   recipeUnlocks:
   - BorgModuleAdvancedChemical
 
@@ -140,7 +140,7 @@
     state: advmop
   discipline: CivilianServices
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - AdvMopItem
   - MegaSprayBottle
@@ -154,7 +154,7 @@
     state: honker
   discipline: CivilianServices
   tier: 2
-  cost: 7500
+  cost: 2500
   recipeUnlocks:
   - HonkerHarness
   - HonkerLArm
@@ -174,7 +174,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
@@ -214,7 +214,7 @@
     state: icon
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 30000
   recipeUnlocks:
   - ClothingShoesBootsSpeed
 
@@ -226,7 +226,7 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
@@ -239,7 +239,7 @@
     state: syringe_gun
   discipline: CivilianServices
   tier: 3
-  cost: 15000
+  cost: 25000
   recipeUnlocks:
   - LauncherSyringe
   - MiniSyringe

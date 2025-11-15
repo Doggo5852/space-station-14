@@ -54,12 +54,15 @@
   - MagazineShotgunSlug
   - SpeedLoaderMagnum
   - SpeedLoaderMagnumEmpty
+  - MagazineBoxAntiMateriel
+  - MagazineBoxAntiMaterielFMJ
+  - MagazineBoxLightRifleMosin
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
   recipes:
   - Flash
-  - Stunbaton
+  # - Stunbaton
   - CombatKnife
   - RiotShield
 
@@ -126,6 +129,10 @@
   - MagazineShotgunIncendiary
   - SpeedLoaderMagnumIncendiary
   - SpeedLoaderMagnumUranium
+  - MagazineBoxRifleAP
+  - MagazineBoxRifleAPHE
+  - MagazineBoxRifleHE
+  - MagazineBoxRifleHEI
 
 - type: latheRecipePack
   id: SecurityWeapons
@@ -136,6 +143,8 @@
   - WeaponLaserCarbine
   - WeaponXrayCannon
   - WeaponTemperatureGun
+  - WeaponMosin
+  - WeaponAKMS
 
 - type: latheRecipePack
   id: SecurityDisablers

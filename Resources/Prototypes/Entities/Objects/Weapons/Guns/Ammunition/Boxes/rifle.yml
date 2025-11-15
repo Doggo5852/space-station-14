@@ -27,7 +27,7 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRifleBig
-  name: ammunition box (.20 rifle)
+  name: ammunition box (5.56×45mm)
   suffix: Big
   components:
   - type: BallisticAmmoProvider
@@ -48,8 +48,8 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRifle
-  name: ammunition box (.20 rifle)
-  description: A cardboard box of .20 rifle rounds. Intended to hold general-purpose kinetic ammunition.
+  name: ammunition box (5.56×45mm)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifle
@@ -63,8 +63,8 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRiflePractice
-  name: ammunition box (.20 rifle practice)
-  description: A cardboard box of .20 rifle rounds. Intended to hold non-harmful chalk ammunition.
+  name: ammunition box (5.56×45mm practice)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold non-harmful chalk ammunition.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRiflePractice
@@ -79,8 +79,8 @@
 - type: entity
   id: MagazineBoxRifleIncendiary
   parent: BaseMagazineBoxRifle
-  name: ammunition box (.20 rifle incendiary)
-  description: A cardboard box of .20 rifle rounds. Intended to hold self-igniting incendiary ammunition.
+  name: ammunition box (5.56×45mm incendiary)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleIncendiary
@@ -95,8 +95,8 @@
 - type: entity
   id: MagazineBoxRifleUranium
   parent: BaseMagazineBoxRifle
-  name: ammunition box (.20 rifle uranium)
-  description: A cardboard box of .20 rifle rounds. Intended to hold exotic uranium-core ammunition.
+  name: ammunition box (5.56×45mm uranium)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleUranium
@@ -108,3 +108,66 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: uranium
 
+
+
+- type: entity
+  parent: BaseMagazineBoxRifle
+  id: MagazineBoxRifleAP
+  name: ammunition box (5.56×45mm AP)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleAP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+
+- type: entity
+  parent: BaseMagazineBoxRifle
+  id: MagazineBoxRifleAPHE
+  name: ammunition box (5.56×45mm APHE)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleAPHE
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBoxRifle
+  id: MagazineBoxRifleHEI
+  name: ammunition box (5.56×45mm HEI)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleHEI
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+
+- type: entity
+  parent: BaseMagazineBoxRifle
+  id: MagazineBoxRifleHE
+  name: ammunition box (5.56×45mm HE)
+  description: A cardboard box of 5.56×45mm rounds. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleHE
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

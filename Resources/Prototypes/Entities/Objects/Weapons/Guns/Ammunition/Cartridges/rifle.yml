@@ -28,6 +28,44 @@
     proto: BulletRifle
 
 - type: entity
+  id: CartridgeRifleAP
+  name: cartridge (5.56×45mm AP)
+  parent: BaseCartridgeRifle
+  description: A modern intermediate cartridge for combat rifles. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAPRifleLight
+
+- type: entity
+  id: CartridgeRifleAPHE
+  name: cartridge (5.56×45mm APHE)
+  parent: BaseCartridgeRifle
+  description: A modern intermediate cartridge for combat rifles. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletExplosiveAPRifleLight
+
+- type: entity
+  id: CartridgeRifleHEI
+  name: cartridge (5.56×45mm HEI)
+  parent: BaseCartridgeRifle
+  description: A modern intermediate cartridge for combat rifles. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletExplosiveIncendiaryRifleLight
+
+- type: entity
+  id: CartridgeRifleHE
+  name: cartridge (5.56×45mm HE)
+  parent: BaseCartridgeRifle
+  description: A modern intermediate cartridge for combat rifles. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletExplosiveRifleLight
+
+
+
+- type: entity
   id: CartridgeRiflePractice
   name: cartridge (5.56×45mm practice)
   parent: BaseCartridgeRifle

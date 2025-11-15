@@ -9,9 +9,14 @@
       - MagazineHeavyRifle
   - type: Item
     size: Small
+    shape:
+    - 0,0,3,2
   - type: BallisticAmmoProvider
     mayTransfer: true
     capacity: 100
+    whitelist:
+      tags:
+        - CartridgeAntiMateriel
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -26,3 +31,37 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+
+- type: entity
+  id: MoeM2BrowningMag
+  name: "M2 Browning magazine belt full"
+  parent: BaseMagazineHeavyRifle
+  description: "Big belt-fed magazine for 12.7x99mm rounds."
+  components:
+  - type: Tag
+    tags:
+      - M2MagBelt
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielFMJ
+    capacity: 100
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+
+- type: entity
+  id: MoeM2BrowningMagEmpty
+  name: "M2 Browning magazine belt"
+  parent: MoeM2BrowningMag
+  description: "Big belt-fed magazine for 12.7x99mm rounds."
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+    capacity: 100

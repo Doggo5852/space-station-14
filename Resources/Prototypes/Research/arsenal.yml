@@ -8,7 +8,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 5000
+  cost: 2000
   recipeUnlocks:
   - WeaponProtoKineticAccelerator
   - ShuttleGunKineticCircuitboard
@@ -22,7 +22,7 @@
     state: incendiarydisplay
   discipline: Arsenal
   tier: 1
-  cost: 10000
+  cost: 18000
   recipeUnlocks:
   - BoxShotgunIncendiary
   - MagazineRifleIncendiary
@@ -37,14 +37,40 @@
   - MagazineBoxRifleIncendiary
 
 - type: technology
+  id: PrimitiveGuns
+  name: research-technology-primitive-guns
+  icon:
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - WeaponMosin
+
+- type: technology
+  id: ModernisedGuns
+  name: research-technology-modernised-guns
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 30500
+  recipeUnlocks:
+  - WeaponAKMS
+  technologyPrerequisites:
+  - PrimitiveGuns
+
+- type: technology
   id: WeaponizedLaserManipulation
   name: research-technology-weaponized-laser-manipulation
   icon:
     sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
     state: icon
   discipline: Arsenal
-  tier: 1
-  cost: 7500
+  tier: 3
+  cost: 60000
   recipeUnlocks:
   - WeaponLaserCarbine
 
@@ -56,7 +82,7 @@
     state: beanbag
   discipline: Arsenal
   tier: 1
-  cost: 5000
+  cost: 250
   recipeUnlocks:
   - MagazineShotgunBeanbag
   - BoxShellTranquilizer
@@ -70,8 +96,8 @@
     sprite: Objects/Materials/Sheets/other.rsi
     state: uranium
   discipline: Arsenal
-  tier: 1
-  cost: 7500
+  tier: 3
+  cost: 60000
   recipeUnlocks:
   - MagazineRifleUranium
   - MagazinePistolUranium
@@ -92,7 +118,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 8000
+  cost: 1500
   recipeUnlocks:
   - Truncheon
   - TelescopicShield
@@ -107,7 +133,7 @@
     state: payload-explosive-armed
   discipline: Arsenal
   tier: 1
-  cost: 10000
+  cost: 4000
   recipeUnlocks:
   - SignallerAdvanced
   - SignalTrigger
@@ -118,6 +144,10 @@
   - ChemicalPayload
   - CableDetStack1
   - EmptyDetonator
+  # - MagazineBoxRifleAP
+  # - MagazineBoxRifleHEI
+  # - MagazineBoxRifleHE
+  # - MagazineBoxRifleAPHE
 
 - type: technology
   id: SpecialMeans
@@ -127,7 +157,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 5000
+  cost: 400
   recipeUnlocks:
   - ClothingBackpackElectropack
 
@@ -140,8 +170,8 @@
     sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
     state: icon
   discipline: Arsenal
-  tier: 2
-  cost: 10000
+  tier: 3
+  cost: 120000
   recipeUnlocks:
   - WeaponLaserCannon
 
@@ -152,8 +182,8 @@
     sprite: Objects/Weapons/Guns/Battery/xray.rsi
     state: icon
   discipline: Arsenal
-  tier: 2
-  cost: 10000
+  tier: 3
+  cost: 150000
   recipeUnlocks:
   - WeaponXrayCannon
 
@@ -165,7 +195,7 @@
     state: display
   discipline: Arsenal
   tier: 2
-  cost: 7500
+  cost: 10000
   recipeUnlocks:
   - PKAUpgradeDamage
   - PKAUpgradeRange
@@ -179,7 +209,7 @@
     state: full
   discipline: Arsenal
   tier: 2
-  cost: 10500
+  cost: 8500
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
@@ -201,7 +231,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 8000
   recipeUnlocks:
   - ClothingBackpackHarmpack
 
@@ -215,7 +245,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 200000
   recipeUnlocks:
   - WeaponAdvancedLaser
   - PortableRecharger
@@ -228,7 +258,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 30000
   recipeUnlocks:
   - WeaponTemperatureGun
 
@@ -240,7 +270,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - GrenadeEMP
   - PowerCageHigh

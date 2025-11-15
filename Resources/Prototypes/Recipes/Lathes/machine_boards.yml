@@ -426,6 +426,22 @@
   id: CutterMachineCircuitboard
   result: CutterMachineCircuitboard
 
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: SecurityTechFab
+  result: SecurityTechFabCircuitboard
+  materials:
+    Silver: 2000
+    Gold: 5000
+
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: MedicalTechFab
+  result: MedicalTechFabCircuitboard
+  materials:
+    Silver: 1000
+    Gold: 2500
+
 # Cell chargers
 - type: latheRecipe
   parent: [ BaseCheapElectronicsRecipe, BaseGeneralMachineRecipeCategory ]

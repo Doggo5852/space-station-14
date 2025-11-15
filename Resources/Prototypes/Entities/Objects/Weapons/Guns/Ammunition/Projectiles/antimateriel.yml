@@ -8,11 +8,30 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 50
-        Structural: 226
+        Piercing: 35
+        Structural: 150
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural
     ignoreResistances: true
   - type: StaminaDamageOnCollide
-    damage: 75
+    damage: 10
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BulletAntiMaterielFMJ
+  name: bullet (12.7x99mm FMJ)
+  description: oh shit
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+        Structural: 30
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 15

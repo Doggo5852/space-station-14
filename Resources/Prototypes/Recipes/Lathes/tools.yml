@@ -45,6 +45,13 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
+  id: Binoculars
+  result: Binoculars
+  materials:
+    Steel: 400
+
+- type: latheRecipe
+  parent: BaseToolRecipe
   id: Wrench
   result: Wrench
   materials:

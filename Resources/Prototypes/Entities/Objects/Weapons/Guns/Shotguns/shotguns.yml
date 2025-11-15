@@ -43,6 +43,9 @@
         ents: []
   - type: StaticPrice
     price: 500
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.65
+    walkModifier: 0.65
 
 - type: entity
   name: Bulldog
@@ -101,6 +104,9 @@
   - type: Appearance
   - type: StaticPrice
     price: 5000
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.65
+    walkModifier: 0.65
 
 - type: entity
   name: double-barreled shotgun

@@ -20,13 +20,13 @@
     unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -20
-    maxAngle: -30
+    maxAngle: -32
   - type: Gun
-    minAngle: 24
-    maxAngle: 45
+    minAngle: 22
+    maxAngle: 38
     angleIncrease: 2
     angleDecay: 20
-    fireRate: 8
+    fireRate: 15
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -90,8 +90,8 @@
     walkModifier: 0.5
   - type: HeldSpeedModifier
   - type: SpeedModifiedOnWield
-    sprintModifier: 0.1
-    walkModifier: 0.1
+    sprintModifier: 0.25
+    walkModifier: 0.25
 
 
 - type: entity

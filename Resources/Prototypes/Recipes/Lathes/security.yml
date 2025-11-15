@@ -45,7 +45,7 @@
   abstract: true
   parent: BaseWeaponRecipe
   id: BaseWeaponRecipeSidearm
-  completetime: 6
+  completetime: 12
 
 ## Recipes
 
@@ -299,3 +299,21 @@
   materials:
     Plastic: 100
     Steel: 400
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponAKMS
+  result: WeaponRifleAk
+  materials:
+    Wood: 500
+    Steel: 6000
+    Plasteel: 2000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMosin
+  result: WeaponSniperMosin
+  materials:
+    Wood: 500
+    Steel: 3000
+    Plasteel: 500

@@ -10,6 +10,47 @@
         Piercing: 19
 
 - type: entity
+  id: BulletLightRifleMosin
+  name: bullet (7.62x54mmR)
+  parent: BulletLightRifle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 28
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletTrigger
+  id: BulletExplosiveLightRifle
+  name: bullet (7.62x39mm HE)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 13
+        Heat: 1
+        Structural: 20
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 0.3
+    totalIntensity: 1.7 # 30 damage per tile
+    maxTileBreak: 0
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+
+- type: entity
   id: BulletLightRiflePractice
   name: bullet (7.62x39mm practice)
   parent: BaseBulletPractice

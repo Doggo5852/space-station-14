@@ -281,9 +281,9 @@
     statePrefix: excable_
   - type: Explosive
     explosionType: DemolitionCharge
-    totalIntensity: 10
+    totalIntensity: 7
     intensitySlope: 5
-    maxIntensity: 5
+    maxIntensity: 4
     canCreateVacuum: false
   - type: ExplodeOnTrigger
   - type: Construction

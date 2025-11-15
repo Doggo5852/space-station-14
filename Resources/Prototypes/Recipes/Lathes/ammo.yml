@@ -24,6 +24,35 @@
 
 ## Recipes
 
+# Antimateriel
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMaterielFMJ
+  result: MagazineBoxAntiMaterielFMJ
+  materials:
+    Steel: 4000
+    Plasteel: 100
+    Silver: 250
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMateriel
+  result: MagazineBoxAntiMateriel
+  materials:
+    Steel: 8500
+    Plasteel: 500
+    Silver: 750
+
+
+# Mosin ammo
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxLightRifleMosin
+  result: MagazineBoxLightRifleMosin
+  materials:
+    Steel: 1200
+
 # .20 Rifle
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
@@ -72,10 +101,45 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
+  id: MagazineBoxRifleAP
+  result: MagazineBoxRifleAP
+  materials:
+    Steel: 2000
+    Silver: 350
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxRifleAPHE
+  result: MagazineBoxRifleAPHE
+  materials:
+    Steel: 2500
+    Silver: 350
+    Plasma: 500
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxRifleHEI
+  result: MagazineBoxRifleHEI
+  materials:
+    Steel: 750
+    Plasma: 500
+    Plastic: 1000
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxRifleHE
+  result: MagazineBoxRifleHE
+  materials:
+    Steel: 750
+    Plasma: 500
+
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
   id: MagazineBoxRifleIncendiary
   result: MagazineBoxRifleIncendiary
   materials:
-    Plastic: 750
+    Plastic: 1500
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
