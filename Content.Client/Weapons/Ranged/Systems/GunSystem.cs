@@ -9,6 +9,7 @@ using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
+using Content.Shared.Mech.Components;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -167,6 +168,11 @@ public sealed partial class GunSystem : SharedGunSystem
 
         var entity = entityNull.Value;
 
+        if (TryComp<MechPilotComponent>(entity, out var mechPilot))
+        {
+            entity = mechPilot.Mech;
+        }
+
         if (!TryGetGun(entity, out var gunUid, out var gun))
         {
             return;
@@ -174,10 +180,10 @@ public sealed partial class GunSystem : SharedGunSystem
 
         var useKey = gun.UseKey ? EngineKeyFunctions.Use : EngineKeyFunctions.UseSecondary;
 
-        if (_inputSystem.CmdStates.GetState(useKey) != BoundKeyState.Down && !gun.BurstActivated)
+        if (_inputSystem.CmdStates.GetState(useKey) != BoundKeyState.Down)
         {
             if (gun.ShotCounter != 0)
-                RaisePredictiveEvent(new RequestStopShootEvent { Gun = GetNetEntity(gunUid) });
+                EntityManager.RaisePredictiveEvent(new RequestStopShootEvent { Gun = GetNetEntity(gunUid) });
             return;
         }
 
@@ -189,7 +195,7 @@ public sealed partial class GunSystem : SharedGunSystem
         if (mousePos.MapId == MapId.Nullspace)
         {
             if (gun.ShotCounter != 0)
-                RaisePredictiveEvent(new RequestStopShootEvent { Gun = GetNetEntity(gunUid) });
+                EntityManager.RaisePredictiveEvent(new RequestStopShootEvent { Gun = GetNetEntity(gunUid) });
 
             return;
         }
@@ -203,7 +209,7 @@ public sealed partial class GunSystem : SharedGunSystem
 
         Log.Debug($"Sending shoot request tick {Timing.CurTick} / {Timing.CurTime}");
 
-        RaisePredictiveEvent(new RequestShootEvent
+        EntityManager.RaisePredictiveEvent(new RequestShootEvent
         {
             Target = target,
             Coordinates = GetNetCoordinates(coordinates),
