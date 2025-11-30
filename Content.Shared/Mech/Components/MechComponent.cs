@@ -13,6 +13,8 @@ namespace Content.Shared.Mech.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class MechComponent : Component
 {
+    
+
     /// <summary>
     /// How much "health" the mech has left.
     /// </summary>
