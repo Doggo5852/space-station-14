@@ -9,6 +9,7 @@
     - CartridgeAntiMateriel
   - type: CartridgeAmmo
     proto: BulletAntiMateriel
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:
@@ -31,6 +32,7 @@
     - CartridgeAntiMateriel
   - type: CartridgeAmmo
     proto: BulletAntiMaterielFMJ
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:

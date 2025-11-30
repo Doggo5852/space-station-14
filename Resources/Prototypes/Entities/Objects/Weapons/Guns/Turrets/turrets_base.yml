@@ -13,7 +13,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
+        density: 250
         mask:
         - MachineMask
         layer:
@@ -108,12 +108,22 @@
           tags:
             - CartridgeAntiMaterielFMJ
   - type: Gun
-    fireRate: 6
+    fireRate: 7.5
     selectedMode: FullAuto
     availableModes:
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: Anchorable
+  - type: HTN
+    blackboard:
+      VisionRadius: !type:Single
+        25
+      AggroVisionRadius: !type:Single
+        25
+      RangedRange: !type:Single
+        25
 
 - type: entity
   parent: BaseWeaponTurret

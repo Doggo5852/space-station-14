@@ -87,10 +87,12 @@
 - type: entity
   parent: MobStatusEffectBase
   id: StatusEffectPainkillersStrongOxycodone
-  name: 50 pain relief
+  name: 150 pain relief
   components:
   - type: PainkillerStatusEffect
-    effectiveness: 50
+    effectiveness: 150
+  - type: GunAccuracyStatusEffect
+    angleRangeModifier: 9
 
 - type: entity
   parent: MobStatusEffectBase
@@ -259,7 +261,7 @@
     attackRateMultiplier: 0.9
     attackRateConstant: -0.05
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 1.5
+    angleRangeModifier: 3
   - type: CauseStatusEffectRandomlyStatusEffect
     probability: 0.3
     updateInterval: 5
@@ -281,7 +283,7 @@
     attackRateMultiplier: 0.8
     attackRateConstant: -0.05
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 6
+    angleRangeModifier: 8
 
 - type: entity
   parent: MobStatusEffectBase
@@ -364,11 +366,11 @@
     attackRateMultiplier: 0.2
     attackRateConstant: -0.1
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 24
+    angleRangeModifier: 12
   - type: GunBackfireStatusEffect
-    probability: 0.9
+    probability: 0.02
   - type: HyposprayBackfireStatusEffect
-    probability: 0.9
+    probability: 0.02
   - type: DisruptOnAttackStatusEffect
 
 - type: entity

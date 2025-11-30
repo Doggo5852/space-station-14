@@ -12,10 +12,38 @@
   id: WeaponTurretMoeM2HB
   suffix: Syndicate
   name: M2HB
+  description: For when morality and ethics take a back seat to ensuring your infantry’s retreat qualifies as a ‘strategic relocation under heavy 12.7mm encouragement.’ Fully automated, because hesitation is a human flaw.
   components:
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: Gun
+    fireRate: 4
+    minAngle: 7
+    maxAngle: 11
+
+- type: entity
+  parent: [BaseWeaponTurretMoeStaticMG, BaseSyndicateContraband]
+  id: WeaponTurretMoeM2HBColony
+  suffix: Colony
+  name: M2HB
+  description: For when morality and ethics take a back seat to ensuring your infantry’s retreat qualifies as a ‘strategic relocation under heavy 12.7mm encouragement.’ Fully automated, because hesitation is a human flaw.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: Gun
+    fireRate: 7.5
+    shotsPerBurst: 10
+    burstCooldown: 3
+    minAngle: 5
+    maxAngle: 8
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
 
 - type: entity
   parent: BaseWeaponBallisticTurret

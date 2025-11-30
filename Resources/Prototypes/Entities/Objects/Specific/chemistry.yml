@@ -372,6 +372,7 @@
         maxVol: 15
   - type: Injector
     injectOnly: false
+    delay: 2.5
     transferAmounts:
     - 5
     - 10
@@ -575,14 +576,14 @@
       food:
         maxVol: 20
   - type: ExplosionResistance
-    damageCoefficient: 0.025 # survives conventional explosives but not minibombs and nukes
+    damageCoefficient: 0.0 # survives conventional explosives but not minibombs and nukes
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 10
+        damage: 25
       behaviors:
       - !type:SpillBehavior
         solution: food

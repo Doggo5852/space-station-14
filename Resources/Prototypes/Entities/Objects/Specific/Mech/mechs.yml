@@ -306,3 +306,156 @@
     containers:
       mech-battery-slot:
       - PowerCellHigh
+
+# Mech tags
+
+- type: entity
+  id: LightVehicle
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Mech
+    equipmentWhitelist:
+      tags:
+      - LightVehicle
+
+- type: entity
+  id: HeavyVehicle
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Mech
+    equipmentWhitelist:
+      tags:
+      - HeavyVehicle
+
+# Mechs
+
+- type: entity
+  id: MechGygax
+  parent: [ BaseMech, LightVehicle, BaseRestrictedContraband ]
+  name: Gygax MK. III
+  description: A very light, nimble mech. It allows for mounting 2 light weapons on each side. Looks pretty durable but the cockpit is pretty exposed and its probably a coffin rather than a tank.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Objects/Specific/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: gygax
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    baseState: gygax
+    openState: gygax-open
+    brokenState: gygax-broken
+    mechToPilotDamageMultiplier: 0.4 #Rimstation
+    airtight: true
+    maxIntegrity: 400
+    maxEquipmentAmount: 2
+    entryDelay: 5
+    equipmentWhitelist:
+      tags:
+      - LightVehicle
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage: #Rimstation
+      types:
+        Blunt: 15
+        Structural: 50
+  - type: CanMoveInAir
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: MobState
+  - type: MovementAlwaysTouching
+  - type: Repairable #Rimstation
+    fuelCost: 100
+    doAfterDelay: 30
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3 #Rimstation
+  - type: StaticPrice
+    price: 3000
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Gygax
+
+
+
+# Mech weapons
+
+
+- type: entity
+  id: BaseMechWeaponRange
+  parent: BaseMechEquipment
+  abstract: true
+  components:
+  - type: Appearance
+  - type: StaticPrice
+    price: 1
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.02
+    sprintModifier: 0.02
+  - type: HeldSpeedModifier
+
+- type: entity
+  id: WeaponMechM60D
+  name: M60D
+  description: Modified M60, widely used on helicopters, ground vehicles and ships. Removal of the stock and pistol grip makes it impossible to use when detached.
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: BaseMechWeaponRange
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  - type: Gun
+    projectileSpeed: 50
+    fireRate: 9
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/m60shot.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: Appearance
+  - type: Tag
+    tags:
+    - LightVehicle
+    - HeavyVehicle
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - M60BigMag
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: null
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot

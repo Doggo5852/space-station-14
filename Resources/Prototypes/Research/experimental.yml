@@ -8,7 +8,7 @@
     state: fab-idle
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 1500
   recipeUnlocks:
   - ProximitySensor
 
@@ -20,7 +20,7 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - AnomalyScanner
   - AnomalyLocator
@@ -36,7 +36,7 @@
     state: display
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 2000
   recipeUnlocks:
   - NodeScanner
   - AnalysisComputerCircuitboard
@@ -50,7 +50,7 @@
     state: display
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 750
   recipeUnlocks:
   - TechDiskComputerCircuitboard
 
@@ -62,7 +62,7 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 7500
+  cost: 750
   recipeUnlocks:
   - ClothingShoesBootsMagSci
   - ClothingShoesBootsMoon
@@ -101,7 +101,7 @@
     state: base
   discipline: Experimental
   tier: 2
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - WeaponPistolCHIMP
   - AnomalySynchronizerCircuitboard
@@ -145,7 +145,7 @@
     state: icon
   discipline: Experimental
   tier: 3
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - DeviceQuantumSpinInverter
 
@@ -157,6 +157,6 @@
     state: icon
   discipline: Experimental
   tier: 3
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - DeviceDesynchronizer

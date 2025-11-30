@@ -209,6 +209,14 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipePractice
+  id: SmokeGrenade
+  result: SmokeGrenade
+  materials:
+    Steel: 500
+    Plastic: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipePractice
   id: WeaponLaserCarbinePractice
   result: WeaponLaserCarbinePractice
   materials:
@@ -306,8 +314,8 @@
   result: WeaponRifleAk
   materials:
     Wood: 500
-    Steel: 6000
-    Plasteel: 2000
+    Steel: 9000
+    Plasteel: 2500
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -315,5 +323,5 @@
   result: WeaponSniperMosin
   materials:
     Wood: 500
-    Steel: 3000
-    Plasteel: 500
+    Steel: 5000
+    Plasteel: 200

@@ -30,17 +30,17 @@
   id: MagazineBoxAntiMaterielFMJ
   result: MagazineBoxAntiMaterielFMJ
   materials:
-    Steel: 4000
-    Plasteel: 100
-    Silver: 250
+    Steel: 6000
+    Plasteel: 200
+    Silver: 200
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxAntiMateriel
   result: MagazineBoxAntiMateriel
   materials:
-    Steel: 8500
-    Plasteel: 500
+    Steel: 12000
+    Plasteel: 1000
     Silver: 750
 
 
