@@ -53,6 +53,46 @@
   materials:
     Steel: 1200
 
+
+# L6 Ammo
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineLightRifleBox
+  result: MagazineLightRifleBox
+  materials:
+    Steel: 1500
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MoeM60Mag
+  result: MoeM60Mag
+  materials:
+    Steel: 10000
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MoeM2BrowningMagEmpty
+  result: MoeM2BrowningMagEmpty
+  materials:
+    Steel: 2000
+
+# Armor
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: moe armor vest (15 slow)
+  result: moe armor vest (15 slow)
+  materials:
+    Steel: 4000
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: moe armor vest bulletproof (20 slow)
+  result: moe armor vest bulletproof (20 slow)
+  materials:
+    Steel: 8000
+    Plasteel: 700
 # .20 Rifle
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe

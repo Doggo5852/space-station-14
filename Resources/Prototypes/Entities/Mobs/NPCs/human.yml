@@ -30,6 +30,24 @@
         task: SimpleHumanoidHostileCompound
 
 - type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerKnife
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerKnife
+  
+- type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerSMG
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerSMG
+
+- type: entity
   name: spirate
   parent: BaseMobHuman
   id: MobSpirate

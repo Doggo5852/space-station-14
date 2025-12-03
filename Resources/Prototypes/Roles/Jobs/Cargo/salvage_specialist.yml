@@ -22,6 +22,7 @@
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     id: SalvagePDA
     ears: ClothingHeadsetCargo
+    shoes: ClothingShoesColorBlack
   #storage:
     #back:
     #- Stuff
@@ -47,10 +48,53 @@
  #   back: ClothingBackpack
 #    shoes: ClothingShoesColorBlack
  #   gloves: ClothingHandsGlovesCombat
+ #inhand:
+ # - WeaponRifleLecterXL8
  # storage:
   #storage:
     #back:
     #- Stuff
+
+- type: startingGear
+  id: SalvagerKnife
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    head: ClothingHeadHatCargosoft
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (15 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+  inhand:
+    - CombatKnife
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+
+- type: startingGear
+  id: SalvagerSMG
+  equipment:
+    head: ClothingHeadHelmetBasic
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (15 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+  inhand:
+    - WeaponSubMachineGunC20rROW
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+
+
 
 
 

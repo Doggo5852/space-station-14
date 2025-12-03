@@ -9,8 +9,8 @@
     damage:
       types:
         Piercing: 35
-        Structural: 75
-    penetrationThreshold: 360
+        Structural: 100
+    penetrationThreshold: 70
     penetrationDamageTypeRequirement:
     - Structural
     ignoreResistances: true
@@ -30,8 +30,74 @@
       types:
         Piercing: 40
         Structural: 15
-    penetrationThreshold: 360
+    penetrationThreshold: 50
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
     damage: 15
+
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: 90mmShellAPBullet
+  name: shell (90mm AP)
+  description: welp, we tried
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: apshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1400
+        Structural: 600
+    penetrationThreshold: 900
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
+
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: B90mmShellHEATFSBullet
+  name: shell (90mm HEAT-FS)
+  description: welp, we tried
+  components:
+  - type: ExplodeOnTrigger
+  - type: TriggerOnCollide
+    fixtureID: projectile
+    maxTriggers: 2
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 7
+    totalIntensity: 100 # 30 damage per tile
+    maxTileBreak: 0
+    deleteAfterExplosion: false
+    repeatable: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: heatfsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 800
+        Structural: 600
+    penetrationThreshold: 900
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150

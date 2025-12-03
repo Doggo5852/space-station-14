@@ -120,7 +120,7 @@
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
   - type: Gun
     fireRate: 0.2
-    projectileSpeed: 20
+    projectileSpeed: 15
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: BallisticAmmoProvider
@@ -146,8 +146,8 @@
     walkModifier: 0.3
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 6
-    pvsIncrease: 0.6
+    maxOffset: 7
+    pvsIncrease: 0.7
 
 
 - type: entity

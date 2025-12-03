@@ -42,3 +42,52 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 20
+
+
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge90mmHEATFS
+  name: shell (M348 HEAT-FS 90mm)
+  description: Used on the M3A1 cannon. Uses chemical energy to penetrate armor with a devastating blow. Can be used against infantry if you are rich enough.
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge90mmShell
+  - type: CartridgeAmmo
+    proto: B90mmShellHEATFSBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseheatfs
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge90mmAP
+  name: shell (M332 APCR 90mm)
+  description: Used on the M3A1 cannon. This kinetic round can break through deep armor but due to the lack of explosive filler, it's only really good at making deep holes in armor or any poor soul behind it.
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge90mmShell
+  - type: CartridgeAmmo
+    proto: 90mmShellAPBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseap
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20

@@ -508,3 +508,122 @@
   - type: Construction
     graph: cardArmour
     node: cardarmour
+
+
+
+- type: entity
+  parent: ClothingOuterArmorBase
+  id: moe armor vest (20 slow)
+  suffix: 20%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.8
+    walkModifier: 0.8
+  
+- type: entity
+  parent: ClothingOuterArmorBase
+  id: moe armor vest (15 slow)
+  suffix: 15%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.85
+    walkModifier: 0.85
+
+- type: entity
+  parent: ClothingOuterArmorBase
+  id: moe armor vest (10 slow)
+  suffix: 10%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.9
+    walkModifier: 0.9
+
+
+- type: entity
+  parent: ClothingOuterArmorBase
+  id: moe armor vest (5 slow)
+  suffix: 5%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+
+# bulletproof
+
+- type: entity
+  parent: ClothingOuterArmorBulletproof
+  id: moe armor vest bulletproof (20 slow)
+  suffix: 20%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.8
+    walkModifier: 0.8
+
+- type: entity
+  parent: ClothingOuterArmorBulletproof
+  id: moe armor vest bulletproof (15 slow)
+  suffix: 15%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.85
+    walkModifier: 0.85
+
+- type: entity
+  parent: ClothingOuterArmorBulletproof
+  id: moe armor vest bulletproof (10 slow)
+  suffix: 10%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.9
+    walkModifier: 0.9
+
+
+- type: entity
+  parent: ClothingOuterArmorBulletproof
+  id: moe armor vest bulletproof (5 slow)
+  suffix: 5%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+
+
+# webvest
+
+- type: entity
+  parent: ClothingOuterVestWeb
+  id: moe armor webvest (20 slow)
+  suffix: 20%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.8
+    walkModifier: 0.8
+
+- type: entity
+  parent: ClothingOuterVestWeb
+  id: moe armor webvest (15 slow)
+  suffix: 15%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.85
+    walkModifier: 0.85
+
+
+- type: entity
+  parent: ClothingOuterVestWeb
+  id: moe armor webvest (10 slow)
+  suffix: 10%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.9
+    walkModifier: 0.9
+
+
+- type: entity
+  parent: ClothingOuterVestWeb
+  id: moe armor webvest (5 slow)
+  suffix: 5%
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95

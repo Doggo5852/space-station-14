@@ -74,9 +74,9 @@
 
 - type: entity
   id: MoeM60Mag
-  name: "M60D magazine box(7.62x39mm)"
+  name: "M60D magazine box (7.62x51mm)"
   parent: MagazineLightRifleBox
-  description: "Produced shortly after numerous complaints from gorlex machinegunners having to yell 'I NEED MORE BOOLETS' far too often"
+  description: "A big and heavy magazine box for the M60D. If bullet doesn't work, use more bullet."
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifle
