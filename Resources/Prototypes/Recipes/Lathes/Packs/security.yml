@@ -151,6 +151,8 @@
   - WeaponTemperatureGun
   - WeaponMosin
   - WeaponAKMS
+  - WeaponLecter
+  - WeaponShotgunKammerer
 
 - type: latheRecipePack
   id: SecurityDisablers

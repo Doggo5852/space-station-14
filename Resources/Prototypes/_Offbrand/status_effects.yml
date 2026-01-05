@@ -5,6 +5,11 @@
   components:
   - type: PainkillerStatusEffect
     effectiveness: 10
+  - type: MovementModStatusEffect
+    sprintSpeedModifier: 0.95
+    walkSpeedModifier: 0.95
+  - type: GunAccuracyStatusEffect
+    angleRangeModifier: 5
 
 - type: entity
   parent: StatusEffectPainkillersNegligibleBicaridine
@@ -27,7 +32,7 @@
     attackRateMultiplier: 0.95
     attackRateConstant: -0.05
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 3
+    angleRangeModifier: 4
 
 - type: entity
   parent: StatusEffectPainkillersMildParacetamolOverdose
@@ -87,12 +92,25 @@
 - type: entity
   parent: MobStatusEffectBase
   id: StatusEffectPainkillersStrongOxycodone
-  name: 150 pain relief
+  name: 250 pain relief
   components:
   - type: PainkillerStatusEffect
-    effectiveness: 150
+    effectiveness: 250
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 9
+    angleRangeModifier: 12
+
+- type: entity
+  parent: MobStatusEffectBase
+  id: StatusEffectPuncturaseDebuff
+  name: puncturasedebuff
+  components:
+  - type: PainkillerStatusEffect
+    effectiveness: 5
+  - type: GunAccuracyStatusEffect
+    angleRangeModifier: 10
+  - type: MovementModStatusEffect
+    sprintSpeedModifier: 0.90
+    walkSpeedModifier: 0.90
 
 - type: entity
   parent: MobStatusEffectBase

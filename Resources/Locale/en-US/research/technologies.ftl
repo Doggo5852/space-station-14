@@ -42,6 +42,7 @@ research-technology-thermal-weaponry = Thermal Weaponry
 research-technology-dual-wielding-technology = Dual Wielding Technology
 research-technology-primitive-guns = Early Weaponry
 research-technology-modernised-guns = Modernised Weaponry
+research-technology-advanced-guns = Advanced Weaponry
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research

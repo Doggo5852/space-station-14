@@ -8,6 +8,7 @@
     damage:
       types:
         Piercing: 17
+        
 
 - type: entity
   id: BulletLightRifleMosin

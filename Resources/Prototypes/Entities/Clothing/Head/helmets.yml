@@ -45,6 +45,8 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.98
 
 #Mercenary Helmet
 - type: entity
@@ -86,6 +88,8 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.97
 
 #Syndicate SWAT Helmet
 - type: entity

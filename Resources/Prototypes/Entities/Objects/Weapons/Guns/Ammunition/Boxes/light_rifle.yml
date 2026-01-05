@@ -5,6 +5,7 @@
   name: ammunition box (7.62x39mm)
   components:
   - type: BallisticAmmoProvider
+    fillDelay: 0.2
     mayTransfer: true
     whitelist:
       tags:
@@ -52,7 +53,7 @@
       tags:
         - CartridgeMosin
     proto: CartridgeMosin
-    capacity: 35
+    capacity: 20
   - type: Sprite
     layers:
     - state: base

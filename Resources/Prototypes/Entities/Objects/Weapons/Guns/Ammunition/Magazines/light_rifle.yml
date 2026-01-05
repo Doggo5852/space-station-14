@@ -68,7 +68,7 @@
     proto: CartridgeLightRifle
     capacity: 150
   - type: Item
-    size: Small
+    size: Huge
     shape:
     - 0,0,2,1
 
@@ -82,7 +82,7 @@
     proto: CartridgeLightRifle
     capacity: 500
   - type: Item
-    size: Small
+    size: Huge
     shape:
     - 0,0,3,2
   - type: Tag

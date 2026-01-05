@@ -48,6 +48,15 @@
         - SalvagerSMG
 
 - type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerAKMS
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerAKMS
+
+- type: entity
   name: spirate
   parent: BaseMobHuman
   id: MobSpirate

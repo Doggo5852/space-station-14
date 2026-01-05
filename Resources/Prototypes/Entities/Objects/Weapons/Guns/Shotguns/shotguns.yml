@@ -44,8 +44,8 @@
   - type: StaticPrice
     price: 500
   - type: SpeedModifiedOnWield
-    sprintModifier: 0.65
-    walkModifier: 0.65
+    sprintModifier: 0.6
+    walkModifier: 0.6
 
 - type: entity
   name: Bulldog
@@ -177,9 +177,9 @@
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 1
+    fireRate: 0.5
   - type: GunSpreadModifier
-    spread: 0.6
+    spread: 0.9
   - type: Tag
     tags:
     - WeaponShotgunKammerer

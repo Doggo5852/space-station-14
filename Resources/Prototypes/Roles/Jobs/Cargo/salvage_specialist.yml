@@ -62,13 +62,14 @@
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses
     mask: ClothingMaskGasExplorer
-    outerClothing: moe armor vest (15 slow)
+    outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesColorBlack
     back: ClothingBackpack
     ears: ClothingHeadsetCargo
     belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
   inhand:
     - CombatKnife
   storage:
@@ -79,15 +80,17 @@
   id: SalvagerSMG
   equipment:
     head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     eyes: ClothingEyesGlassesCheapSunglasses
     mask: ClothingMaskGasExplorer
-    outerClothing: moe armor vest (15 slow)
+    outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesColorBlack
     back: ClothingBackpack
     ears: ClothingHeadsetCargo
     belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
   inhand:
     - WeaponSubMachineGunC20rROW
   storage:
@@ -95,7 +98,26 @@
     - ChemistryBottleEpinephrine
 
 
-
+- type: startingGear
+  id: SalvagerAKMS
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - kubuakms
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
 
 
   #  head: ClothingHeadHatCargosoft

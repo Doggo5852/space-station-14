@@ -12,6 +12,12 @@
         },
         {
             "name": "base-spent"
+        },
+        {
+            "name": "baseheatfs"
+        },
+        {
+            "name": "baseap"
         }
     ]
 }

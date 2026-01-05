@@ -6,11 +6,12 @@
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
+    fillDelay: 0.2
     whitelist:
       tags:
         - CartridgeAntiMateriel
     proto: CartridgeAntiMateriel
-    capacity: 15
+    capacity: 20
   - type: Item
     size: Small
   - type: ContainerContainer

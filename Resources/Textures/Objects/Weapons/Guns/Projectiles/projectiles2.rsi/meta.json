@@ -20,6 +20,12 @@
       "name": "ball"
     },
     {
+      "name": "apshellbullet"
+    },
+    {
+      "name": "heatfsshellbullet"
+    },
+    {
       "name": "bullet",
       "delays": [
         [

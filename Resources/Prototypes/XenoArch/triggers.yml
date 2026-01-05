@@ -22,10 +22,10 @@
     TriggerPrying: 0.5
     TriggerScrewing: 0.5
     TriggerPulsing: 0.5
-    TriggerTimer: 0.25
+    #TriggerTimer: 0.25
     TriggerBlood: 1
     TriggerThrow: 1
-    TriggerDeath: 1
+    #TriggerDeath: 1
     TriggerMagnet: 1
 
 - type: xenoArchTrigger

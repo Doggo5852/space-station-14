@@ -10,12 +10,12 @@
       types:
         Piercing: 35
         Structural: 100
-    penetrationThreshold: 70
+    penetrationThreshold: 150
     penetrationDamageTypeRequirement:
     - Structural
     ignoreResistances: true
   - type: StaminaDamageOnCollide
-    damage: 10
+    damage: 20
 
 
 - type: entity
@@ -34,7 +34,7 @@
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
-    damage: 15
+    damage: 30
 
 
 
@@ -56,7 +56,7 @@
       types:
         Piercing: 1400
         Structural: 600
-    penetrationThreshold: 900
+    penetrationThreshold: 1500
     penetrationDamageTypeRequirement:
     - Structural
     - Piercing
@@ -75,12 +75,12 @@
   - type: ExplodeOnTrigger
   - type: TriggerOnCollide
     fixtureID: projectile
-    maxTriggers: 2
+    maxTriggers: 3
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
     intensitySlope: 7
-    totalIntensity: 100 # 30 damage per tile
+    totalIntensity: 125 # 30 damage per tile
     maxTileBreak: 0
     deleteAfterExplosion: false
     repeatable: true
@@ -95,7 +95,7 @@
       types:
         Piercing: 800
         Structural: 600
-    penetrationThreshold: 900
+    penetrationThreshold: 1500
     penetrationDamageTypeRequirement:
     - Structural
     - Piercing

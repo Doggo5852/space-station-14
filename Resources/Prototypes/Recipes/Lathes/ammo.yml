@@ -30,8 +30,8 @@
   id: MagazineBoxAntiMaterielFMJ
   result: MagazineBoxAntiMaterielFMJ
   materials:
-    Steel: 6000
-    Plasteel: 200
+    Steel: 4500
+    Plasteel: 100
     Silver: 200
 
 - type: latheRecipe
@@ -39,8 +39,8 @@
   id: MagazineBoxAntiMateriel
   result: MagazineBoxAntiMateriel
   materials:
-    Steel: 12000
-    Plasteel: 1000
+    Steel: 9000
+    Plasteel: 600
     Silver: 750
 
 
@@ -84,14 +84,14 @@
   id: moe armor vest (15 slow)
   result: moe armor vest (15 slow)
   materials:
-    Steel: 4000
+    Steel: 5500
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: moe armor vest bulletproof (20 slow)
   result: moe armor vest bulletproof (20 slow)
   materials:
-    Steel: 8000
+    Steel: 8500
     Plasteel: 700
 # .20 Rifle
 - type: latheRecipe

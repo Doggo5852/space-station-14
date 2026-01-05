@@ -71,7 +71,10 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Ginormous
   - type: Gun
+    projectileSpeed: 28
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -151,13 +154,13 @@
   - type: Appearance
 
 - type: entity
-  name: Lecter
+  name: M16
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleLecter
-  description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from 5.56×45mm rifle magazines."
+  description: "Small carbine developed in the 60s. This variant allows for automated fire. \nFeeds from 5.56×45mm rifle magazines."
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: Objects/Weapons/Guns/Rifles/m16.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -165,7 +168,10 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+  - type: Item
+    size: Ginormous
   - type: Gun
+    projectileSpeed: 35
     fireRate: 8
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
@@ -194,7 +200,7 @@
       gun_chamber: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
-    steps: 5
+    steps: 1
     zeroVisible: true
   - type: Appearance
 
@@ -239,6 +245,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
+    size: Ginormous
     shape:
     - 0,0,4,2
   - type: Clothing
@@ -326,3 +333,24 @@
       path: /Audio/Weapons/Guns/Empty/empty.ogg
     clumsyProof: true
   - type: PacifismAllowedGun
+
+
+- type: entity
+  id: kubuakms
+  parent: WeaponSubMachineGunC20rROW
+  name: AKMS
+  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 7.62x39mm rifle magazine.
+  components:
+  - type: Gun
+    burstFireRate: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeLightRifle

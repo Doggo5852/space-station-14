@@ -88,13 +88,13 @@
   - type: TypingIndicator
   - type: SlowOnDamage
     speedModifierThresholds:
-      20: 0.95
-      30: 0.85
-      40: 0.8
-      50: 0.75
-      60: 0.7
-      70: 0.65
-      80: 0.5
+      20: 0.98
+      30: 0.88
+      40: 0.84
+      50: 0.78
+      60: 0.74
+      70: 0.68
+      80: 0.54
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:
@@ -169,6 +169,9 @@
   - type: SleepEmitSound
   - type: StandingState
   - type: Crawler
+    defaultKnockedDuration: 2
+    speedModifier: 0.25
+    standTime: 3
   - type: Dna
   - type: MindContainer
     showExamineInfo: true
@@ -240,12 +243,12 @@
   - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
     allowedStates:
     - Alive
-    damageCap: 50
+    damageCap: 75
     damage:
       types:
-        Heat: -0.07
+        Heat: -0.06
       groups:
-        Brute: -0.16
+        Brute: -0.19
   - type: Fingerprint
   - type: Blindable
   # Other
