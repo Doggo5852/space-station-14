@@ -46,6 +46,10 @@
   - type: SpeedModifiedOnWield
     sprintModifier: 0.6
     walkModifier: 0.6
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 0.95
+  - type: HeldSpeedModifier
 
 - type: entity
   name: Bulldog
@@ -151,9 +155,15 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Item
+    size: Ginormous
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: BallisticAmmoProvider
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+  - type: GunSpreadModifier
+    spread: 1.1
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.5
+    walkModifier: 0.5
 
 - type: entity
   parent: WeaponShotgunEnforcer
@@ -170,6 +180,7 @@
   description: An old yet faithful design, and a favorite among irregular forces of many worlds. Uses .50 shotgun shells.
   components: # intend for Kammerer to have tighter choke for slower fire rate and/or manual cycling
   - type: Item
+    size: Ginormous
     sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
@@ -179,7 +190,7 @@
   - type: Gun
     fireRate: 0.5
   - type: GunSpreadModifier
-    spread: 0.9
+    spread: 0.75
   - type: Tag
     tags:
     - WeaponShotgunKammerer
@@ -279,6 +290,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
   - type: Item
+    size: Ginormous
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun

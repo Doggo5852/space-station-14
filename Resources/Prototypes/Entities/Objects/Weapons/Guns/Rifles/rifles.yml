@@ -57,6 +57,10 @@
   - type: SpeedModifiedOnWield
     sprintModifier: 0.5
     walkModifier: 0.5
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.97
+    walkModifier: 0.97
+  - type: HeldSpeedModifier
 
 - type: entity
   name: AKMS
@@ -203,6 +207,32 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
+- type: entity
+  name: M16A2
+  id: WeaponM16A2Scoped
+  parent: WeaponRifleLecter
+  description: "An M16 with a longer barrel. This one has a 4x20 scope mounted on top."
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/m16a2.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    burstFireRate: 10
+    projectileSpeed: 40
+    shotsPerBurst: 3
+    availableModes:
+    - Burst
+    - SemiAuto
+    selectedMode: SemiAuto
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.6
 
 - type: entity
   parent: WeaponRifleLecter

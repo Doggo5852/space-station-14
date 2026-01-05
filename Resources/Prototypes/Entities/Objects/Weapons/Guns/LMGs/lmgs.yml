@@ -20,10 +20,10 @@
     unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -20
-    maxAngle: -32
+    maxAngle: -34
   - type: Gun
     minAngle: 22
-    maxAngle: 38
+    maxAngle: 40
     angleIncrease: 2
     angleDecay: 20
     fireRate: 15
