@@ -12,6 +12,8 @@
       types:
         Piercing: 40
         Structural: 15
+  - type: StaminaDamageOnCollide
+    damage: 15
 
 
 - type: entity
@@ -44,6 +46,8 @@
       types:
         Piercing: 10
         Structural: 15
+  - type: StaminaDamageOnCollide
+    damage: 5
 
 
 - type: entity
@@ -69,7 +73,7 @@
     damage:
       types:
         Blunt: 3
-        Heat: 7
+        Heat: 5
   - type: IgnitionSource
     ignited: true
 
