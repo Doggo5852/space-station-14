@@ -18,7 +18,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
-    fireRate: 5
+    fireRate: 8
     projectileSpeed: 30
     selectedMode: FullAuto
     availableModes:
