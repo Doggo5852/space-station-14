@@ -53,7 +53,6 @@
   materials:
     Steel: 1200
 
-
 # L6 Ammo
 
 - type: latheRecipe
@@ -76,6 +75,27 @@
   result: MoeM2BrowningMagEmpty
   materials:
     Steel: 2000
+
+# 90mm shells
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Moe90MMAPCR
+  result: Cartridge90mmAP
+  materials:
+    Steel: 15000
+    Plasteel: 800
+    Gold: 50
+    
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Moe90MMHEATFS
+  result: Cartridge90mmHEATFS
+  materials:
+    Steel: 10000
+    Plasteel: 400
+    Gold: 300
+    Plasma: 1200
 
 # Armor
 

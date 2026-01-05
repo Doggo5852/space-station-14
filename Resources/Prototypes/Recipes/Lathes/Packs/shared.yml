@@ -4,6 +4,7 @@
   id: MaterialsStatic
   recipes:
   - SheetRGlass
+  - SheetPlasteelAutolathe
 
 - type: latheRecipePack
   id: PartsStatic

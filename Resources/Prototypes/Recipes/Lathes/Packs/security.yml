@@ -16,6 +16,8 @@
   - MoeM2BrowningMagEmpty
   - moe armor vest (15 slow)
   - moe armor vest bulletproof (20 slow)
+  - Moe90MMAPCR
+  - Moe90MMHEATFS
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -33,7 +35,7 @@
   - MagazinePistolPractice
   - SpeedLoaderMagnumPractice
   - MagazinePistolSubMachineGunPractice
-  - WeaponFlareGunSecurity
+  #- WeaponFlareGunSecurity
 
 # Shared between secfab and emagged autolathe
 - type: latheRecipePack
