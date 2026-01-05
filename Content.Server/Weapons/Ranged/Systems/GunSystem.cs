@@ -294,7 +294,7 @@ public sealed partial class GunSystem : SharedGunSystem
         {
             Random rnd = new Random();
             int hitOrNotHit = rnd.Next(1, 11);
-            if (hitOrNotHit >= 7)
+            if (hitOrNotHit >= 8)
             {
                 var targeted = EnsureComp<TargetedProjectileComponent>(uid);
                 targeted.Target = target;
