@@ -384,3 +384,25 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeLightRifle
+
+
+- type: entity
+  id: kubuM16
+  parent: WeaponSubMachineGunC20rROW
+  name: M16
+  description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from 5.56×45mm rifle magazines."
+
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/m16.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    burstFireRate: 8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeRifle 

@@ -33,6 +33,7 @@
   name: salvager
   parent: MobSalvager
   id: MobSalvagerKnife
+  suffix: Knife
   components:
     - type: Loadout
       prototypes:
@@ -42,6 +43,7 @@
   name: salvager
   parent: MobSalvager
   id: MobSalvagerSMG
+  suffix: SMG
   components:
     - type: Loadout
       prototypes:
@@ -51,10 +53,21 @@
   name: salvager
   parent: MobSalvager
   id: MobSalvagerAKMS
+  suffix: AKMS
   components:
     - type: Loadout
       prototypes:
         - SalvagerAKMS
+
+- type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerM16
+  suffix: M16
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerM16        
 
 - type: entity
   name: spirate

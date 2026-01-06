@@ -119,6 +119,28 @@
     back:
     - ChemistryBottleEpinephrine
 
+- type: startingGear
+  id: SalvagerM16
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - kubuM16
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+
+
 
   #  head: ClothingHeadHatCargosoft
   #  eyes: ClothingEyesGlassesCheapSunglasses
