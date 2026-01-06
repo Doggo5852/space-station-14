@@ -118,6 +118,9 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+    slots:
+    - Back
+    - suitStorage
   - type: Gun
     fireRate: 0.2
     projectileSpeed: 15
@@ -146,8 +149,28 @@
     walkModifier: 0.3
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 7
-    pvsIncrease: 0.7
+    maxOffset: 5
+    pvsIncrease: 0.4
+
+- type: entity
+  name: XBGM-71 Launcher
+  parent: WeaponLauncherRocket
+  id: WeaponLauncherBGMLauncherColony
+  description: A reusable launcher designed to launch BGM-71 missiles. Packs a big punch but is incredibly heavy. This one is modified with a custom IFF system that rejects targets saved in its memory.
+  components:
+  - type: Gun
+    fireRate: 0.3
+    projectileSpeed: 25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeBGM71I
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.75
+    walkModifier: 0.75
+  - type: EyeCursorOffset
+    maxOffset: 12
+    pvsIncrease: 1.2
 
 
 - type: entity

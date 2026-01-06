@@ -811,12 +811,36 @@
     explosionType: Default
     maxIntensity: 40
     intensitySlope: 6
-    totalIntensity: 200
+    totalIntensity: 150
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
+
+- type: entity
+  id: BulletBGM71I
+  name: missile
+  parent: BulletRocket
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    minSpeed: 25
+    maxSpeed: 25
+    impulseInterval: 0.1
+    chasingComponent:
+    - type: MechRaiders
+    rotateWithImpulse: true
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 200
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 20
+    totalIntensity: 350
+    maxTileBreak: 1
 
 - type: entity
   id: BulletWeakRocket
