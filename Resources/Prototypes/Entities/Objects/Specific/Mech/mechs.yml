@@ -5,7 +5,6 @@
   components:
   - type: MobMover
   - type: Mech
-  - type: MechAir
   - type: AirFilter
     # everything except oxygen and nitrogen
     gases:
@@ -335,6 +334,7 @@
   id: MechGygax
   parent: [ BaseMech, LightVehicle, BaseRestrictedContraband ]
   name: Gygax MK. III
+  #suffix: Colony
   description: A very light, nimble mech. It allows for mounting 2 light weapons on each side. Looks pretty durable but the cockpit is pretty exposed and its probably a coffin rather than a tank.
   components:
   - type: Sprite
@@ -351,9 +351,9 @@
     baseState: gygax
     openState: gygax-open
     brokenState: gygax-broken
-    mechToPilotDamageMultiplier: 0.5 #Rimstation
+    mechToPilotDamageMultiplier: 0.3 #Rimstation
     airtight: true
-    maxIntegrity: 400
+    maxIntegrity: 600
     maxEquipmentAmount: 2
     entryDelay: 5
     equipmentWhitelist:
@@ -391,6 +391,22 @@
     - Gygax
 
 - type: entity
+  id: MechGygaxRaider
+  parent: MechGygax
+  name: Gygax MK. III
+  suffix: Raider
+  components:
+  - type: MechRaiders
+
+- type: entity
+  id: MechGygaxColony
+  parent: MechGygax
+  name: Gygax MK. III
+  suffix: Colony
+  components:
+  - type: MechColony
+
+- type: entity
   id: MechDurand
   parent: [ BaseMech, HeavyVehicle, BaseRestrictedContraband ]
   name: Durand
@@ -412,7 +428,7 @@
     brokenState: durand-broken
     mechToPilotDamageMultiplier: 0.1 #Rimstation
     airtight: true
-    maxIntegrity: 1750
+    maxIntegrity: 1500
     maxEquipmentAmount: 3
     entryDelay: 10
     equipmentWhitelist:
@@ -449,6 +465,19 @@
     - FootstepSound
     - Gygax
 
+- type: entity
+  id: MechDurandRaider
+  parent: MechDurand
+  suffix: Raider
+  components:
+  - type: MechRaiders
+
+- type: entity
+  id: MechDurandColony
+  parent: MechDurand
+  suffix: Colony
+  components:
+  - type: MechColony
 
 # Mech weapons
 
@@ -483,7 +512,7 @@
     projectileSpeed: 50
     fireRate: 9
     minAngle: 2
-    maxAngle: 4
+    maxAngle: 5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
