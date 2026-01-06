@@ -1,6 +1,6 @@
 namespace Content.Server.Mech.Components;
 /// <summary>
-/// Marker for iff
+/// Marker for IFF
 /// </summary>
 [RegisterComponent]
 public sealed partial class MechRaidersComponent : Component
