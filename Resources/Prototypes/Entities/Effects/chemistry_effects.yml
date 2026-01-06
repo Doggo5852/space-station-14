@@ -31,6 +31,7 @@
         maxVol: 600
         canReact: false
 
+
 - type: entity
   parent: BaseFoam
   id: Smoke
@@ -46,6 +47,18 @@
   - type: Tag
     tags:
     - HideContextMenu
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: true
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        mask:
+        - ItemMask
+        layer:
+        - Opaque
+        
 
 - type: entity
   parent: BaseFoam
