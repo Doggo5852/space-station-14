@@ -158,6 +158,7 @@
   id: Brutepack
   suffix: Full
   components:
+  
   - type: Tag
     tags:
     - Brutepack
@@ -183,6 +184,7 @@
         variation: 0.125
   # Begin Offbrand
   - type: Tending
+    selfTendPenaltyModifier: 2.7
     woundWhitelist:
       tags: [WoundBrute]
     damage:
