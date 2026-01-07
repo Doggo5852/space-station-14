@@ -211,8 +211,9 @@
       curve: !type:BoolCurve
     - !type:TargetIsCritCon
       curve: !type:InverseBoolCurve
-    - !type:TargetIsStunnedCon
-      curve: !type:InverseBoolCurve
+    #- !type:TargetIsStunnedCon
+    #  curve: !type:InverseBoolCurve
+    # mf, i don't give a single shit that you are on the ground. DIE
     - !type:TurretTargetingCon
       curve: !type:BoolCurve
     - !type:TargetDistanceCon
@@ -254,6 +255,6 @@
 - type: utilityCurvePreset
   id: TargetHealth
   curve: !type:QuadraticCurve
-    slope: 1.0
+    slope: -1.0 #evil ai
     exponent: 0.4
     xOffset: -0.02
