@@ -49,6 +49,45 @@
   - type: StaminaDamageOnCollide
     damage: 10
 
+- type: entity
+  id: SmokeScreenBullet
+  name: smoke screen
+  categories: [ HideSpawnMenu ]
+  parent: PelletShotgun
+  components:
+  - type: TriggerOnSpawn
+  - type: TimerTrigger
+    delay: 0.05
+  - type: SmokeOnTrigger
+    keysIn:
+    - timer
+    duration: 30
+    spreadAmount: 15
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer
+
+- type: entity
+  id: SmokeScreenSpread
+  name: smoke screen
+  categories: [ HideSpawnMenu ]
+  parent: PelletShotgun
+  components:
+  - type: TriggerOnSpawn
+  - type: TimerTrigger
+    delay: 0.05
+  - type: SmokeOnTrigger
+    keysIn:
+    - timer
+    duration: 30
+    spreadAmount: 15
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer
+  - type: ProjectileSpread
+    proto: SmokeScreenBullet
+    count: 6
+    spread: 30
 
 - type: entity
   id: PelletShotgunSpread

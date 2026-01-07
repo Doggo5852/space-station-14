@@ -177,8 +177,9 @@
 - type: entity
   id: WeaponLauncherBGMLauncherRaider
   parent: WeaponLauncherBGMLauncherColony
-  components: BallisticAmmoProvider
-  proto: 
+  components:
+  - type: BallisticAmmoProvider
+    proto: BulletBGM71IRaider
 
 - type: entity
   name: multiple rocket launcher

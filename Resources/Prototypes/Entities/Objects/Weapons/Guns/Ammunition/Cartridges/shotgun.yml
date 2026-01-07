@@ -20,6 +20,23 @@
   - type: SpentAmmoVisuals
 
 - type: entity
+  id: SmokeScreenCartridge
+  name: smoke screen pack
+  parent: BaseShellShotgun
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - SmokeScreenCartridge
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/smoke.rsi
+    layers:
+      - state: primed
+  - type: CartridgeAmmo
+    proto: SmokeScreenSpread
+    deleteOnSpawn: true
+
+- type: entity
   id: ShellShotgunBeanbag
   name: shell (.50 beanbag)
   parent: [ BaseShellShotgun, BaseSecurityBartenderContraband ]
