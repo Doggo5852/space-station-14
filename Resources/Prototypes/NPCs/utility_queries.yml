@@ -203,6 +203,17 @@
       curve: !type:BoolCurve
 
 - type: utilityQuery
+  id: NearbyNPCLeader
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: NPCLeader
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+
+- type: utilityQuery
   id: NearbyGunTargets
   query:
     - !type:NearbyHostilesQuery
