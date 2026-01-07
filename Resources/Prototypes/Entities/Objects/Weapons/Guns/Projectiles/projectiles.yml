@@ -831,6 +831,7 @@
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
+    maxChaseRadius: 35
   - type: Projectile
     damage:
       types:
@@ -838,7 +839,7 @@
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
-    intensitySlope: 20
+    intensitySlope: 15
     totalIntensity: 350
     maxTileBreak: 1
   - type: Fixtures
@@ -851,7 +852,15 @@
         mask:
         - Impassable
         - BulletImpassable
-        - Opaque
+        - Opaque #smoke now has opaque layer, giving this projectile opaque as mask gives the illusion that the missile auto-destructs when it flies into smoke
+
+- type: entity
+  id: BulletBGM71IRaider
+  parent: BulletBGM71I
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
 
 - type: entity
   id: BulletWeakRocket

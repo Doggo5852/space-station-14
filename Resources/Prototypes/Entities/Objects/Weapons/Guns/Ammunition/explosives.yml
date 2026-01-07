@@ -60,6 +60,13 @@
   - type: CartridgeAmmo
     proto: BulletBGM71I
 
+- type: entity
+  id: CartridgeMissileBGM71IRaider
+  parent: CartridgeMissileBGM71I
+  components:
+  - type: CartridgeAmmo
+    proto: BulletBGM71IRaider
+
 # Grenades
 
 - type: entity
