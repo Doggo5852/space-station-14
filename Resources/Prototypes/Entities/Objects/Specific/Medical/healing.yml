@@ -48,6 +48,7 @@
         variation: 0.125
   # Begin Offbrand
   - type: Tending
+    selfTendPenaltyModifier: 2.7
     woundWhitelist:
       tags: [WoundHeat, WoundCold, WoundShock, WoundCaustic]
     damage:
