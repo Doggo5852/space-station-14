@@ -61,7 +61,7 @@
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGasExplorer
+    #mask: ClothingMaskGasExplorer
     outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
@@ -75,6 +75,7 @@
   storage:
     back:
     - ChemistryBottleEpinephrine
+    - Brutepack
 
 - type: startingGear
   id: SalvagerSMG
@@ -82,7 +83,7 @@
     head: ClothingHeadHelmetBasic
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGasExplorer
+    #mask: ClothingMaskGasExplorer
     outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
@@ -96,6 +97,7 @@
   storage:
     back:
     - ChemistryBottleEpinephrine
+    - Brutepack
 
 
 - type: startingGear
@@ -104,7 +106,7 @@
     head: ClothingHeadHelmetBasic
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGasExplorer
+    #mask: ClothingMaskGasExplorer
     outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
@@ -118,6 +120,7 @@
   storage:
     back:
     - ChemistryBottleEpinephrine
+    - Brutepack
 
 - type: startingGear
   id: SalvagerM16
@@ -125,7 +128,7 @@
     head: ClothingHeadHelmetBasic
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGasExplorer
+    #mask: ClothingMaskGasExplorer
     outerClothing: moe armor vest (20 slow)
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesCombat
@@ -139,6 +142,7 @@
   storage:
     back:
     - ChemistryBottleEpinephrine
+    - Brutepack
 
 
 
