@@ -81,9 +81,33 @@
         - !type:HTNCompoundTask
           task: IdleCompound
 
+# do not look at ts
+
+- type: htnCompound
+  id: LeaderFollowCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyNPCLeader
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+    
 - type: htnCompound
   id: SimpleHumanoidHostileCompound
   branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: LeaderFollowCompound
     - tasks:
         - !type:HTNCompoundTask
           task: RangedCombatCompound

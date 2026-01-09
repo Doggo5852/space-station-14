@@ -266,6 +266,6 @@
 - type: utilityCurvePreset
   id: TargetHealth
   curve: !type:QuadraticCurve
-    slope: -1.0 #evil ai
+    slope: 1.0 #evil ai
     exponent: 0.4
     xOffset: -0.02
