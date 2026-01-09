@@ -367,6 +367,7 @@
 
 - type: entity
   id: kubuakms
+  suffix: Battery
   parent: WeaponSubMachineGunC20rROW
   name: AKMS
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 7.62x39mm rifle magazine.
@@ -388,6 +389,7 @@
 
 - type: entity
   id: kubuM16
+  suffix: Battery
   parent: WeaponSubMachineGunC20rROW
   name: M16
   description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from 5.56×45mm rifle magazines."

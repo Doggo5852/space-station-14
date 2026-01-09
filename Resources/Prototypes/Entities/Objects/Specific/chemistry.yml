@@ -219,7 +219,7 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 100
+        maxVol: 150
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 6
