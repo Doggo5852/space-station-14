@@ -8,7 +8,7 @@
     state: seedextractor
   discipline: CivilianServices
   tier: 1
-  cost: 1250
+  cost: 750
   recipeUnlocks:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
@@ -22,7 +22,7 @@
     state: hamtr
   discipline: CivilianServices
   tier: 1
-  cost: 1250
+  cost: 250
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -42,7 +42,7 @@
     state: cameracase
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 500
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraWirelessRouterCircuitboard
@@ -61,7 +61,7 @@
     state: television
   discipline: CivilianServices
   tier: 1
-  cost: 3000
+  cost: 100
   recipeUnlocks:
     - ComputerTelevisionCircuitboard
     - SynthesizerInstrument
@@ -77,7 +77,7 @@
     state: display
   discipline: CivilianServices
   tier: 1
-  cost: 7500
+  cost: 750
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
@@ -93,7 +93,7 @@
     state: astroice
   discipline: CivilianServices
   tier: 2
-  cost: 1000
+  cost: 100
   recipeUnlocks:
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -113,7 +113,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 7500
+  cost: 15000
   recipeUnlocks:
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
@@ -154,7 +154,7 @@
     state: honker
   discipline: CivilianServices
   tier: 2
-  cost: 2500
+  cost: 250
   recipeUnlocks:
   - HonkerHarness
   - HonkerLArm
@@ -174,7 +174,7 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 500
   recipeUnlocks:
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
@@ -199,9 +199,9 @@
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 4000
+  cost: 400
   recipeUnlocks:
-  - PushHorn
+  #- PushHorn
   - BorgModuleAdvancedClowning
 
 # Tier 3
@@ -226,7 +226,7 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
@@ -239,7 +239,7 @@
     state: syringe_gun
   discipline: CivilianServices
   tier: 3
-  cost: 25000
+  cost: 50000
   recipeUnlocks:
   - LauncherSyringe
   - MiniSyringe
