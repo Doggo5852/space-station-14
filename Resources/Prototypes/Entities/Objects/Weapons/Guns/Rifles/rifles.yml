@@ -112,6 +112,9 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.94
+    walkModifier: 0.94
 
 - type: entity
   name: M90 GL
@@ -385,6 +388,10 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeLightRifle
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.90
+    walkModifier: 0.90
+  - type: HeldSpeedModifier
 
 
 - type: entity
@@ -392,8 +399,7 @@
   suffix: Battery
   parent: WeaponSubMachineGunC20rROW
   name: M16
-  description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from 5.56×45mm rifle magazines."
-
+  description: "Small carbine developed in the 60s. This variant allows for automated fire. \nFeeds from 5.56×45mm rifle magazines."
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/m16.rsi
@@ -408,3 +414,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeRifle 
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.92
+    walkModifier: 0.92
+  - type: HeldSpeedModifier

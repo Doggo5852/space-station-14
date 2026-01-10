@@ -98,7 +98,7 @@
   name: L6N SAW
   id: MoeWeaponLMGL6
   parent: WeaponLightMachineGunL6
-  description: An upgraded L6, has a scope attached to the side which allows for long range area denial.
+  description: An upgraded L6, has a scope attached to the side.
   components:
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset

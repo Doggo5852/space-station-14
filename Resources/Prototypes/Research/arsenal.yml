@@ -44,7 +44,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 8000
+  cost: 5000
   recipeUnlocks:
   - WeaponMosin
 
@@ -56,7 +56,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 18000
+  cost: 15000
   recipeUnlocks:
   - WeaponAKMS
   - WeaponShotgunKammerer
@@ -71,23 +71,50 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 40000
+  cost: 30000
   recipeUnlocks:
   - WeaponLecter
   technologyPrerequisites:
   - ModernisedGuns
 
 - type: technology
-  id: WeaponizedLaserManipulation
-  name: research-technology-weaponized-laser-manipulation
+  id: Sidearms
+  name: research-technology-sidearms
   icon:
-    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - WeaponPistolMk58
+
+- type: technology
+  id: ScopedGuns
+  name: research-technology-optics
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/m16a2.rsi
     state: icon
   discipline: Arsenal
-  tier: 3
-  cost: 60000
+  tier: 2
+  cost: 15000
   recipeUnlocks:
-  - WeaponLaserCarbine
+  - MoeWeaponLMGL6
+  - WeaponM16A2Scoped
+  technologyPrerequisites:
+  - AdvancedGuns
+
+#- type: technology
+#  id: WeaponizedLaserManipulation
+#  name: research-technology-weaponized-laser-manipulation
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 80000
+#  recipeUnlocks:
+#  - WeaponLaserCarbine
 
 - type: technology
   id: NonlethalAmmunition
@@ -137,8 +164,8 @@
   recipeUnlocks:
   - Truncheon
   - TelescopicShield
-  - HoloprojectorSecurity
-  - WeaponDisablerSMG
+  #- HoloprojectorSecurity
+  #- WeaponDisablerSMG
 
 - type: technology
   id: ExplosiveTechnology
@@ -165,6 +192,36 @@
   # - MagazineBoxRifleAPHE
 
 - type: technology
+  id: LauncherUnguided
+  name: research-technology-launchers
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+    state: base
+  discipline: Arsenal
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
+  - CartridgeRocket
+  - WeaponLauncherRocket 
+  technologyPrerequisites:
+  - ExplosiveTechnology
+
+- type: technology
+  id: LauncherGuided
+  name: research-technology-guided-launchers
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+    state: base
+  discipline: Arsenal
+  tier: 3
+  cost: 45000
+  recipeUnlocks:
+  - CartridgeMissileBGM71I
+  - WeaponLauncherBGMLauncherColony
+  technologyPrerequisites:
+  - LauncherUnguided
+
+- type: technology
   id: SpecialMeans
   name: research-technology-special-means
   icon:
@@ -178,43 +235,43 @@
 
 # Tier 2
 
-- type: technology
-  id: ConcentratedLaserWeaponry
-  name: research-technology-concentrated-laser-weaponry
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 150000
-  recipeUnlocks:
-  - WeaponLaserCannon
+#- type: technology
+#  id: ConcentratedLaserWeaponry
+#  name: research-technology-concentrated-laser-weaponry
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 150000
+#  recipeUnlocks:
+#  - WeaponLaserCannon
 
-- type: technology
-  id: WaveParticleHarnessing
-  name: research-technology-wave-particle-harnessing
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/xray.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 150000
-  recipeUnlocks:
-  - WeaponXrayCannon
+#- type: technology
+#  id: WaveParticleHarnessing
+#  name: research-technology-wave-particle-harnessing
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 150000
+#  recipeUnlocks:
+# - WeaponXrayCannon
 
-- type: technology
-  id: KineticModifications
-  name: research-technology-kinetic-modifications
-  icon:
-    sprite: Objects/Tools/upgrade.rsi
-    state: display
-  discipline: Arsenal
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-  - PKAUpgradeDamage
-  - PKAUpgradeRange
-  - PKAUpgradeFireRate
+#- type: technology
+#  id: KineticModifications
+#  name: research-technology-kinetic-modifications
+#  icon:
+#    sprite: Objects/Tools/upgrade.rsi
+#    state: display
+#  discipline: Arsenal
+#  tier: 2
+#  cost: 10000
+#  recipeUnlocks:
+#  - PKAUpgradeDamage
+#  - PKAUpgradeRange
+#  - PKAUpgradeFireRate
 
 - type: technology
   id: BasicShuttleArmament
@@ -252,30 +309,30 @@
 
 # Tier 3
 
-- type: technology
-  id: PortableMicrofusionWeaponry
-  name: research-technology-portable-microfusion-weaponry
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 200000
-  recipeUnlocks:
-  - WeaponAdvancedLaser
-  - PortableRecharger
+#- type: technology
+#  id: PortableMicrofusionWeaponry
+#  name: research-technology-portable-microfusion-weaponry
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 200000
+#  recipeUnlocks:
+#  - WeaponAdvancedLaser
+#  - PortableRecharger
 
-- type: technology
-  id: ThermalWeaponry
-  name: research-technology-thermal-weaponry
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 300000
-  recipeUnlocks:
-  - WeaponTemperatureGun
+#- type: technology
+#  id: ThermalWeaponry
+#  name: research-technology-thermal-weaponry
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 300000
+#  recipeUnlocks:
+#  - WeaponTemperatureGun
 
 - type: technology
   id: AdvancedShuttleWeapon

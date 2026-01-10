@@ -8,13 +8,13 @@
     state: handdrill
   discipline: Industrial
   tier: 1
-  cost: 1250
+  cost: 750
   recipeUnlocks:
   - MiningDrill
   - MineralScannerEmpty
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
-  - ClothingShoesBootsJump
+  #- ClothingShoesBootsJump
 
 - type: technology
   id: SpaceScanning
@@ -186,19 +186,19 @@
 
 # Tier 3
 
-- type: technology
-  id: BluespaceStorage
-  name: research-technology-bluespace-storage
-  icon:
-    sprite: Clothing/Back/Backpacks/holding.rsi
-    state: holding
-  discipline: Industrial
-  tier: 3
-  cost: 120000
-  recipeUnlocks:
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
+#- type: technology
+#  id: BluespaceStorage
+#  name: research-technology-bluespace-storage
+#  icon:
+#    sprite: Clothing/Back/Backpacks/holding.rsi
+#    state: holding
+#  discipline: Industrial
+#  tier: 3
+#  cost: 120000
+#  recipeUnlocks:
+#  - ClothingBackpackHolding
+#  - ClothingBackpackSatchelHolding
+#  - ClothingBackpackDuffelHolding
 
 - type: technology
   id: OptimizedMicrogalvanism

@@ -6,9 +6,9 @@
   - ClothingEyesHudSecurity
   - ForensicPad
   - Handcuffs
-  - TargetClown
+  #- TargetClown
   - TargetHuman
-  - TargetSyndicate
+  #- TargetSyndicate
   - Zipties
   - SmokeGrenade
   - MagazineLightRifleBox
@@ -28,8 +28,8 @@
   - MagazineBoxMagnumPractice
   - MagazineBoxPistolPractice
   - MagazineBoxRiflePractice
-  - WeaponDisablerPractice
-  - WeaponLaserCarbinePractice
+  #- WeaponDisablerPractice
+  #- WeaponLaserCarbinePractice
   - MagazineLightRiflePractice
   - MagazineRiflePractice
   - MagazinePistolPractice
@@ -80,7 +80,7 @@
   id: SecurityEquipment
   recipes:
   - ClothingBackpackElectropack
-  - HoloprojectorSecurity
+  #- HoloprojectorSecurity
   - PortableRecharger
   - PowerCageHigh
   - PowerCageMedium
@@ -155,9 +155,17 @@
   - WeaponAKMS
   - WeaponLecter
   - WeaponShotgunKammerer
+  - WeaponM16A2Scoped
+  - WeaponPistolMk58
+  - MoeWeaponLMGL6
+  - CartridgeMissileBGM71I
+  - WeaponLauncherBGMLauncherColony
+  - CartridgeRocket
+  - WeaponLauncherRocket
+
 
 - type: latheRecipePack
   id: SecurityDisablers
   recipes:
   - WeaponDisabler
-  - WeaponDisablerSMG
+  #- WeaponDisablerSMG

@@ -126,6 +126,7 @@
     projectileSpeed: 15
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+      maxDistance: 50
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -151,6 +152,7 @@
   - type: EyeCursorOffset
     maxOffset: 5
     pvsIncrease: 0.4
+  - type: HeldSpeedModifier
 
 - type: entity
   name: XBGM-71 Launcher
@@ -161,7 +163,7 @@
   components:
   - type: Gun
     fireRate: 0.3
-    projectileSpeed: 25
+    projectileSpeed: 22
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -171,12 +173,13 @@
     sprintModifier: 0.75
     walkModifier: 0.75
   - type: EyeCursorOffset
-    maxOffset: 12
+    maxOffset: 15
     pvsIncrease: 1.2
 
 - type: entity
   id: WeaponLauncherBGMLauncherRaider
   parent: WeaponLauncherBGMLauncherColony
+  suffix: Raider
   components:
   - type: BallisticAmmoProvider
     proto: BulletBGM71IRaider

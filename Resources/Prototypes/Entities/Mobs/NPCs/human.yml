@@ -28,6 +28,11 @@
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompound
+      blackboard:
+        VisionRadius: !type:Single
+          15
+        AggroVisionRadius: !type:Single
+          15
 
 - type: entity
   name: salvager

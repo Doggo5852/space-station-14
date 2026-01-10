@@ -191,32 +191,32 @@
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard
 
-- type: technology
-  id: PushHorn
-  name: research-technology-clowning-utilities
-  icon:
-    sprite: Objects/Fun/push_horn.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 2
-  cost: 400
-  recipeUnlocks:
-  #- PushHorn
-  - BorgModuleAdvancedClowning
+#- type: technology
+#  id: PushHorn
+#  name: research-technology-clowning-utilities
+#  icon:
+#    sprite: Objects/Fun/push_horn.rsi
+#    state: icon
+#  discipline: CivilianServices
+#  tier: 2
+#  cost: 400
+#  recipeUnlocks:
+#  - PushHorn
+#  - BorgModuleAdvancedClowning
 
 # Tier 3
 
-- type: technology
-  id: QuantumFiberWeaving
-  name: research-technology-quantum-fiber-weaving
-  icon:
-    sprite: Clothing/Shoes/Boots/speedboots.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 3
-  cost: 30000
-  recipeUnlocks:
-  - ClothingShoesBootsSpeed
+#- type: technology
+#  id: QuantumFiberWeaving
+#  name: research-technology-quantum-fiber-weaving
+#  icon:
+#    sprite: Clothing/Shoes/Boots/speedboots.rsi
+#    state: icon
+#  discipline: CivilianServices
+#  tier: 3
+#  cost: 30000
+#  recipeUnlocks:
+#  - ClothingShoesBootsSpeed
 
 - type: technology
   id: BluespaceChemistry

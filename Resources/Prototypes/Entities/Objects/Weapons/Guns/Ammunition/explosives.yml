@@ -12,7 +12,7 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,1,3
+    - 0,0,3,1
   - type: CartridgeAmmo
     proto: BulletRocket
     deleteOnSpawn: true
@@ -46,6 +46,7 @@
 
 - type: entity
   id: CartridgeMissileBGM71I
+  suffix: Colony
   name: BGM-71I
   parent: CartridgeRocket
   description: A BGM-71 missile with an IR seeker in the front. What used to be a wire-guided missile is now a infrared tank removal tool with fire and forget capabilities.
@@ -56,12 +57,13 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,1,4
+    - 0,0,4,1
   - type: CartridgeAmmo
     proto: BulletBGM71I
 
 - type: entity
   id: CartridgeMissileBGM71IRaider
+  suffix: Raider
   parent: CartridgeMissileBGM71I
   components:
   - type: CartridgeAmmo

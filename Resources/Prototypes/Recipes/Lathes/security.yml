@@ -336,9 +336,73 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
+  id: WeaponM16A2Scoped
+  result: WeaponM16A2Scoped
+  materials:
+    Steel: 16500
+    Plasteel: 2500
+    Glass: 750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: MoeWeaponLMGL6
+  result: MoeWeaponLMGL6
+  materials:
+    Steel: 16500
+    Plasteel: 5000
+    Glass: 750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponPistolMk58
+  result: WeaponPistolMk58
+  materials:
+    Steel: 2000
+    Plasteel: 150
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
   id: WeaponShotgunKammerer
   result: WeaponShotgunKammerer
   materials:
     Wood: 1500
+    Steel: 4000
+    Plasteel: 400
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponLauncherRocket
+  result: WeaponLauncherRocket
+  materials:
+    Steel: 20000
+    Plasteel: 7500
+    Glass: 1000
+    Uranium: 750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeRocket
+  result: CartridgeRocket
+  materials:
     Steel: 2000
-    Plasteel: 800
+    Plasteel: 500
+    Plasma: 750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponLauncherBGMLauncherColony
+  result: WeaponLauncherBGMLauncherColony
+  materials:
+    Steel: 25000
+    Plasteel: 10000
+    Glass: 1500
+    Uranium: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeMissileBGM71I
+  result: CartridgeMissileBGM71I
+  materials:
+    Steel: 2500
+    Plasteel: 1000
+    Plasma: 2500

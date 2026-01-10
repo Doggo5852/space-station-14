@@ -43,6 +43,10 @@ research-technology-dual-wielding-technology = Dual Wielding Technology
 research-technology-primitive-guns = Early Weaponry
 research-technology-modernised-guns = Modernised Weaponry
 research-technology-advanced-guns = Advanced Weaponry
+research-technology-optics = Scoped Weaponry
+research-technology-sidearms = Sidearms
+research-technology-launchers = Launchers
+research-technology-guided-launchers = Guided Missiles
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research
