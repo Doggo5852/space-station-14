@@ -47,6 +47,8 @@ research-technology-optics = Scoped Weaponry
 research-technology-sidearms = Sidearms
 research-technology-launchers = Launchers
 research-technology-guided-launchers = Guided Missiles
+research-technology-mech-utilities = Mech Utilities
+research-technology-cannons = Cannons
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research

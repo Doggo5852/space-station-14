@@ -12,7 +12,7 @@
     #TriggerTritium: 0.1
     #TriggerAmmonia: 0.1
     #TriggerFrezon: 0.1
-    TriggerRadiation: 1
+    #TriggerRadiation: 1
     #TriggerPressureHigh: 0.5
     #TriggerPressureLow: 1
     TriggerExamine: 1

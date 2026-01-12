@@ -22,7 +22,7 @@
     state: incendiarydisplay
   discipline: Arsenal
   tier: 1
-  cost: 18000
+  cost: 7000
   recipeUnlocks:
   - BoxShotgunIncendiary
   - MagazineRifleIncendiary
@@ -44,7 +44,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 5000
+  cost: 2000
   recipeUnlocks:
   - WeaponMosin
 
@@ -56,10 +56,11 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 15000
+  cost: 13000
   recipeUnlocks:
   - WeaponAKMS
   - WeaponShotgunKammerer
+  - WeaponMechM2HB
   technologyPrerequisites:
   - PrimitiveGuns
 
@@ -71,9 +72,10 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 30000
+  cost: 20000
   recipeUnlocks:
   - WeaponLecter
+  - WeaponMechM60D
   technologyPrerequisites:
   - ModernisedGuns
 
@@ -85,7 +87,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 1500
+  cost: 1000
   recipeUnlocks:
   - WeaponPistolMk58
 
@@ -97,7 +99,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 15000
+  cost: 8000
   recipeUnlocks:
   - MoeWeaponLMGL6
   - WeaponM16A2Scoped
@@ -139,7 +141,7 @@
     state: uranium
   discipline: Arsenal
   tier: 3
-  cost: 60000
+  cost: 15000
   recipeUnlocks:
   - MagazineRifleUranium
   - MagazinePistolUranium
@@ -192,6 +194,19 @@
   # - MagazineBoxRifleAPHE
 
 - type: technology
+  id: MechUtilities
+  name: research-technology-mech-utilities
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  discipline: Arsenal
+  tier: 2
+  cost: 1750
+  recipeUnlocks:
+  - WeaponMechSM6
+  - SmokeScreenCartridge
+
+- type: technology
   id: LauncherUnguided
   name: research-technology-launchers
   icon:
@@ -199,12 +214,24 @@
     state: base
   discipline: Arsenal
   tier: 2
-  cost: 20000
+  cost: 12000
   recipeUnlocks:
   - CartridgeRocket
   - WeaponLauncherRocket 
   technologyPrerequisites:
   - ExplosiveTechnology
+
+- type: technology
+  id: Cannons
+  name: research-technology-cannons
+  icon:
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - WeaponMechM3A1
 
 - type: technology
   id: LauncherGuided
@@ -214,10 +241,11 @@
     state: base
   discipline: Arsenal
   tier: 3
-  cost: 45000
+  cost: 25000
   recipeUnlocks:
   - CartridgeMissileBGM71I
   - WeaponLauncherBGMLauncherColony
+  - WeaponMechBGMRack
   technologyPrerequisites:
   - LauncherUnguided
 
@@ -281,7 +309,7 @@
     state: full
   discipline: Arsenal
   tier: 2
-  cost: 8500
+  cost: 5000
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
@@ -303,7 +331,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 8000
+  cost: 5000
   recipeUnlocks:
   - ClothingBackpackHarmpack
 
@@ -342,7 +370,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 5000
+  cost: 3000
   recipeUnlocks:
   - GrenadeEMP
   - PowerCageHigh

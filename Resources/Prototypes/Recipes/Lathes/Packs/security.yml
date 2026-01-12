@@ -162,6 +162,12 @@
   - WeaponLauncherBGMLauncherColony
   - CartridgeRocket
   - WeaponLauncherRocket
+  - WeaponMechSM6
+  - WeaponMechM60D
+  - SmokeScreenCartridge
+  - WeaponMechM2HB
+  - WeaponMechM3A1
+  - WeaponMechBGMRack
 
 
 - type: latheRecipePack

@@ -143,14 +143,14 @@
   - type: GunRequiresWield
   - type: Wieldable
   - type: ClothingSpeedModifier
-    sprintModifier: 0.8
-    walkModifier: 0.8
+    sprintModifier: 0.9
+    walkModifier: 0.9
   - type: SpeedModifiedOnWield
     sprintModifier: 0.3
     walkModifier: 0.3
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 5
+    maxOffset: 4
     pvsIncrease: 0.4
   - type: HeldSpeedModifier
 
@@ -162,19 +162,19 @@
   description: A reusable launcher designed to launch BGM-71 missiles. Packs a big punch but is incredibly heavy. This one is modified with a custom IFF system that rejects targets saved in its memory.
   components:
   - type: Gun
-    fireRate: 0.3
-    projectileSpeed: 22
+    fireRate: 0.2
+    projectileSpeed: 20
   - type: BallisticAmmoProvider
     whitelist:
       tags:
         - CartridgeBGM71I
     proto: CartridgeMissileBGM71I
   - type: ClothingSpeedModifier
-    sprintModifier: 0.75
-    walkModifier: 0.75
+    sprintModifier: 0.88
+    walkModifier: 0.88
   - type: EyeCursorOffset
-    maxOffset: 15
-    pvsIncrease: 1.2
+    maxOffset: 17
+    pvsIncrease: 1.3
 
 - type: entity
   id: WeaponLauncherBGMLauncherRaider

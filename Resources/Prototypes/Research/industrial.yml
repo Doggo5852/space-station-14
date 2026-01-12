@@ -37,7 +37,7 @@
     state: empty
   discipline: Industrial
   tier: 1
-  cost: 2500
+  cost: 2000
   recipeUnlocks:
   - PowerCellHigh
   - TurboItemRechargerCircuitboard
@@ -63,7 +63,7 @@
     state: building
   discipline: Industrial
   tier: 1
-  cost: 2500
+  cost: 2000
   recipeUnlocks:
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
@@ -108,7 +108,7 @@
     state: ripley
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 2000
   recipeUnlocks:
   - RipleyHarness
   - RipleyLArm
@@ -160,7 +160,7 @@
     state: icon
   discipline: Industrial
   tier: 2
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
     - WelderExperimental
     - PowerDrill
@@ -177,7 +177,7 @@
     state: handdrill
   discipline: Industrial
   tier: 2
-  cost: 12500
+  cost: 5000
   recipeUnlocks:
     - OreBagOfHolding
     - MiningDrillDiamond

@@ -97,8 +97,8 @@
     WallRockSand: WallRockSandPlasma
     WallRockSnow: WallRockSnowPlasma
   maxCount: 12
-  minGroupSize: 4
-  maxGroupSize: 8
+  minGroupSize: 8
+  maxGroupSize: 10
   radius: 4
 
 # Uranium
@@ -112,8 +112,8 @@
     WallRockSand: WallRockSandUranium
     WallRockSnow: WallRockSnowUranium
   maxCount: 15
-  minGroupSize: 4
-  maxGroupSize: 8
+  minGroupSize: 7
+  maxGroupSize: 13
   radius: 4
 
 - type: biomeMarkerLayer

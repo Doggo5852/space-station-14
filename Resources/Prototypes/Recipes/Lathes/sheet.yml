@@ -120,10 +120,10 @@
   result: SheetPlasteel1
   completetime: 1
   materials:
-    Plasma: 30
-    Uranium: 25
-    Steel: 500
-
+    Plasma: 15
+    Uranium: 20
+    Steel: 400
+    
 - type: latheRecipe
   id: SheetPlasteel30
   result: SheetPlasteel

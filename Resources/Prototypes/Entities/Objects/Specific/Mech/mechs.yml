@@ -96,7 +96,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 6000
+        damage: 2000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -371,9 +371,6 @@
         Blunt: 10
         Structural: 10
   - type: CanMoveInAir
-  - type: NpcFactionMember
-    factions:
-    - NanoTrasen
   - type: MobState
   - type: MovementAlwaysTouching
   - type: Repairable #Rimstation
@@ -397,6 +394,9 @@
   suffix: Raider
   components:
   - type: MechRaiders
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
 
 - type: entity
   id: MechGygaxColony
@@ -405,6 +405,9 @@
   suffix: Colony
   components:
   - type: MechColony
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
 
 - type: entity
   id: MechDurand
@@ -446,9 +449,6 @@
         Blunt: 30
         Structural: 30
   - type: CanMoveInAir
-  - type: NpcFactionMember
-    factions:
-    - NanoTrasen
   - type: MobState
   - type: MovementAlwaysTouching
   - type: Repairable #Rimstation
@@ -471,6 +471,9 @@
   suffix: Raider
   components:
   - type: MechRaiders
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
 
 - type: entity
   id: MechDurandColony
@@ -478,6 +481,9 @@
   suffix: Colony
   components:
   - type: MechColony
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
 
 # Mech weapons
 
@@ -501,7 +507,7 @@
 - type: entity
   id: WeaponMechM60D
   name: M60D
-  description: Modified M60, widely used on helicopters, ground vehicles and ships. Removal of the stock and pistol grip makes it impossible to use when detached.
+  description: "Modified M60, widely used on helicopters, ground vehicles and ships. Removal of the stock and pistol grip makes it impossible to use when detached. Can be fit on: Light, Heavy."
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -511,8 +517,8 @@
   - type: Gun
     projectileSpeed: 50
     fireRate: 9
-    minAngle: 2
-    maxAngle: 5
+    minAngle: 3
+    maxAngle: 6
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -552,7 +558,7 @@
 - type: entity
   id: WeaponMechM2HB
   name: M2HB
-  description: Use if diplomacy failed.
+  description: "Use if diplomacy failed. Can be fit on: Heavy."
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -604,7 +610,7 @@
 - type: entity
   id: WeaponMechM3A1
   name: M3A1
-  description: Uses 90mm shells, this variant can also fit HEAT-FS shells. Handle with extreme care.
+  description: "Uses 90mm shells, this variant can also fit HEAT-FS shells. Handle with extreme care. Can be fit on: Heavy."
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -638,8 +644,8 @@
 
 - type: entity
   id: WeaponMechSM6
-  name: SM-6 Smokescreening device
-  description: Deploys smokes.
+  name: SM-6
+  description: "Deploys smokes. Can be fit on: Light, Heavy"
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -653,9 +659,9 @@
     fireRate: 2
     minAngle: 1
     maxAngle: 2
-    selectedMode: FullAuto
+    selectedMode: SemiAuto
     availableModes:
-      - FullAuto
+      - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/m2hb.ogg
   - type: Appearance
@@ -665,8 +671,42 @@
     - LightVehicle
   - type: AmmoCounter
   - type: BallisticAmmoProvider
-    capacity: 2
+    capacity: 3
     proto: null
     whitelist:
       tags:
       - SmokeScreenCartridge
+
+- type: entity
+  id: WeaponMechBGMRack
+  name: TER-9
+  description: "The TER-9 is a general purpose missile rack. It can fit serval bombs, rockets or missiles. Can be fit on: Light"
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: BaseMechWeaponRange
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  - type: MechEquipment
+    installDuration: 7
+  - type: Gun
+    projectileSpeed: 20
+    fireRate: 0.7
+    minAngle: 1
+    maxAngle: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: Appearance
+  - type: Tag
+    tags:
+    - LightVehicle
+  - type: AmmoCounter
+  - type: BallisticAmmoProvider
+    capacity: 2
+    proto: null
+    whitelist:
+      tags:
+      - CartridgeBGM71I

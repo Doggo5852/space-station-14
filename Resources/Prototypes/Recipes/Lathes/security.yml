@@ -406,3 +406,50 @@
     Steel: 2500
     Plasteel: 1000
     Plasma: 2500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechM60D
+  result: WeaponMechM60D
+  materials:
+    Steel: 2000
+    Plasteel: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechSM6
+  result: WeaponMechSM6
+  materials:
+    Steel: 1000
+    Plasteel: 100
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: SmokeScreenCartridge
+  result: SmokeScreenCartridge
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechM2HB
+  result: WeaponMechM2HB
+  materials:
+    Steel: 6500
+    Plasteel: 1200
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechM3A1
+  result: WeaponMechM3A1
+  materials:
+    Steel: 9000
+    Plasteel: 3500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechBGMRack
+  result: WeaponMechBGMRack
+  materials:
+    Steel: 2500
+    Plasteel: 800
