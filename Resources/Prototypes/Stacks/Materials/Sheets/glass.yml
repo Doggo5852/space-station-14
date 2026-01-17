@@ -3,7 +3,7 @@
   name: stack-glass
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: glass }
   spawn: SheetGlass1
-  maxCount: 30
+  maxCount: 60
 
 - type: stack
   id: ReinforcedGlass
