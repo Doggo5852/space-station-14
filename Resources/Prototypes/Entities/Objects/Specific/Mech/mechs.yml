@@ -402,6 +402,19 @@
         layer:
         - MobLayer
   - type: ItemToggle
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   id: MechGygaxRaider
@@ -451,7 +464,7 @@
     brokenState: m1abrams
     mechToPilotDamageMultiplier: 0.05 #Rimstation
     airtight: true
-    maxIntegrity: 1500
+    maxIntegrity: 1800
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -490,6 +503,35 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    range: 75
+    components:
+    - type: GuidedMissile
+  - type: Beeper
+    isMuted: true
+    minBeepInterval: 0.10
+    maxBeepInterval: 0.70
+    beepSound:
+      path: "/Audio/Items/locator_beep.ogg"
+      params:
+        maxDistance: 5
+        volume: -1
+        pitch: 2.2
+  - type: ItemToggle
 
 - type: entity
   id: MechDurandRaider

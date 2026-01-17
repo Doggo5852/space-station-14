@@ -41,6 +41,7 @@ public abstract partial class SharedMechSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly SharedContentEyeSystem _eyeSystem = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -171,6 +172,7 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         _mover.SetRelay(pilot, mech);
         _interaction.SetRelay(pilot, mech, irelay);
+        _eyeSystem.SetZoom(pilot, component.Zoom, ignoreLimits: true);
         rider.Mech = mech;
         Dirty(pilot, rider);
 
@@ -194,6 +196,7 @@ public abstract partial class SharedMechSystem : EntitySystem
         RemComp<InteractionRelayComponent>(pilot);
 
         _actions.RemoveProvidedActions(pilot, mech);
+        _eyeSystem.ResetZoom(pilot);
     }
 
     /// <summary>

@@ -86,8 +86,8 @@
   - type: StaticPrice
     price: 10000
   - type: ClothingSpeedModifier
-    sprintModifier: 0.5
-    walkModifier: 0.5
+    sprintModifier: 0.75
+    walkModifier: 0.75
   - type: HeldSpeedModifier
   - type: SpeedModifiedOnWield
     sprintModifier: 0.25

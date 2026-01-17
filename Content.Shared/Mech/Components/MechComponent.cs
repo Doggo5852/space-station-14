@@ -3,6 +3,7 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using System.Numerics;
 
 namespace Content.Shared.Mech.Components;
 
@@ -121,6 +122,9 @@ public sealed partial class MechComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float BatteryRemovalDelay = 2;
+
+    [DataField("zoom")]
+    public Vector2 Zoom = new(1.8f, 1.8f);
 
     /// <summary>
     /// Whether or not the mech is airtight.
