@@ -143,6 +143,14 @@ public sealed partial class MechComponent : Component
     [DataField]
     public EntProtoId MechCycleAction = "ActionMechCycleEquipment";
     [DataField]
+    public EntProtoId MechSwapToOneAction = "ActionMechSwapToOneEquipment";
+    [DataField]
+    public EntProtoId MechSwapToTwoAction = "ActionMechSwapToTwoEquipment";
+    [DataField]
+    public EntProtoId MechSwapToThreeAction = "ActionMechSwapToThreeEquipment";
+    [DataField]
+    public EntProtoId MechSwapToFourAction = "ActionMechSwapToFourEquipment";
+    [DataField]
     public EntProtoId MechUiAction = "ActionMechOpenUI";
     [DataField]
     public EntProtoId MechEjectAction = "ActionMechEject";
@@ -157,6 +165,10 @@ public sealed partial class MechComponent : Component
     public string? BrokenState;
     #endregion
 
+    [DataField] public EntityUid? MechSwapToOneEquipmentEntity;
+    [DataField] public EntityUid? MechSwapToTwoEquipmentEntity;
+    [DataField] public EntityUid? MechSwapToThreeEquipmentEntity;
+    [DataField] public EntityUid? MechSwapToFourEquipmentEntity;
     [DataField] public EntityUid? MechCycleActionEntity;
     [DataField] public EntityUid? MechUiActionEntity;
     [DataField] public EntityUid? MechEjectActionEntity;

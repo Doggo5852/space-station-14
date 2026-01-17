@@ -53,6 +53,22 @@ public sealed partial class MechToggleEquipmentEvent : InstantActionEvent
 {
 }
 
+public sealed partial class MechSwapToOneEquipmentEvent : InstantActionEvent
+{
+}
+
+public sealed partial class MechSwapToTwoEquipmentEvent : InstantActionEvent
+{
+}
+
+public sealed partial class MechSwapToThreeEquipmentEvent : InstantActionEvent
+{
+}
+
+public sealed partial class MechSwapToFourEquipmentEvent : InstantActionEvent
+{
+}
+
 public sealed partial class MechOpenUiEvent : InstantActionEvent
 {
 }

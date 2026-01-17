@@ -46,6 +46,10 @@ public abstract partial class SharedMechSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<MechComponent, MechToggleEquipmentEvent>(OnToggleEquipmentAction);
+        SubscribeLocalEvent<MechComponent, MechSwapToOneEquipmentEvent>(OnSwapToSlotOne);
+        SubscribeLocalEvent<MechComponent, MechSwapToTwoEquipmentEvent>(OnSwapToSlotTwo);
+        SubscribeLocalEvent<MechComponent, MechSwapToThreeEquipmentEvent>(OnSwapToSlotThree);
+        SubscribeLocalEvent<MechComponent, MechSwapToFourEquipmentEvent>(OnSwapToSlotFour);
         SubscribeLocalEvent<MechComponent, MechEjectPilotEvent>(OnEjectPilotEvent);
         SubscribeLocalEvent<MechComponent, UserActivateInWorldEvent>(RelayInteractionEvent);
         SubscribeLocalEvent<MechComponent, ComponentStartup>(OnStartup);
@@ -68,6 +72,39 @@ public abstract partial class SharedMechSystem : EntitySystem
             return;
         args.Handled = true;
         CycleEquipment(uid);
+    }
+    
+    private void OnSwapToSlotOne(EntityUid uid, MechComponent component, MechSwapToOneEquipmentEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        SelectEquipmentSlot(uid, 0, component);
+    }
+    private void OnSwapToSlotTwo(EntityUid uid, MechComponent component, MechSwapToTwoEquipmentEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        SelectEquipmentSlot(uid, 1, component);
+    }
+    private void OnSwapToSlotThree(EntityUid uid, MechComponent component, MechSwapToThreeEquipmentEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        SelectEquipmentSlot(uid, 2, component);
+    }
+    private void OnSwapToSlotFour(EntityUid uid, MechComponent component, MechSwapToFourEquipmentEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        args.Handled = true;
+        SelectEquipmentSlot(uid, 3, component);
     }
 
     private void OnEjectPilotEvent(EntityUid uid, MechComponent component, MechEjectPilotEvent args)
@@ -143,6 +180,10 @@ public abstract partial class SharedMechSystem : EntitySystem
         _actions.AddAction(pilot, ref component.MechCycleActionEntity, component.MechCycleAction, mech);
         _actions.AddAction(pilot, ref component.MechUiActionEntity, component.MechUiAction, mech);
         _actions.AddAction(pilot, ref component.MechEjectActionEntity, component.MechEjectAction, mech);
+        _actions.AddAction(pilot, ref component.MechSwapToOneEquipmentEntity, component.MechSwapToOneAction, mech);
+        _actions.AddAction(pilot, ref component.MechSwapToTwoEquipmentEntity, component.MechSwapToTwoAction, mech);
+        _actions.AddAction(pilot, ref component.MechSwapToThreeEquipmentEntity, component.MechSwapToThreeAction, mech);
+        _actions.AddAction(pilot, ref component.MechSwapToFourEquipmentEntity, component.MechSwapToFourAction, mech);
     }
 
     private void RemoveUser(EntityUid mech, EntityUid pilot)
@@ -209,6 +250,31 @@ public abstract partial class SharedMechSystem : EntitySystem
 
         Dirty(uid, component);
     }
+    
+    public void SelectEquipmentSlot(EntityUid uid, int slot, MechComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return;
+
+        var allEquipment = component.EquipmentContainer.ContainedEntities;
+
+        if (slot < 0 || slot >= allEquipment.Count)
+            return;
+
+        component.CurrentSelectedEquipment = allEquipment[slot];
+
+        var popupString = Loc.GetString(
+            "mech-equipment-select-popup",
+            ("item", component.CurrentSelectedEquipment)
+        );
+
+        if (_net.IsServer)
+            _popup.PopupEntity(popupString, uid);
+
+        Dirty(uid, component);
+    }
+
+    
 
     /// <summary>
     /// Inserts an equipment item into the mech.
