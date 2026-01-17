@@ -34,9 +34,55 @@
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
-    damage: 30
+    damage: 45
 
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: Bullet25mmShellAPDS
+  name: shell (25x137mm APDS)
+  description: oh shit
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 100
+        Structural: 35
+    penetrationThreshold: 50
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 75
 
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: Bullet25mmShellHEI
+  name: shell (25x137mm HEI)
+  description: oh shit
+  components:
+  - type: ExplodeOnTrigger
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 5
+    penetrationThreshold: 50
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 75
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 5
+    intensitySlope: 5
+    totalIntensity: 25 # 30 damage per tile
+    maxTileBreak: 0
+    deleteAfterExplosion: false
+    repeatable: true
+  - type: TriggerOnCollide
+    fixtureID: projectile
+    maxTriggers: 1
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -54,8 +100,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 1400
-        Structural: 600
+        Piercing: 500
+        Structural: 1200
     penetrationThreshold: 1500
     penetrationDamageTypeRequirement:
     - Structural
@@ -63,7 +109,92 @@
   - type: StaminaDamageOnCollide
     damage: 150
 
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: 120mmShellAPBullet
+  name: shell (120mm APFSDS)
+  description: welp, we tried
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: apfsdsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 600
+        Structural: 1500
+    penetrationThreshold: 1500
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
 
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: 120mmShellAPA1Bullet
+  name: shell (120mm APFSDS)
+  description: welp, we tried
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: apfsdsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 850
+        Structural: 1600
+    penetrationThreshold: 2000
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: 120mmShellHEATFSBullet
+  name: shell (120mm HEAT-FS)
+  description: welp, we tried
+  components:
+  - type: ExplodeOnTrigger
+  - type: TriggerOnCollide
+    fixtureID: projectile
+    maxTriggers: 3
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 6
+    totalIntensity: 150 # 30 damage per tile
+    maxTileBreak: 0
+    deleteAfterExplosion: false
+    repeatable: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: heatfsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 400
+        Structural: 700
+    penetrationThreshold: 1500
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -93,7 +224,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 800
+        Piercing: 500
         Structural: 600
     penetrationThreshold: 1500
     penetrationDamageTypeRequirement:

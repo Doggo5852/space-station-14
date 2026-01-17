@@ -43,7 +43,52 @@
   - type: StaticPrice
     price: 20
 
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge25mmAPDS
+  name: shell (25x137mm APDS)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge25x137mm
+  - type: CartridgeAmmo
+    proto: Bullet25mmShellAPDS
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 1.5, 1.5
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
 
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge25mmHEI
+  name: shell (25x137mm HEI)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge25x137mm
+  - type: CartridgeAmmo
+    proto: Bullet25mmShellHEI
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 1.5, 1.5
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: [ BaseCartridge, BaseMajorContraband ]
@@ -86,6 +131,89 @@
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:
     - state: baseap
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge120mmHEATFS
+  name: shell (M830 HEAT-FS 120mm)
+  description: Used on the M256 cannon. Uses chemical energy to penetrate armor with a devastating blow.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,5,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge120mmShell
+  - type: CartridgeAmmo
+    proto: 120mmShellHEATFSBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseheatfs
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge120mmAP
+  name: shell (M829 APFSDS 120mm)
+  description: Used on the M256 cannon. A powerful AP shell designed to penetrate tanks.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,5,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge120mmShell
+  - type: CartridgeAmmo
+    proto: 120mmShellAPBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseapfsds
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge120mmAPA1
+  name: shell (M829A1 APFSDS 120mm)
+  description: Used on the M256 cannon. A more powerful round, its capable of cutting through thick armor with ease.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,5,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge120mmShell
+  - type: CartridgeAmmo
+    proto: 120mmShellAPA1Bullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseapfsds
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals

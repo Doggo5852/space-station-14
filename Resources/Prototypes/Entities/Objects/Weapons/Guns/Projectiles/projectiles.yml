@@ -836,12 +836,6 @@
     damage:
       types:
         Blunt: 400
-  - type: AmbientSound
-    volume: -8
-    range: 75
-    enabled: true
-    sound:
-      path: /Audio/Weapons/Guns/Misc/missileflyby.ogg
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -859,6 +853,7 @@
         - Impassable
         - BulletImpassable
         - Opaque #smoke now has opaque layer, giving this projectile opaque as mask gives the illusion that the missile auto-destructs when it flies into smoke
+  - type: GuidedMissile
 
 - type: entity
   id: BulletBGM71IRaider
