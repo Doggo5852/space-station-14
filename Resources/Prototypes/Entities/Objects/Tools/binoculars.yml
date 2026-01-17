@@ -27,3 +27,23 @@
       Glass: 50
   - type: StaticPrice
     price: 100
+
+
+- type: entity
+  name: optic
+  parent: Binoculars
+  id: BinocularVehicle
+  description: A powerful optic for long range reconnaissance.
+  components:
+  - type: Clothing
+  - type: Item
+    size: Ginormous
+  - type: UseDelay
+    delay: 5
+  - type: EyeCursorOffset
+    maxOffset: 20
+    pvsIncrease: 1.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.01
+    sprintModifier: 0.01
+  - type: HeldSpeedModifier
