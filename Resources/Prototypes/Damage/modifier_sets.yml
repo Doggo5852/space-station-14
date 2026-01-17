@@ -11,6 +11,32 @@
     Heat: 5
 
 - type: damageModifierSet
+  id: MetallicBradley
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Shock: 1.2
+    Structural: 0.5
+  flatReductions:
+    Blunt: 5
+    Heat: 5
+    Piercing: 11
+
+- type: damageModifierSet
+  id: MetallicAbrams
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Shock: 1.2
+    Structural: 0.5
+  flatReductions:
+    Blunt: 5
+    Heat: 5
+    Piercing: 25
+
+- type: damageModifierSet
   id: StructuralMetallicStrong
   coefficients:
     Blunt: 0.5
