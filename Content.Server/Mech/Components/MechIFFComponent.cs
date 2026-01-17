@@ -11,3 +11,8 @@ public sealed partial class MechRaidersComponent : Component
 public sealed partial class MechColonyComponent : Component
 {
 }
+
+[RegisterComponent]
+public sealed partial class GuidedMissileComponent : Component
+{
+}
