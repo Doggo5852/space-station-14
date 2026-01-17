@@ -13,12 +13,50 @@
   description: Cycles currently selected equipment
   components:
   - type: Action
-    useDelay: 0.5
+    useDelay: 0.0
     icon:
       sprite: Interface/Actions/actions_mecha.rsi
       state: mech_cycle_equip_on
   - type: InstantAction
     event: !type:MechToggleEquipmentEvent
+# allow for switching to a specific weapon directly
+
+- type: entity
+  parent: ActionMechCycleEquipment
+  id: ActionMechSwapToOneEquipment
+  name: Slot 1
+  description: Switch to this weapon Slot
+  components:
+  - type: InstantAction
+    event: !type:MechSwapToOneEquipmentEvent
+
+- type: entity
+  parent: ActionMechCycleEquipment
+  id: ActionMechSwapToTwoEquipment
+  name: Slot 2
+  description: Switch to this weapon Slot
+  components:
+  - type: InstantAction
+    event: !type:MechSwapToTwoEquipmentEvent
+
+- type: entity
+  parent: ActionMechCycleEquipment
+  id: ActionMechSwapToThreeEquipment
+  name: Slot 3
+  description: Switch to this weapon Slot
+  components:
+  - type: InstantAction
+    event: !type:MechSwapToThreeEquipmentEvent
+
+
+- type: entity
+  parent: ActionMechCycleEquipment
+  id: ActionMechSwapToFourEquipment
+  name: Slot 4
+  description: Switch to this weapon Slot
+  components:
+  - type: InstantAction
+    event: !type:MechSwapToFourEquipmentEvent
 
 - type: entity
   parent: BaseMechAction
