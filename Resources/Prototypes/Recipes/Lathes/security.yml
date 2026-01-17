@@ -375,9 +375,9 @@
   result: WeaponLauncherRocket
   materials:
     Steel: 20000
-    Plasteel: 7500
+    Plasteel: 2000
     Glass: 1000
-    Uranium: 750
+    Uranium: 150
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -385,8 +385,8 @@
   result: CartridgeRocket
   materials:
     Steel: 2000
-    Plasteel: 500
-    Plasma: 750
+    Plasteel: 300
+    Plasma: 350
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -394,9 +394,9 @@
   result: WeaponLauncherBGMLauncherColony
   materials:
     Steel: 25000
-    Plasteel: 10000
+    Plasteel: 5000
     Glass: 1500
-    Uranium: 1000
+    Uranium: 200
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -405,7 +405,7 @@
   materials:
     Steel: 2500
     Plasteel: 1000
-    Plasma: 2500
+    Plasma: 800
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -440,8 +440,8 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
-  id: WeaponMechM3A1
-  result: WeaponMechM3A1
+  id: WeaponMechM256
+  result: WeaponMechM256
   materials:
     Steel: 9000
     Plasteel: 3500
@@ -453,3 +453,11 @@
   materials:
     Steel: 2500
     Plasteel: 800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMechM242
+  result: WeaponMechM242
+  materials:
+    Steel: 4500
+    Plasteel: 2500

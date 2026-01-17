@@ -92,11 +92,58 @@
   id: Moe90MMHEATFS
   result: Cartridge90mmHEATFS
   materials:
+    Steel: 80000
+    Plasteel: 200
+    Gold: 300
+    Plasma: 800
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Cartridge120mmAP
+  result: Cartridge120mmAP
+  materials:
+    Steel: 10000
+    Plasteel: 400
+    Gold: 50
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Cartridge120mmAPA1
+  result: Cartridge120mmAPA1
+  materials:
+    Steel: 13000
+    Plasteel: 600
+    Gold: 200
+    
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Cartridge120mmHEATFS
+  result: Cartridge120mmHEATFS
+  materials:
     Steel: 10000
     Plasteel: 400
     Gold: 300
     Plasma: 1200
 
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Cartridge25mmAPDS
+  result: Cartridge25mmAPDS
+  materials:
+    Steel: 3000
+    Plasteel: 50
+    Gold: 20
+    Plasma: 5
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: Cartridge25mmHEI
+  result: Cartridge25mmHEI
+  materials:
+    Steel: 4000
+    Plasteel: 150
+    Gold: 80
+    Plasma: 100
 # Armor
 
 - type: latheRecipe

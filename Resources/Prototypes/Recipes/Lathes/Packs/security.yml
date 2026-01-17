@@ -18,6 +18,11 @@
   - moe armor vest bulletproof (20 slow)
   - Moe90MMAPCR
   - Moe90MMHEATFS
+  - Cartridge120mmHEATFS
+  - Cartridge120mmAP
+  - Cartridge120mmAPA1
+  - Cartridge25mmAPDS
+  - Cartridge25mmHEI
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -166,8 +171,10 @@
   - WeaponMechM60D
   - SmokeScreenCartridge
   - WeaponMechM2HB
-  - WeaponMechM3A1
+  #- WeaponMechM3A1
   - WeaponMechBGMRack
+  - WeaponMechM242
+  - WeaponMechM256
 
 
 - type: latheRecipePack
