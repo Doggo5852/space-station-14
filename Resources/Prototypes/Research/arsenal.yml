@@ -141,7 +141,7 @@
     state: uranium
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - MagazineRifleUranium
   - MagazinePistolUranium
@@ -162,7 +162,7 @@
     state: icon
   discipline: Arsenal
   tier: 1
-  cost: 1500
+  cost: 1000
   recipeUnlocks:
   - Truncheon
   - TelescopicShield
@@ -201,7 +201,7 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 2
-  cost: 1750
+  cost: 1500
   recipeUnlocks:
   - WeaponMechSM6
   - SmokeScreenCartridge
@@ -214,7 +214,7 @@
     state: base
   discipline: Arsenal
   tier: 2
-  cost: 12000
+  cost: 8000
   recipeUnlocks:
   - CartridgeRocket
   - WeaponLauncherRocket 
@@ -229,9 +229,10 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 3
-  cost: 15000
+  cost: 30000
   recipeUnlocks:
-  - WeaponMechM3A1
+  - WeaponMechM256
+  - WeaponMechM242
 
 - type: technology
   id: LauncherGuided
@@ -241,7 +242,7 @@
     state: base
   discipline: Arsenal
   tier: 3
-  cost: 25000
+  cost: 20000
   recipeUnlocks:
   - CartridgeMissileBGM71I
   - WeaponLauncherBGMLauncherColony
