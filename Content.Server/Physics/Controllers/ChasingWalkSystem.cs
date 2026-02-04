@@ -99,12 +99,33 @@ public sealed class ChasingWalkSystem : VirtualController
         var delta = pos2 - pos1;
         var speed = delta.Length() > 0 ? delta.Normalized() * component.Speed : Vector2.Zero;
 
-        _physics.SetLinearVelocity(uid, speed);
+        //_physics.SetLinearVelocity(uid, speed); 
         _physics.SetBodyStatus(uid, physics, BodyStatus.InAir); //If this is not done, from the explosion up close, the tesla will "Fall" to the ground, and almost stop moving.
 
+        //Lead pursuit guidance
+        //TODO: should be as a different component or atleast an option
+        
+        Vector2 targetVelocity = Vector2.Zero;
+
+        if (TryComp<PhysicsComponent>(component.ChasingEntity.Value, out var targetPhysics))
+        {
+            targetVelocity = targetPhysics.LinearVelocity;
+        }
+
+        var distance = delta.Length();
+
+        if (distance <= 0.001f)
+            return;
+
+        var timeToIntercept = distance / component.Speed;
+        var interceptPoint = pos2 + targetVelocity * timeToIntercept;
+        var interceptDir = interceptPoint - _transform.GetWorldPosition(uid);
+
+        var velocityToIntercept = interceptDir.Normalized() * component.Speed;
+        _physics.SetLinearVelocity(uid, velocityToIntercept);
         if (component.RotateWithImpulse)
         {
-            var ang = speed.ToAngle() + Angle.FromDegrees(90); // we want "Up" to be forward, bullet convention.
+            var ang = velocityToIntercept.ToAngle() + Angle.FromDegrees(90); // we want "Up" to be forward, bullet convention.
             _transform.SetWorldRotation(uid, ang + component.RotationAngleOffset);
         }
     }
