@@ -87,6 +87,13 @@ public sealed partial class ChasingWalkComponent : Component
     public bool RotateWithImpulse;
 
     /// <summary>
+    /// Should the object give a pop up
+    /// </summary>
+    
+    [DataField]
+    public bool SmokeTrail;
+
+    /// <summary>
     /// Sprite rotation offset.
     /// </summary>
     [DataField]

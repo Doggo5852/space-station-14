@@ -827,6 +827,7 @@
   - type: ChasingWalk
     minSpeed: 17
     maxSpeed: 17
+    smokeTrail: true
     impulseInterval: 0.1
     chasingComponent:
     - type: MechRaiders

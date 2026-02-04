@@ -6,6 +6,10 @@ using Robust.Shared.Timing;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Controllers;
+using Content.Server.Popups;
+using Robust.Server.Player;
+using Content.Shared.Popups;
+
 
 namespace Content.Server.Physics.Controllers;
 
@@ -19,7 +23,8 @@ public sealed class ChasingWalkSystem : VirtualController
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-
+    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
     private readonly HashSet<Entity<IComponent>> _potentialChaseTargets = new();
 
     public override void Initialize()
@@ -33,6 +38,19 @@ public sealed class ChasingWalkSystem : VirtualController
     {
         component.NextImpulseTime = _gameTiming.CurTime;
         component.NextChangeVectorTime = _gameTiming.CurTime;
+
+        if (component.SmokeTrail)
+        {
+            foreach (var session in _player.Sessions)
+            {
+                if (session.AttachedEntity is not { } playerEnt)
+                    continue;
+
+                var coords = Transform(playerEnt).Coordinates;
+
+                _popup.PopupCoordinates("You see a smoke trail in the air.", coords, session, PopupType.MediumCaution);
+            }
+        }
     }
 
     public override void UpdateBeforeSolve(bool prediction, float frameTime)
