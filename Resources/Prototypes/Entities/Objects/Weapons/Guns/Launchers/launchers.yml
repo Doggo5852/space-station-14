@@ -161,6 +161,13 @@
   id: WeaponLauncherBGMLauncherColony
   description: A reusable launcher designed to launch BGM-71 missiles. Packs a big punch but is incredibly heavy. This one is modified with a custom IFF system that rejects targets saved in its memory.
   components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/bgmrocket.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 0.2
     projectileSpeed: 20

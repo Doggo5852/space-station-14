@@ -41,8 +41,8 @@
   - type: UseDelay
     delay: 5
   - type: EyeCursorOffset
-    maxOffset: 20
-    pvsIncrease: 1.6
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: ClothingSpeedModifier
     walkModifier: 0.01
     sprintModifier: 0.01
