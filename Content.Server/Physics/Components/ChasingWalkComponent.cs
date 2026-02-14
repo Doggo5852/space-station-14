@@ -94,6 +94,40 @@ public sealed partial class ChasingWalkComponent : Component
     public bool SmokeTrail;
 
     /// <summary>
+    /// Can the missile gain altitude in order to not collide with obstacles
+    /// </summary>
+    
+    [DataField]
+    public bool CanLoft;
+
+    /// <summary>
+    /// Delay after which the missile goes up. Changes InAir to true
+    /// </summary>
+
+    [DataField]
+    public float RiseTime = 3f;
+
+    /// <summary>
+    /// When is the missile going up
+    /// </summary>
+
+    [DataField]
+    public TimeSpan LoftTime;
+    
+    /// <summary>
+    /// When should the missile dive down for the target. Changes InAir to false
+    /// </summary>
+
+    [DataField]
+    public float DiveDistance = 20f;
+
+    /// <summary>
+    /// Is the missile currently in air
+    /// </summary>
+
+    [DataField]
+    public bool InAir;
+    /// <summary>
     /// Sprite rotation offset.
     /// </summary>
     [DataField]

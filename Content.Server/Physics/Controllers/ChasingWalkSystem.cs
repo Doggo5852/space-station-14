@@ -9,6 +9,7 @@ using Robust.Shared.Physics.Controllers;
 using Content.Server.Popups;
 using Robust.Server.Player;
 using Content.Shared.Popups;
+using Robust.Shared.Physics.Events;
 
 
 namespace Content.Server.Physics.Controllers;
@@ -23,6 +24,7 @@ public sealed class ChasingWalkSystem : VirtualController
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
+    [Dependency] private readonly FixtureSystem _fixtures = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     private readonly HashSet<Entity<IComponent>> _potentialChaseTargets = new();
@@ -32,12 +34,14 @@ public sealed class ChasingWalkSystem : VirtualController
         base.Initialize();
 
         SubscribeLocalEvent<ChasingWalkComponent, MapInitEvent>(OnChasingMapInit);
+        SubscribeLocalEvent<ChasingWalkComponent, PreventCollideEvent>(OnPreventCollide);
     }
 
     private void OnChasingMapInit(EntityUid uid, ChasingWalkComponent component, MapInitEvent args)
     {
         component.NextImpulseTime = _gameTiming.CurTime;
         component.NextChangeVectorTime = _gameTiming.CurTime;
+        component.LoftTime = _gameTiming.CurTime;
 
         if (component.SmokeTrail)
         {
@@ -48,7 +52,7 @@ public sealed class ChasingWalkSystem : VirtualController
 
                 var coords = Transform(playerEnt).Coordinates;
 
-                _popup.PopupCoordinates("You see a smoke trail in the air.", coords, session, PopupType.MediumCaution);
+                _popup.PopupCoordinates("You see a smoke trail in the air.", coords, session, PopupType.LargeCaution);
             }
         }
     }
@@ -74,8 +78,27 @@ public sealed class ChasingWalkSystem : VirtualController
                 var delay = TimeSpan.FromSeconds(_random.NextFloat(chasing.ChangeVectorMinInterval, chasing.ChangeVectorMaxInterval));
                 chasing.NextChangeVectorTime += delay;
             }
+            // Lofting 
+            if (chasing.LoftTime + TimeSpan.FromSeconds(chasing.RiseTime) <= _gameTiming.CurTime && !chasing.InAir && chasing.CanLoft)
+            {
+                var coords = Transform(uid).Coordinates;
+                _popup.PopupCoordinates("The missile pitches up", coords, PopupType.MediumCaution);
+                chasing.InAir = true;
+            }
         }
     }
+
+    private void OnPreventCollide(EntityUid uid, ChasingWalkComponent component, ref PreventCollideEvent args)
+    {
+        if (args.Cancelled)
+            return;
+        if (component.InAir)
+        {
+            args.Cancelled = true;
+        }
+
+    }
+
 
     private void ChangeTarget(EntityUid uid, ChasingWalkComponent component)
     {
@@ -134,6 +157,14 @@ public sealed class ChasingWalkSystem : VirtualController
 
         if (distance <= 0.001f)
             return;
+
+        if (distance <= component.DiveDistance && component.InAir)
+        {
+            component.InAir = false;
+            component.CanLoft = false;
+            var coords = Transform(uid).Coordinates;
+            _popup.PopupCoordinates("The missile dives rapidly", coords, PopupType.MediumCaution);
+        }
 
         var timeToIntercept = distance / component.Speed;
         var interceptPoint = pos2 + targetVelocity * timeToIntercept;
