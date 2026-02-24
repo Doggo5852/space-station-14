@@ -154,12 +154,13 @@
     pvsIncrease: 0.4
   - type: HeldSpeedModifier
 
+# Replace with a real launcher
 - type: entity
-  name: XBGM-71 Launcher
+  name: BGM-71 Launcher
   parent: WeaponLauncherRocket
   suffix: Colony
   id: WeaponLauncherBGMLauncherColony
-  description: A reusable launcher designed to launch BGM-71 missiles. Packs a big punch but is incredibly heavy. This one is modified with a custom IFF system that rejects targets saved in its memory.
+  description: A reusable launcher designed to launch BGM-71 missiles.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/bgmrocket.rsi
@@ -174,8 +175,9 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - CartridgeBGM71I
-    proto: CartridgeMissileBGM71I
+        - CartridgeBGM71F
+        - CartridgeBGM71D
+    proto: CartridgeMissileBGM71D
   - type: ClothingSpeedModifier
     sprintModifier: 0.88
     walkModifier: 0.88

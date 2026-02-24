@@ -45,29 +45,66 @@
 # Missiles, still parent from rockets though
 
 - type: entity
-  id: CartridgeMissileBGM71I
+  id: CartridgeMissileBGM71F
   suffix: Colony
-  name: BGM-71I
+  name: BGM-71F
   parent: CartridgeRocket
-  description: A BGM-71 missile with an IR seeker in the front. What used to be a wire-guided missile is now a infrared tank removal tool with fire and forget capabilities.
+  description: American made ATGM with the ability to fly over obstacles and strike from above.
   components:
   - type: Tag
     tags:
-      - CartridgeBGM71I
+      - CartridgeBGM71F
   - type: Item
     size: Large
     shape:
     - 0,0,4,1
   - type: CartridgeAmmo
-    proto: BulletBGM71I
+    proto: BulletBGM71F
 
 - type: entity
-  id: CartridgeMissileBGM71IRaider
+  id: CartridgeMissileBGM71D
+  name: BGM-71D
+  parent: CartridgeMissileBGM71F
+  description: American missile designed to destroy tanks from afar.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeBGM71D
+  - type: CartridgeAmmo
+    proto: BulletBGM71D
+
+- type: entity
+  id: CartridgeMissileBGM71FRaider
   suffix: Raider
-  parent: CartridgeMissileBGM71I
+  parent: CartridgeMissileBGM71F
   components:
   - type: CartridgeAmmo
-    proto: BulletBGM71IRaider
+    proto: BulletBGM71FRaider
+
+- type: entity
+  id: CartridgeMissile9K111M
+  name: 9K111M Faktoria
+  description: Medium sized mass produced ATGM.
+  parent: CartridgeMissileBGM71D
+  components:
+  - type: Tag
+    tags:
+      - Cartridge9K111M
+  - type: CartridgeAmmo
+    proto: Bullet9K111M
+
+- type: entity
+  id: CartridgeMissile9K113
+  name: 9K113 Konkurs
+  parent: CartridgeMissile9K111M
+  description: A slightly bigger and slower missile than its predecessor.
+  components:
+  - type: Tag
+    tags:
+      - Cartridge9K113
+  - type: CartridgeAmmo
+    proto: Bullet9K113
+
 
 # Grenades
 

@@ -819,24 +819,27 @@
     energy: 0.5
 #SmokeImpassable
 - type: entity
-  id: BulletBGM71I
+  id: BulletBGM71F
   name: missile
   parent: BulletRocket
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
-    minSpeed: 17
-    maxSpeed: 17
+    minSpeed: 16
+    maxSpeed: 16
+    riseTime: 2
+    canLoft: true
+    diveDistance: 15
     smokeTrail: true
     impulseInterval: 0.1
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 35
+    maxChaseRadius: 60
   - type: Projectile
     damage:
       types:
-        Blunt: 400
+        Blunt: 600
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -855,15 +858,59 @@
         - BulletImpassable
         - Opaque #smoke now has opaque layer, giving this projectile opaque as mask gives the illusion that the missile auto-destructs when it flies into smoke
   - type: GuidedMissile
+  - type: TimedDespawn
+    lifetime: 20
 
 - type: entity
-  id: BulletBGM71IRaider
-  parent: BulletBGM71I
+  id: BulletBGM71FRaider
+  parent: BulletBGM71F
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
     chasingComponent:
     - type: MechColony
+
+- type: entity
+  id: BulletBGM71D
+  parent: BulletBGM71F
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    canLoft: false
+
+- type: entity
+  id: Bullet9K111M
+  parent: BulletBGM71F
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+    minSpeed: 25
+    maxSpeed: 25
+    canLoft: false
+    maxChaseRadius: 40
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 450
+
+- type: entity
+  id: Bullet9K113
+  parent: Bullet9K111M
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+    minSpeed: 21
+    maxSpeed: 21
+    canLoft: false
+    maxChaseRadius: 40
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 600
 
 - type: entity
   id: BulletWeakRocket

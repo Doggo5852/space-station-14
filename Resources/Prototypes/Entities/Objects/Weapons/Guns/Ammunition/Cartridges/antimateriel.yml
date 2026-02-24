@@ -3,6 +3,10 @@
   id: CartridgeAntiMateriel
   name: cartridge (12.7x99mm AP)
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
   - type: Tag
     tags:
     - Cartridge
@@ -26,6 +30,10 @@
   id: CartridgeAntiMaterielFMJ
   name: cartridge (12.7x99mm FMJ)
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
   - type: Tag
     tags:
     - Cartridge
@@ -48,6 +56,10 @@
   id: Cartridge25mmAPDS
   name: shell (25x137mm APDS)
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
   - type: Tag
     tags:
     - Cartridge
@@ -56,7 +68,7 @@
     proto: Bullet25mmShellAPDS
     deleteOnSpawn: true
   - type: Sprite
-    scale: 1.5, 1.5
+    scale: 1.4, 1.3
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:
     - state: base
@@ -72,6 +84,10 @@
   id: Cartridge25mmHEI
   name: shell (25x137mm HEI)
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
   - type: Tag
     tags:
     - Cartridge
@@ -80,7 +96,7 @@
     proto: Bullet25mmShellHEI
     deleteOnSpawn: true
   - type: Sprite
-    scale: 1.5, 1.5
+    scale: 1.4, 1.3
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
     layers:
     - state: base
@@ -137,6 +153,60 @@
   - type: StaticPrice
     price: 20
 
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge30mmAPDS
+  name: shell (30x165mm APDS)
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge30x165mm
+  - type: CartridgeAmmo
+    proto: Bullet30mmShellAPDS
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 1.45, 1.35
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge30mmHEI
+  name: shell (30x165mm HEI)
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge30x165mm
+  - type: CartridgeAmmo
+    proto: Bullet30mmShellHEI
+    deleteOnSpawn: true
+  - type: Sprite
+    scale: 1.45, 1.35
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
 
 
 - type: entity

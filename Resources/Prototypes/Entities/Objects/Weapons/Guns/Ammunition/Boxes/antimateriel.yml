@@ -54,3 +54,64 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMateriel25mmAPDS
+  name: ammunition box (25x137mm APDS)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge25mmAPDS
+    capacity: 150
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMateriel25mmHEI
+  name: ammunition box (25x137mm HEI)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge25mmHEI
+    capacity: 150
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMateriel30mmAPDS
+  name: ammunition box (30x165mm APDS)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge30mmAPDS
+    capacity: 150
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMateriel30mmHEI
+  name: ammunition box (30x165mm HEI)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge30mmHEI
+    capacity: 150
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

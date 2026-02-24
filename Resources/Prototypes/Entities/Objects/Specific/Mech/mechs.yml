@@ -300,30 +300,30 @@
 # Mech tags
 
 - type: entity
-  id: LightVehicle
+  id: Bradley
   abstract: true
   categories: [ HideSpawnMenu ]
   components:
   - type: Mech
     equipmentWhitelist:
       tags:
-      - LightVehicle
+      - M3
 
 - type: entity
-  id: HeavyVehicle
+  id: Abrams
   abstract: true
   categories: [ HideSpawnMenu ]
   components:
   - type: Mech
     equipmentWhitelist:
       tags:
-      - HeavyVehicle
+      - M1
       
 # Mechs
 
 - type: entity
-  id: MechGygax
-  parent: [ BaseMech, LightVehicle, BaseRestrictedContraband ]
+  id: BradleyIFV
+  parent: [ BaseMech, Bradley, BaseRestrictedContraband ]
   name: M3A3 Bradley IFV
   description: The M3A3 is a light infantry fighting vehicle designed to deal with infantry and armored vehicles.
   components:
@@ -349,7 +349,7 @@
     entryDelay: 5
     equipmentWhitelist:
       tags:
-      - LightVehicle
+      - M3
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -361,12 +361,12 @@
   - type: MobState
   - type: MovementAlwaysTouching
   - type: Repairable #Rimstation
-    fuelCost: 100
-    doAfterDelay: 30
+    fuelCost: 20
+    doAfterDelay: 60
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 5 #Rimstation
-    baseAcceleration: 0.5
+    baseAcceleration: 0.4
     baseFriction: 1
   - type: StaticPrice
     price: 3000
@@ -396,7 +396,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 1
-        density: 800
+        density: 2000
         mask:
         - MobMask
         layer:
@@ -406,7 +406,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200
+        damage: 1000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -417,10 +417,10 @@
         acts: ["Destruction"]
 
 - type: entity
-  id: MechGygaxRaider
-  parent: MechGygax
+  id: BradleyIFVRussia
+  parent: BradleyIFV
   name: M3A3 Bradley IFV
-  suffix: Raider
+  suffix: Russia
   components:
   - type: MechRaiders
   - type: NpcFactionMember
@@ -428,10 +428,10 @@
     - Syndicate
 
 - type: entity
-  id: MechGygaxColony
-  parent: MechGygax
+  id: BradleyIFVUS
+  parent: BradleyIFV
   name: M3A3 Bradley IFV
-  suffix: Colony
+  suffix: US
   components:
   - type: MechColony
   - type: NpcFactionMember
@@ -439,8 +439,8 @@
     - NanoTrasen
 
 - type: entity
-  id: MechDurand
-  parent: [ BaseMech, HeavyVehicle, BaseRestrictedContraband ]
+  id: AbramsTank
+  parent: [ BaseMech, Abrams, BaseRestrictedContraband ]
   name: M1A1 Abrams
   description: Well damn.
   components:
@@ -465,11 +465,12 @@
     mechToPilotDamageMultiplier: 0.05 #Rimstation
     airtight: true
     maxIntegrity: 1800
+    zoom: 2.5, 2.5
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
       tags:
-      - HeavyVehicle
+      - M1
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -478,8 +479,8 @@
   - type: MobState
   - type: MovementAlwaysTouching
   - type: Repairable #Rimstation
-    fuelCost: 175
-    doAfterDelay: 45
+    fuelCost: 40
+    doAfterDelay: 120
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4 #Rimstation
@@ -498,7 +499,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 1.5
-        density: 1200
+        density: 2000
         mask:
         - MobMask
         layer:
@@ -507,7 +508,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2300
+        damage: 2000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -534,9 +535,9 @@
   - type: ItemToggle
 
 - type: entity
-  id: MechDurandRaider
-  parent: MechDurand
-  suffix: Raider
+  id: AbramsRussia
+  parent: AbramsTank
+  suffix: Russia
   components:
   - type: MechRaiders
   - type: NpcFactionMember
@@ -544,15 +545,120 @@
     - Syndicate
 
 - type: entity
-  id: MechDurandColony
-  parent: MechDurand
-  suffix: Colony
+  id: AbramsUS
+  parent: AbramsTank
+  suffix: US
   components:
   - type: MechColony
   - type: NpcFactionMember
     factions:
     - NanoTrasen
 
+- type: entity
+  id: BMP2
+  parent: [ BaseMech, Bradley, BaseRestrictedContraband ]
+  name: BMP-2
+  description: Light, fast and an agile IFV. Can fit a single ATGM at the top of the turret.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: false
+    scale: 1.7, 1.8
+    sprite: Objects/Specific/Mech/vehicles.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: bmp2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    baseState: bmp2
+    openState: bmp2
+    brokenState: bmp2
+    mechToPilotDamageMultiplier: 0.20 #Rimstation
+    airtight: true
+    maxIntegrity: 650
+    maxEquipmentAmount: 3
+    entryDelay: 7
+    equipmentWhitelist:
+      tags:
+      - BMP2
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
+  - type: CanMoveInAir
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: MetallicBradley
+  - type: MobState
+  - type: MovementAlwaysTouching
+  - type: Repairable #Rimstation
+    fuelCost: 20
+    doAfterDelay: 60
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 6 #Rimstation
+    baseAcceleration: 0.45
+    baseFriction: 1
+  - type: StaticPrice
+    price: 3000
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Gygax
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    range: 75
+    components:
+    - type: GuidedMissile
+  - type: Beeper
+    isMuted: true
+    minBeepInterval: 0.10
+    maxBeepInterval: 0.70
+    beepSound:
+      path: "/Audio/Items/locator_beep.ogg"
+      params:
+        maxDistance: 5
+        volume: -1
+        pitch: 2.2
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1
+        density: 2000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: ItemToggle
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+
+- type: entity
+  id: BMP2Russia
+  parent: BMP2
+  suffix: Russia
+  components:
+  - type: MechRaiders
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
 # Mech weapons
 
 
@@ -596,8 +702,8 @@
   - type: Appearance
   - type: Tag
     tags:
-    - LightVehicle
-    - HeavyVehicle
+    - M3
+    - M1
   - type: AmmoCounter
   - type: ItemSlots
     slots:
@@ -649,7 +755,7 @@
   - type: Appearance
   - type: Tag
     tags:
-    - HeavyVehicle
+    - M1
   - type: AmmoCounter
   - type: ItemSlots
     slots:
@@ -700,7 +806,7 @@
   - type: Appearance
   - type: Tag
     tags:
-    - HeavyVehicle
+    - M1
   - type: AmmoCounter
   - type: BallisticAmmoProvider
     capacity: 5
@@ -723,7 +829,7 @@
   - type: MechEquipment
     installDuration: 10
   - type: Gun
-    projectileSpeed: 30
+    projectileSpeed: 40
     fireRate: 3
     minAngle: 1
     maxAngle: 2
@@ -735,25 +841,47 @@
   - type: Appearance
   - type: Tag
     tags:
-    - LightVehicle
+    - M3
   - type: AmmoCounter
   - type: BallisticAmmoProvider
-    capacity: 25
+    capacity: 150
     proto: null
     whitelist:
       tags:
       - Cartridge25x137mm
 
 - type: entity
-  id: WeaponMechSM6
-  name: SM-6
+  id: WeaponMech2A42
+  name: 2A42
+  description: "Uses 30x165mm shells. Can be fit on: Light."
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: WeaponMechM242
+  components:
+  - type: Gun
+    projectileSpeed: 35
+    fireRate: 6.5
+    minAngle: 2
+    maxAngle: 5
+  - type: Tag
+    tags:
+    - BMP2
+  - type: BallisticAmmoProvider
+    capacity: 100
+    proto: null
+    whitelist:
+      tags:
+      - Cartridge30x165mm
+
+- type: entity
+  id: WeaponMechM250
+  name: M250
   description: "Deploys smokes. Can be fit on: Light, Heavy"
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_uac2
+    state: smokelauncher
   - type: MechEquipment
     installDuration: 1
   - type: Gun
@@ -769,8 +897,8 @@
   - type: Appearance
   - type: Tag
     tags:
-    - HeavyVehicle
-    - LightVehicle
+    - M1
+    - M3
   - type: AmmoCounter
   - type: BallisticAmmoProvider
     capacity: 3
@@ -780,9 +908,28 @@
       - SmokeScreenCartridge
 
 - type: entity
+  id: WeaponMech902B
+  name: 902B Tucha
+  description: "Deploys smokes. Can be fit on: Light, Heavy"
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: WeaponMechM250
+  components:
+  - type: Tag
+    tags:
+    - BMP2
+    - T72
+  - type: BallisticAmmoProvider
+    capacity: 2
+    proto: null
+    whitelist:
+      tags:
+      - SmokeScreenCartridge
+
+
+- type: entity
   id: WeaponMechBGMRack
-  name: BGM71 Twin Launcher
-  description: "A guided missile launcher, it allows 2 missiles to be stored inside at a time. Can be fit on: Light"
+  name: BGM-71 Twin Launcher
+  description: "Guided missile launcher, it allows 2 BGM-71 ATGMs to be stored inside at a time. Can be fit on: Light"
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -804,11 +951,76 @@
   - type: Appearance
   - type: Tag
     tags:
-    - LightVehicle
+    - M3
   - type: AmmoCounter
   - type: BallisticAmmoProvider
     capacity: 2
     proto: null
     whitelist:
       tags:
-      - CartridgeBGM71I
+      - CartridgeBGM71F
+      - CartridgeBGM71D
+
+
+
+- type: entity
+  id: WeaponMech9P135M
+  name: 9P135M Launcher
+  description: "Guided missile launcher designed to fit a single 9K111M Faktoria missile"
+  parent: WeaponMechBGMRack
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  - type: MechEquipment
+    installDuration: 6
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 0.7
+    minAngle: 1
+    maxAngle: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: Tag
+    tags:
+    - BMP2
+  - type: BallisticAmmoProvider
+    capacity: 1
+    proto: null
+    whitelist:
+      tags:
+      - Cartridge9K111M
+
+- type: entity
+  id: WeaponMech9M113
+  name: 9M113 Launcher
+  description: "Guided missile launcher designed to fit a single 9K113 Konkurs missile"
+  parent: WeaponMech9P135M
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  - type: MechEquipment
+    installDuration: 5
+  - type: Gun
+    projectileSpeed: 22
+    fireRate: 0.7
+    minAngle: 1
+    maxAngle: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: Tag
+    tags:
+    - BMP2
+  - type: BallisticAmmoProvider
+    capacity: 1
+    proto: null
+    whitelist:
+      tags:
+      - Cartridge9K113
