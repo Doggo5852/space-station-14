@@ -34,6 +34,37 @@
 
 ## Recipes
 
+# Vehicles
+
+- type: latheRecipe
+  id: M3BradleyRecipeCash
+  categories:
+  - Vehicle
+  completetime: 15
+  materials:
+    Credit: 9000
+  result: BradleyIFVUS
+
+- type: latheRecipe
+  id: M1AbramsRecipeCash
+  categories:
+  - Vehicle
+  completetime: 15
+  materials:
+    Credit: 22000
+  result: AbramsUS
+
+
+- type: latheRecipe
+  id: BMP2RecipeCash
+  categories:
+  - Vehicle
+  completetime: 15
+  materials:
+    Credit: 7500
+  result: BMP2Russia
+
+
 # Ripley
 - type: latheRecipe
   parent: BaseMechPartRecipe

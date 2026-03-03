@@ -5,14 +5,13 @@
   id: BaseAmmoRecipe
   categories:
   - Ammo
-  completetime: 5
+  completetime: 1
 
 - type: latheRecipe
   abstract: true
   parent: BaseAmmoRecipe
   id: BaseAmmoBoxRecipe
   categories:
-  - Ammo
   - Boxes
 
 - type: latheRecipe
@@ -36,6 +35,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMaterielFMJCash
+  result: MagazineBoxAntiMaterielFMJ
+  materials:
+    Credit: 150
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
   id: MagazineBoxAntiMateriel
   result: MagazineBoxAntiMateriel
   materials:
@@ -43,6 +49,12 @@
     Plasteel: 600
     Silver: 750
 
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMaterielAPCash
+  result: MagazineBoxAntiMateriel
+  materials:
+    Credit: 225
 
 # Mosin ammo
 
@@ -70,11 +82,25 @@
     Steel: 10000
 
 - type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MoeM60MagCash
+  result: MoeM60Mag
+  materials:
+    Credit: 80
+
+- type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MoeM2BrowningMagEmpty
   result: MoeM2BrowningMagEmpty
   materials:
     Steel: 2000
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MoeM2BrowningMagEmptyCash
+  result: MoeM2BrowningMagEmpty
+  materials:
+    Credit: 25
 
 # 90mm shells
 
@@ -107,6 +133,14 @@
     Gold: 50
 
 - type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: Cartridge120mmAPCash
+  result: Cartridge120mmAP
+  completetime: 2
+  materials:
+    Credit: 800
+
+- type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: Cartridge120mmAPA1
   result: Cartridge120mmAPA1
@@ -114,7 +148,15 @@
     Steel: 13000
     Plasteel: 600
     Gold: 200
-    
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: Cartridge120mmAPA1Cash
+  result: Cartridge120mmAPA1
+  completetime: 2
+  materials:
+    Credit: 1250
+
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: Cartridge120mmHEATFS
@@ -124,6 +166,14 @@
     Plasteel: 400
     Gold: 300
     Plasma: 1200
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: Cartridge120mmHEATFSCash
+  result: Cartridge120mmHEATFS
+  completetime: 2
+  materials:
+    Credit: 950
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -137,6 +187,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMateriel25mmAPDSCash
+  result: MagazineBoxAntiMateriel25mmAPDS
+  materials:
+    Credit: 500
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
   id: Cartridge25mmHEI
   result: Cartridge25mmHEI
   materials:
@@ -144,6 +201,13 @@
     Plasteel: 150
     Gold: 80
     Plasma: 100
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: MagazineBoxAntiMateriel25mmHEICash
+  result: MagazineBoxAntiMateriel25mmHEI
+  materials:
+    Credit: 500
 # Armor
 
 - type: latheRecipe
@@ -155,11 +219,30 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
+  id: ArmorVestCash
+  result: moe armor vest (15 slow)
+  categories:
+  - Clothing
+  materials:
+    Credit: 50
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
   id: moe armor vest bulletproof (20 slow)
   result: moe armor vest bulletproof (20 slow)
   materials:
     Steel: 8500
     Plasteel: 700
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: ArmorBulletproofVestCash
+  result: moe armor vest bulletproof (20 slow)
+  categories:
+  - Clothing
+  materials:
+    Credit: 175
+
 # .20 Rifle
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
@@ -174,6 +257,13 @@
   result: MagazineRifle
   materials:
     Steel: 475
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineRifleCash
+  result: MagazineRifle
+  materials:
+    Credit: 15
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -280,6 +370,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
+  id: MagazineLightRifleCash
+  result: MagazineLightRifle
+  materials:
+    Credit: 20
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
   id: MagazineLightRifleIncendiary
   result: MagazineLightRifleIncendiary
   materials:
@@ -345,6 +442,13 @@
   result: MagazinePistol
   materials:
     Steel: 145
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazinePistolCash
+  result: MagazinePistol
+  materials:
+    Credit: 4
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

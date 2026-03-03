@@ -1,0 +1,22 @@
+- type: latheRecipePack
+  id: USEquipmentStatic
+  recipes:
+  - MagazineBoxAntiMaterielFMJCash
+  - MagazineBoxAntiMaterielAPCash
+  - MoeM60MagCash
+  - MoeM2BrowningMagEmptyCash
+  - Cartridge120mmAPCash
+  - Cartridge120mmAPA1Cash
+  - Cartridge120mmHEATFSCash
+  - MagazineBoxAntiMateriel25mmAPDSCash
+  - MagazineBoxAntiMateriel25mmHEICash
+  - ArmorVestCash
+  - ArmorBulletproofVestCash
+  - MagazineRifleCash
+  - MagazinePistolCash
+
+- type: latheRecipePack
+  id: USVehicleStatic
+  recipes:
+  - M3BradleyRecipeCash
+  - M1AbramsRecipeCash

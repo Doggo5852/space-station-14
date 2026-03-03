@@ -419,6 +419,25 @@
     channels: [Security]
 
 - type: entity
+  id: USAcquisitionConsole
+  parent: SecurityTechFab
+  name: Acquisition Console
+  description: Used to obtain various military equipment.
+  components:
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - USEquipmentStatic
+    - USVehicleStatic
+    dynamicPacks:
+    - SalvageSecurityBoards
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - SpaceCash
+
+- type: entity
   id: AmmoTechFab
   parent: BaseLatheLube
   name: ammo techfab
