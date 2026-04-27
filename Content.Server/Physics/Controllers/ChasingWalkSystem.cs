@@ -169,13 +169,34 @@ public sealed class ChasingWalkSystem : VirtualController
         var timeToIntercept = distance / component.Speed;
         var interceptPoint = pos2 + targetVelocity * timeToIntercept;
         var interceptDir = interceptPoint - _transform.GetWorldPosition(uid);
+        var currentAngle = _transform.GetWorldRotation(uid);
+        
 
-        var velocityToIntercept = interceptDir.Normalized() * component.Speed;
+        // First we find out which way do we turn (left is -, right is +)
+
+        var toTarget = interceptDir.Normalized();
+        var forward = (currentAngle + Angle.FromDegrees(90)).ToVec();
+        var cross = forward.X * toTarget.Y - forward.Y * toTarget.X;
+
+        if (cross < 0)
+        {
+            // turn left
+            currentAngle += component.TurnRate * component.ImpulseInterval;
+        }
+        else if (cross > 0)
+        {
+            // turn right
+            currentAngle -= component.TurnRate * component.ImpulseInterval;
+        }
+
+        _transform.SetWorldRotation(uid, currentAngle);
+        currentAngle = _transform.GetWorldRotation(uid) - Angle.FromDegrees(90);
+        var velocityToIntercept = currentAngle.ToVec() * component.Speed; // just breaks
         _physics.SetLinearVelocity(uid, velocityToIntercept);
         if (component.RotateWithImpulse)
         {
             var ang = velocityToIntercept.ToAngle() + Angle.FromDegrees(90); // we want "Up" to be forward, bullet convention.
-            _transform.SetWorldRotation(uid, ang + component.RotationAngleOffset);
+            //_transform.SetWorldRotation(uid, currentAngle + Angle.FromDegrees(90));
         }
     }
 }

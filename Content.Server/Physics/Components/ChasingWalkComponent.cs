@@ -75,6 +75,12 @@ public sealed partial class ChasingWalkComponent : Component
     public float MaxChaseRadius = 25;
 
     /// <summary>
+    /// Degrees per second
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float TurnRate = 1f;
+
+    /// <summary>
     /// The entity uid, chasing by the component owner
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
