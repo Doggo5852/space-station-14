@@ -82,7 +82,7 @@
     Steel: 10000
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
+  parent: BaseAmmoBoxRecipe
   id: MoeM60MagCash
   result: MoeM60Mag
   materials:
@@ -259,7 +259,7 @@
     Steel: 475
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
+  parent: BaseEmptyAmmoRecipe
   id: MagazineRifleCash
   result: MagazineRifle
   materials:
@@ -369,7 +369,7 @@
     Steel: 565
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
+  parent: BaseAmmoBoxRecipe
   id: MagazineLightRifleCash
   result: MagazineLightRifle
   materials:
@@ -444,7 +444,7 @@
     Steel: 145
 
 - type: latheRecipe
-  parent: BaseAmmoRecipe
+  parent: BaseEmptyAmmoRecipe
   id: MagazinePistolCash
   result: MagazinePistol
   materials:

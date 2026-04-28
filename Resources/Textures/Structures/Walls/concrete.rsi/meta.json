@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By Doggo5852",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "concrete"
+    },
+    {
+      "name": "concrete0"
+    },
+    {
+      "name": "concrete1"
+    },
+    {
+      "name": "concrete2"
+    },
+    {
+      "name": "concrete3"
+    },
+    {
+      "name": "concrete4"
+    },
+    {
+      "name": "concrete5"
+    },
+    {
+      "name": "concrete6"
+    },
+    {
+      "name": "concrete7"
+    }
+  ]
+}

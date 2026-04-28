@@ -238,6 +238,33 @@
 
 - type: entity
   parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge125mmHEATFS
+  name: shell (3BK HEAT-FS 125mm)
+  description: Used on the 2A42 cannon. Uses chemical energy to penetrate armor with a devastating blow.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,6,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge125mmShell
+  - type: CartridgeAmmo
+    proto: 125mmShellHEATFSBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseheatfs
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
   id: Cartridge120mmAP
   name: shell (M829 APFSDS 120mm)
   description: Used on the M256 cannon. A powerful AP shell designed to penetrate tanks.
@@ -252,6 +279,33 @@
     - Cartridge120mmShell
   - type: CartridgeAmmo
     proto: 120mmShellAPBullet
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: baseapfsds
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: Cartridge125mmAP
+  name: shell (3BM APFSDS 125mm)
+  description: Used on the 2A42 cannon. A powerful AP shell designed to penetrate tanks.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,6,1
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge125mmShell
+  - type: CartridgeAmmo
+    proto: 125mmShellAPBullet
     deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi

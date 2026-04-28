@@ -203,7 +203,7 @@
   tier: 2
   cost: 1500
   recipeUnlocks:
-  - WeaponMechSM6
+  - WeaponMechM250
   - SmokeScreenCartridge
 
 - type: technology
@@ -244,7 +244,7 @@
   tier: 3
   cost: 20000
   recipeUnlocks:
-  - CartridgeMissileBGM71I
+  - CartridgeMissileBGM71F
   - WeaponLauncherBGMLauncherColony
   - WeaponMechBGMRack
   technologyPrerequisites:

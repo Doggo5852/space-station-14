@@ -210,6 +210,31 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
+  id: 125mmShellAPBullet
+  name: shell (125mm APFSDS)
+  description: welp, we tried
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: apfsdsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 900
+        Structural: 1600
+    penetrationThreshold: 2000
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
   id: 120mmShellHEATFSBullet
   name: shell (120mm HEAT-FS)
   description: welp, we tried
@@ -222,7 +247,7 @@
     explosionType: Default
     maxIntensity: 100
     intensitySlope: 6
-    totalIntensity: 150 # 30 damage per tile
+    totalIntensity: 180 # 30 damage per tile
     maxTileBreak: 0
     deleteAfterExplosion: false
     repeatable: true
@@ -237,6 +262,43 @@
       types:
         Piercing: 400
         Structural: 700
+    penetrationThreshold: 1500
+    penetrationDamageTypeRequirement:
+    - Structural
+    - Piercing
+  - type: StaminaDamageOnCollide
+    damage: 150
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: 125mmShellHEATFSBullet
+  name: shell (125mm HEAT-FS)
+  description: welp, we tried
+  components:
+  - type: ExplodeOnTrigger
+  - type: TriggerOnCollide
+    fixtureID: projectile
+    maxTriggers: 3
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 6
+    totalIntensity: 200
+    maxTileBreak: 0
+    deleteAfterExplosion: false
+    repeatable: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: heatfsshellbullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 450
+        Structural: 750
     penetrationThreshold: 1500
     penetrationDamageTypeRequirement:
     - Structural

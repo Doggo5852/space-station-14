@@ -1020,6 +1020,30 @@
     base: solid
 
 - type: entity
+  parent: BaseStructureWall
+  name: concrete wall
+  id: WallConcrete
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: Sprite
+    sprite: Structures/Walls/concrete.rsi
+    state: concrete
+  - type: Icon
+    sprite: Structures/Walls/concrete.rsi
+    state: concrete
+  - type: Occluder
+
+- type: entity
   parent: WallDiagonalBase
   id: WallSolidDiagonal
   name: solid wall

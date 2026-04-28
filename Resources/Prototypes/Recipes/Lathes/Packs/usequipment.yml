@@ -14,6 +14,22 @@
   - ArmorBulletproofVestCash
   - MagazineRifleCash
   - MagazinePistolCash
+  - WeaponLecterCash
+  - WeaponM16A2ScopedCash
+  - WeaponPistolMk58Cash
+  - WeaponLauncherBGMLauncherColonyCash
+  - WeaponMechM250Cash
+  - CartridgeMissileBGM71FCash
+  - CartridgeMissileBGM71DCash
+  - WeaponMechM60DCash
+  - WeaponMechM256Cash
+  - WeaponMechM242Cash
+  - SmokeScreenCartridgeCash
+  - WeaponMechBGMRackCash
+  - WeaponTurretMoeM2HBColonyCash
+  - WeaponMechM2HBCash
+  - BinocularVehicleCash
+  - BinocularsCash
 
 - type: latheRecipePack
   id: USVehicleStatic

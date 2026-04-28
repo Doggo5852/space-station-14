@@ -22,6 +22,19 @@
   - type: StaticPrice
     price: 20
 
+- type: entity #realistically this isn't even supposed to be found, its a disposable launcher
+  id: CartridgeLAW72A3
+  parent: CartridgeRocket
+  name: LAW72A3 rocket
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLAW72A3
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - M72A3LAW
+
+
 - type: entity
   id: CartridgeRocketSlow
   name: PG-7VL grenade "Snail-Rocket"

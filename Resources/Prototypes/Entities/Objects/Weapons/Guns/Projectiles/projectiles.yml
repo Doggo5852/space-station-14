@@ -817,6 +817,29 @@
     radius: 3.5
     color: orange
     energy: 0.5
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 75 # speed, i need this
+
+- type: entity
+  id: BulletLAW72A3
+  name: missile
+  parent: BulletRocket
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 12
+    intensitySlope: 6
+    totalIntensity: 175
+    maxTileBreak: 1
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 125
+
+
 #SmokeImpassable
 - type: entity
   id: BulletBGM71F
@@ -827,7 +850,8 @@
   - type: ChasingWalk
     minSpeed: 16
     maxSpeed: 16
-    riseTime: 2
+    riseTime: 1.25
+    turnRate: 0.8
     canLoft: true
     diveDistance: 15
     smokeTrail: true
@@ -835,7 +859,7 @@
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 60
+    maxChaseRadius: 70
   - type: Projectile
     damage:
       types:
@@ -877,6 +901,7 @@
   components:
   - type: ChasingWalk
     canLoft: false
+    turnRate: 0.6
 
 - type: entity
   id: Bullet9K111M
@@ -889,6 +914,7 @@
     minSpeed: 25
     maxSpeed: 25
     canLoft: false
+    turnRate: 1
     maxChaseRadius: 40
   - type: Projectile
     damage:
@@ -906,6 +932,7 @@
     minSpeed: 21
     maxSpeed: 21
     canLoft: false
+    turnRate: 0.9
     maxChaseRadius: 40
   - type: Projectile
     damage:

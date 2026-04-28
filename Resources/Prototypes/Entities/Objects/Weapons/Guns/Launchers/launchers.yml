@@ -107,10 +107,10 @@
   name: RPG-7
   parent: [ BaseWeaponLauncher, BaseMajorContraband ]
   id: WeaponLauncherRocket
-  description: A modified ancient rocket-propelled grenade launcher.
+  description: Soviet era rocket launcher, widely known as THE RPG though it still has plenty of flaws, primarily the poor accuracy.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+    sprite: Objects/Weapons/Guns/Launchers/rpg7.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -122,8 +122,8 @@
     - Back
     - suitStorage
   - type: Gun
-    fireRate: 0.2
-    projectileSpeed: 15
+    fireRate: 0.5
+    projectileSpeed: 30
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
       maxDistance: 50
@@ -143,16 +143,47 @@
   - type: GunRequiresWield
   - type: Wieldable
   - type: ClothingSpeedModifier
-    sprintModifier: 0.9
-    walkModifier: 0.9
+    sprintModifier: 0.95
+    walkModifier: 0.95
   - type: SpeedModifiedOnWield
-    sprintModifier: 0.3
-    walkModifier: 0.3
+    sprintModifier: 0.5
+    walkModifier: 0.5
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 4
-    pvsIncrease: 0.4
+    maxOffset: 10
+    pvsIncrease: 0.5
   - type: HeldSpeedModifier
+
+- type: entity
+  id: M72A3LAW
+  parent: WeaponLauncherRocket
+  name: M72A3 LAW
+  description: Very light single use launcher. It fits a 66mm rocket. When collapsed, it's small enough to be thrown into a bag. Throw away after use.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/m72law.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.99
+    walkModifier: 0.99
+  - type: EyeCursorOffset
+    maxOffset: 8
+    pvsIncrease: 0.5
+  - type: Gun
+    projectileSpeed: 25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - M72A3LAW
+    proto: CartridgeLAW72A3
+    capacity: 1
+    cycleable: false
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,1
 
 # Replace with a real launcher
 - type: entity
@@ -179,10 +210,10 @@
         - CartridgeBGM71D
     proto: CartridgeMissileBGM71D
   - type: ClothingSpeedModifier
-    sprintModifier: 0.88
-    walkModifier: 0.88
+    sprintModifier: 0.94
+    walkModifier: 0.94
   - type: EyeCursorOffset
-    maxOffset: 30
+    maxOffset: 40
     pvsIncrease: 2.2
 
 - type: entity
@@ -191,7 +222,7 @@
   suffix: Raider
   components:
   - type: BallisticAmmoProvider
-    proto: BulletBGM71IRaider
+    proto: CartridgeMissileBGM71FRaider
 
 - type: entity
   name: multiple rocket launcher

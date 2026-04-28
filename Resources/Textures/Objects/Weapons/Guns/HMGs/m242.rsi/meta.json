@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Assets taken from /tg/station 13 at https://github.com/tgstation/tgstation/commit/a39e3f3f1f351e3be5ae955c4de3a2e8889e191b. inhand-left, inhand-right by K-Dynamic (github).",
+    "copyright": "By Doggo5852",
     "size": {
         "x": 64,
         "y": 64
@@ -9,6 +9,9 @@
     "states": [
         {
             "name": "m242"
+        },
+        {
+            "name": "2A42"
         }
     ]
 }

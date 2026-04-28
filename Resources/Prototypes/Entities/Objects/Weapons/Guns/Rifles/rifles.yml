@@ -63,10 +63,10 @@
   - type: HeldSpeedModifier
 
 - type: entity
-  name: AKMS
+  name: AK-47
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleAk
-  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 7.62x39mm rifle magazines.
+  description: Old but reliable. Feeds from 7.62x39mm rifle magazines.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
@@ -79,6 +79,8 @@
     size: Ginormous
   - type: Gun
     projectileSpeed: 28
+    minAngle: 22
+    maxAngle: 34
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider

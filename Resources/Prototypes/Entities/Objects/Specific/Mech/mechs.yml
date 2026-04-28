@@ -345,6 +345,7 @@
     mechToPilotDamageMultiplier: 0.15 #Rimstation
     airtight: true
     maxIntegrity: 800
+    zoom: 3, 3
     maxEquipmentAmount: 3
     entryDelay: 5
     equipmentWhitelist:
@@ -465,7 +466,7 @@
     mechToPilotDamageMultiplier: 0.05 #Rimstation
     airtight: true
     maxIntegrity: 1800
-    zoom: 2.5, 2.5
+    zoom: 3, 3
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -508,7 +509,103 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 3000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    range: 75
+    components:
+    - type: GuidedMissile
+  - type: Beeper
+    isMuted: true
+    minBeepInterval: 0.10
+    maxBeepInterval: 0.70
+    beepSound:
+      path: "/Audio/Items/locator_beep.ogg"
+      params:
+        maxDistance: 5
+        volume: -1
+        pitch: 2.2
+  - type: ItemToggle
+
+- type: entity
+  id: T72Tank
+  parent: [ BaseMech, Abrams, BaseRestrictedContraband ]
+  name: T72
+  description: 
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: false
+    scale: 1.7, 1.7
+    sprite: Objects/Specific/Mech/vehiclesbig.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: t72
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: MetallicAbrams
+  - type: Mech
+    baseState: t72
+    openState: t72
+    brokenState: t72
+    mechToPilotDamageMultiplier: 0.08 #Rimstation
+    airtight: true
+    maxIntegrity: 2000
+    zoom: 3, 3
+    maxEquipmentAmount: 4
+    entryDelay: 10
+    equipmentWhitelist:
+      tags:
+      - T72
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
+  - type: CanMoveInAir
+  - type: MobState
+  - type: MovementAlwaysTouching
+  - type: Repairable #Rimstation
+    fuelCost: 40
+    doAfterDelay: 120
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.4 #Rimstation
+    baseAcceleration: 0.35
+    baseFriction: 1
+  - type: StaticPrice
+    price: 3000
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Gygax
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        density: 2000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -555,10 +652,20 @@
     - NanoTrasen
 
 - type: entity
+  id: T72Russia
+  parent: T72Tank
+  suffix: Russia
+  components:
+  - type: MechRaiders
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+- type: entity
   id: BMP2
   parent: [ BaseMech, Bradley, BaseRestrictedContraband ]
   name: BMP-2
-  description: Light, fast and an agile IFV. Can fit a single ATGM at the top of the turret.
+  description: Light, fast and agile IFV. Can fit a single ATGM at the top of the turret.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -784,7 +891,7 @@
 - type: entity
   id: WeaponMechM256
   name: M256
-  description: "Uses 120mm shells. The ammo rack allows for 5 rounds in total to be stowed. Can be fit on: Heavy."
+  description: "Uses 120mm shells. The ammo rack allows for 10 rounds in total to be stowed. Can be fit on: Heavy."
   suffix: Mech Weapon, Gun, Combat, Rifle
   parent: BaseMechWeaponRange
   components:
@@ -792,10 +899,10 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_uac2
   - type: MechEquipment
-    installDuration: 25
+    installDuration: 20
   - type: Gun
     projectileSpeed: 60
-    fireRate: 0.06
+    fireRate: 0.1
     minAngle: 1
     maxAngle: 2
     selectedMode: SemiAuto
@@ -809,7 +916,7 @@
     - M1
   - type: AmmoCounter
   - type: BallisticAmmoProvider
-    capacity: 5
+    capacity: 10
     proto: null
     whitelist:
       tags:
@@ -830,7 +937,7 @@
     installDuration: 10
   - type: Gun
     projectileSpeed: 40
-    fireRate: 3
+    fireRate: 3.3
     minAngle: 1
     maxAngle: 2
     selectedMode: FullAuto
@@ -850,18 +957,57 @@
       tags:
       - Cartridge25x137mm
 
+
 - type: entity
   id: WeaponMech2A42
   name: 2A42
+  description: "Uses 125mm shells. The ammo rack allows for 8 rounds in total to be stowed. Can be fit on: Heavy."
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: WeaponMechM256
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_uac2
+  - type: MechEquipment
+    installDuration: 25
+  - type: Gun
+    projectileSpeed: 65
+    fireRate: 0.13
+    minAngle: 3
+    maxAngle: 5
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/m2hb.ogg
+  - type: Appearance
+  - type: Tag
+    tags:
+    - T72
+  - type: AmmoCounter
+  - type: BallisticAmmoProvider
+    capacity: 8
+    proto: null
+    whitelist:
+      tags:
+      - Cartridge125mmShell
+
+- type: entity
+  id: WeaponMech2A46M
+  name: 2A46M
   description: "Uses 30x165mm shells. Can be fit on: Light."
   suffix: Mech Weapon, Gun, Combat, Rifle
-  parent: WeaponMechM242
+  parent: WeaponMechM256
   components:
   - type: Gun
     projectileSpeed: 35
     fireRate: 6.5
     minAngle: 2
     maxAngle: 5
+  - type: Sprite
+    scale: 1.2, 1.2
+    sprite: Objects/Weapons/Guns/HMGs/m242.rsi
+    state: 2A42
   - type: Tag
     tags:
     - BMP2
