@@ -23,6 +23,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
+using Content.Shared.Mech.Components;
 
 namespace Content.Shared.Movement.Systems;
 
@@ -55,6 +56,7 @@ public abstract partial class SharedMoverController : VirtualController
     protected EntityQuery<MovementRelayTargetComponent> RelayTargetQuery;
     protected EntityQuery<MovementSpeedModifierComponent> ModifierQuery;
     protected EntityQuery<NoRotateOnMoveComponent> NoRotateQuery;
+    protected EntityQuery<MechComponent> MechQuery;
     protected EntityQuery<PhysicsComponent> PhysicsQuery;
     protected EntityQuery<RelayInputMoverComponent> RelayQuery;
     protected EntityQuery<PullableComponent> PullableQuery;
@@ -88,6 +90,7 @@ public abstract partial class SharedMoverController : VirtualController
         PullableQuery = GetEntityQuery<PullableComponent>();
         XformQuery = GetEntityQuery<TransformComponent>();
         NoRotateQuery = GetEntityQuery<NoRotateOnMoveComponent>();
+        MechQuery = GetEntityQuery<MechComponent>();
         CanMoveInAirQuery = GetEntityQuery<CanMoveInAirComponent>();
         FootstepModifierQuery = GetEntityQuery<FootstepModifierComponent>();
         MapGridQuery = GetEntityQuery<MapGridComponent>();
@@ -326,6 +329,13 @@ public abstract partial class SharedMoverController : VirtualController
                 var worldRot = _transform.GetWorldRotation(xform);
 
                 _transform.SetLocalRotation(uid, xform.LocalRotation + wishDir.ToWorldAngle() - worldRot, xform);
+
+                // For vehicles
+                if (MechQuery.HasComponent(uid))
+                {
+                    var direction = physicsComponent.LinearVelocity.ToAngle();
+                    _transform.SetWorldRotation(uid, direction + Angle.FromDegrees(90));
+                }
             }
 
             if (!weightless && MobMoverQuery.TryGetComponent(uid, out var mobMover) &&

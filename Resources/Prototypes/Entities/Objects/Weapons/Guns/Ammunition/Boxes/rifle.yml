@@ -4,7 +4,7 @@
   id: BaseMagazineBoxRifle
   components:
   - type: BallisticAmmoProvider
-    fillDelay: 0.2
+    fillDelay: 0.1
     mayTransfer: true
     whitelist:
       tags:

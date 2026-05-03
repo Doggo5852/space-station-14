@@ -18,9 +18,9 @@
     factions:
     - Syndicate
   - type: Gun
-    fireRate: 4
-    minAngle: 7
-    maxAngle: 11
+    fireRate: 6
+    minAngle: 6
+    maxAngle: 9
 
 - type: entity
   parent: [BaseWeaponTurretMoeStaticMG, BaseSyndicateContraband]
@@ -35,8 +35,8 @@
   - type: Gun
     fireRate: 7.5
     shotsPerBurst: 10
-    burstCooldown: 3
-    minAngle: 5
+    burstCooldown: 3.5
+    minAngle: 3
     maxAngle: 8
     selectedMode: FullAuto
     availableModes:

@@ -59,6 +59,33 @@
   - type: Appearance
 
 - type: entity
+  id: MagazineLightRifleBoxM249
+  name: "M249 magazine box (5.56x45mm)"
+  parent: BaseMagazineLightRifle
+  description: Box containing a 200-round belt.
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifleBoxM249
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    capacity: 200
+    whitelist:
+      tags:
+        - CartridgeRifle
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
   id: MoeL6Mag
   name: "extended L6 SAW magazine box (7.62x39mm)"
   parent: MagazineLightRifleBox
@@ -79,8 +106,11 @@
   description: "A big and heavy magazine box for the M60D. If bullet doesn't work, use more bullet."
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: CartridgeLightRifleNATO
     capacity: 500
+    whitelist:
+      tags:
+        - Cartridge762NATO
   - type: Item
     size: Huge
     shape:

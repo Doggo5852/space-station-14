@@ -34,6 +34,8 @@
   - type: Examiner
   - type: Eye
   - type: ContentEye
+    maxZoom: 1.5, 1.5
+    targetZoom: 1.5, 1.5
   - type: CameraRecoil
   - type: MindContainer
   - type: RequireProjectileTarget

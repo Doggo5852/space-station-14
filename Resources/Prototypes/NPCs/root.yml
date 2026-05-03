@@ -101,6 +101,41 @@
           targetKey: TargetCoordinates
           rangeKey: FollowCloseRange
           removeKeyOnFinish: false
+
+- type: htnCompound
+  id: LeaderFollowCompoundBlue #Just different leaders
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyNPCLeaderBlue
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+
+- type: htnCompound
+  id: SimpleHumanoidHostileCompoundBlue
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: LeaderFollowCompoundBlue
+    - tasks:
+        - !type:HTNCompoundTask
+          task: RangedCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
     
 - type: htnCompound
   id: SimpleHumanoidHostileCompound

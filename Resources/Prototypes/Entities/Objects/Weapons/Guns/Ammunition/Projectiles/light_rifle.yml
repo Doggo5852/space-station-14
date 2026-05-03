@@ -7,7 +7,20 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 18
+        Blunt: 1
+
+- type: entity
+  id: BulletLightRifleNATO
+  name: bullet (7.62x51mm)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 22
+        Blunt: 2
         
 
 - type: entity
@@ -19,7 +32,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 29
+        Piercing: 25
+        Blunt: 3
 
 - type: entity
   categories: [ HideSpawnMenu ]

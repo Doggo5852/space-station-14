@@ -214,6 +214,17 @@
         preset: TargetDistance
 
 - type: utilityQuery
+  id: NearbyNPCLeaderBlue
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: NPCLeaderBlue
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+
+- type: utilityQuery
   id: NearbyGunTargets
   query:
     - !type:NearbyHostilesQuery

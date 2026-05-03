@@ -12,7 +12,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
+          bounds: "-0.25,-0.25,0.25,0.25"
         density: 250
         mask:
         - MachineMask
@@ -119,11 +119,11 @@
   - type: HTN
     blackboard:
       VisionRadius: !type:Single
-        25
+        35
       AggroVisionRadius: !type:Single
-        25
+        35
       RangedRange: !type:Single
-        25
+        35
 
 - type: entity
   parent: BaseWeaponTurret

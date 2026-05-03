@@ -22,10 +22,10 @@
     minAngle: -20
     maxAngle: -34
   - type: Gun
-    minAngle: 22
-    maxAngle: 40
-    angleIncrease: 2
-    angleDecay: 20
+    minAngle: 20.6
+    maxAngle: 42
+    angleIncrease: 0.17
+    angleDecay: 1
     fireRate: 15
     selectedMode: FullAuto
     availableModes:
@@ -92,6 +92,7 @@
   - type: SpeedModifiedOnWield
     sprintModifier: 0.25
     walkModifier: 0.25
+  
 
 
 - type: entity
@@ -102,8 +103,51 @@
   components:
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 10
+    maxOffset: 12
     pvsIncrease: 0.9
+
+- type: entity
+  name: M249
+  id: WeaponM249
+  parent: WeaponLightMachineGunL6
+  description:
+  components:
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.9
+  - type: Gun
+    minAngle: 20.8
+    maxAngle: 38
+    projectileSpeed: 33
+    angleIncrease: 0.2
+    angleDecay: 2
+    fireRate: 8
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.88
+    walkModifier: 0.88
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.4
+    walkModifier: 0.4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleBoxM249
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBoxM249
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
 
 - type: entity
   name: L6C ROW

@@ -30,9 +30,58 @@
         task: SimpleHumanoidHostileCompound
       blackboard:
         VisionRadius: !type:Single
-          15
+          17
         AggroVisionRadius: !type:Single
+          25
+        MinimumIdleTime: !type:Single
           15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        NavClimb: !type:Bool
+          true
+
+- type: entity
+  name: salvager
+  parent: BaseMobHuman
+  id: MobSalvagerColony
+  suffix: Colony
+  components:
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: Loadout
+      prototypes:
+        - SalvageSpecialistGear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompoundBlue
+      blackboard:
+        VisionRadius: !type:Single
+          17
+        AggroVisionRadius: !type:Single
+          25
+        MinimumIdleTime: !type:Single
+          15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        NavClimb: !type:Bool
+          true
+
+- type: entity
+  name: salvager
+  parent: MobSalvagerColony
+  id: MobSalvagerSMGColony
+  suffix: SMGColony
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerSMG
 
 - type: entity
   name: salvager

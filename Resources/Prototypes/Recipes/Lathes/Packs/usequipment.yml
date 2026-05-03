@@ -30,6 +30,11 @@
   - WeaponMechM2HBCash
   - BinocularVehicleCash
   - BinocularsCash
+  - M72A3LAWCash
+  - GrenadeShrapnelCash
+  - MagazineBoxLightRifleNATOCash
+  - MagazineLightRifleBoxM249Cash
+  - WeaponM249Cash
 
 - type: latheRecipePack
   id: USVehicleStatic

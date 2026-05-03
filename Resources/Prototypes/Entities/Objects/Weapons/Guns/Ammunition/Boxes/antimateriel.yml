@@ -11,7 +11,7 @@
       tags:
         - CartridgeAntiMateriel
     proto: CartridgeAntiMateriel
-    capacity: 20
+    capacity: 25
   - type: Item
     size: Small
   - type: ContainerContainer

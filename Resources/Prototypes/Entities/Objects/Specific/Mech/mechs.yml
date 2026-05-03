@@ -51,7 +51,6 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
-  - type: Pullable
   - type: Physics
     bodyType: KinematicController
   - type: GravityAffected
@@ -466,7 +465,7 @@
     mechToPilotDamageMultiplier: 0.05 #Rimstation
     airtight: true
     maxIntegrity: 1800
-    zoom: 3, 3
+    zoom: 4, 4
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -562,7 +561,7 @@
     mechToPilotDamageMultiplier: 0.08 #Rimstation
     airtight: true
     maxIntegrity: 2000
-    zoom: 3, 3
+    zoom: 4, 4
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -686,6 +685,7 @@
     airtight: true
     maxIntegrity: 650
     maxEquipmentAmount: 3
+    zoom: 3, 3
     entryDelay: 7
     equipmentWhitelist:
       tags:
@@ -811,6 +811,8 @@
     tags:
     - M3
     - M1
+    - BMP2 #temporary
+    - T72 #temporary
   - type: AmmoCounter
   - type: ItemSlots
     slots:
@@ -830,7 +832,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - Cartridge762NATO
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -899,7 +901,7 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_uac2
   - type: MechEquipment
-    installDuration: 20
+    installDuration: 17
   - type: Gun
     projectileSpeed: 60
     fireRate: 0.1
@@ -1083,7 +1085,7 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_uac2
   - type: MechEquipment
-    installDuration: 7
+    installDuration: 5
   - type: Gun
     projectileSpeed: 20
     fireRate: 0.7

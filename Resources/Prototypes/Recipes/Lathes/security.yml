@@ -46,7 +46,7 @@
   abstract: true
   parent: BaseWeaponRecipe
   id: BaseWeaponRecipeSidearm
-  completetime: 12
+  completetime: 8
 
 ## Recipes
 
@@ -359,6 +359,13 @@
     Credit: 900
 
 - type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: WeaponM249Cash
+  result: WeaponM249
+  materials:
+    Credit: 2500
+
+- type: latheRecipe
   parent: BaseWeaponRecipeSidearm
   id: MoeWeaponLMGL6
   result: MoeWeaponLMGL6
@@ -426,6 +433,20 @@
   result: WeaponLauncherBGMLauncherColony
   materials:
     Credit: 2750
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: M72A3LAWCash
+  result: M72A3LAW
+  materials:
+    Credit: 680
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: GrenadeShrapnelCash
+  result: GrenadeShrapnel
+  materials:
+    Credit: 200
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

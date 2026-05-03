@@ -31,7 +31,7 @@
     thresholds:
     - trigger: # Excess damage, don't spawn entities
         !type:DamageTrigger
-        damage: 200
+        damage: 600
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -40,7 +40,7 @@
         acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 125
+        damage: 325
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -89,7 +89,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Climbable
-    delay: 2.5
+    delay: 1
   - type: RequireProjectileTarget
 
 #High
@@ -109,7 +109,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.10,-0.5,0.10,0.5"
+          bounds: "-0.20,-0.5,0.20,0.5" #"-0.10,-0.5,0.10,0.5"
         density: 1000
         mask:
         - FullTileMask
@@ -205,7 +205,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.10,-0.5,0.10,0.5"
+          bounds: "-0.20,-0.5,0.20,0.5"
         density: 1000
         mask:
         - TableMask
@@ -292,7 +292,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.10,-0.5,0.10,0.5"
+          bounds: "-0.20,-0.5,0.20,0.5"
         density: 1000
         mask:
         - FullTileMask

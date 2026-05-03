@@ -43,6 +43,19 @@
     - CartridgeMosin
 
 - type: entity
+  id: CartridgeLightRifleNATO
+  name: cartridge (7.62x51mm)
+  parent: CartridgeLightRifle
+  description: NATO variant of the 7.62mm.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleNATO
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge762NATO
+
+- type: entity
   id: CartridgeLightRiflePractice
   name: cartridge (7.62x39mm practice)
   parent: BaseCartridgeLightRifle

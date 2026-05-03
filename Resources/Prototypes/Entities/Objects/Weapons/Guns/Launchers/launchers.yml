@@ -111,13 +111,14 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rpg7.rsi
+    scale: 1.2, 1.2
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+    sprite: Objects/Weapons/Guns/Launchers/rpg7.rsi
     slots:
     - Back
     - suitStorage
@@ -162,6 +163,7 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/m72law.rsi
+    scale: 1.2, 1.2
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -195,6 +197,7 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/bgmrocket.rsi
+    scale: 1.0, 1.0
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
