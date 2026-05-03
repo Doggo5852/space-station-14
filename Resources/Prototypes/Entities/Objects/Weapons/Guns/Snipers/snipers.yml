@@ -98,6 +98,10 @@
     whitelist:
       tags:
       - CartridgeMosin
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 6
+    pvsIncrease: 0.6
 
 - type: entity
   name: Hristov
@@ -133,13 +137,13 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 20
+    maxOffset: 28
     pvsIncrease: 1
   - type: StaticPrice
     price: 3500
   - type: ClothingSpeedModifier
-    sprintModifier: 0.8
-    walkModifier: 0.8
+    sprintModifier: 0.87
+    walkModifier: 0.87
   - type: HeldSpeedModifier
 
 - type: entity

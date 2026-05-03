@@ -47,7 +47,7 @@
     proto: CartridgeLightRifle
     capacity: 100
   - type: Item
-    size: Small
+    size: Normal
     shape:
     - 0,0,1,1
   - type: Sprite
@@ -74,9 +74,9 @@
       tags:
         - CartridgeRifle
   - type: Item
-    size: Small
+    size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
   - type: MagazineVisuals
@@ -95,7 +95,7 @@
     proto: CartridgeLightRifle
     capacity: 150
   - type: Item
-    size: Huge
+    size: Normal
     shape:
     - 0,0,2,1
 

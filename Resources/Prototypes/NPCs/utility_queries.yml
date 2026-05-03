@@ -229,10 +229,10 @@
   query:
     - !type:NearbyHostilesQuery
   considerations:
-    - !type:TargetIsAliveCon
-      curve: !type:BoolCurve
-    - !type:TargetIsCritCon
+    - !type:TargetIsDeadCon
       curve: !type:InverseBoolCurve
+    #- !type:TargetIsCritCon
+    #  curve: !type:BoolCurve
     #- !type:TargetIsStunnedCon
     #  curve: !type:InverseBoolCurve
     # mf, i don't give a single shit that you are on the ground. DIE

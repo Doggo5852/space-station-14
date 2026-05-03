@@ -5,6 +5,7 @@
   components:
   - type: MobMover
   - type: Mech
+  - type: NoRotateOnInteract
   - type: AirFilter
     # everything except oxygen and nitrogen
     gases:
@@ -344,7 +345,7 @@
     mechToPilotDamageMultiplier: 0.15 #Rimstation
     airtight: true
     maxIntegrity: 800
-    zoom: 3, 3
+    zoom: 4, 4
     maxEquipmentAmount: 3
     entryDelay: 5
     equipmentWhitelist:
@@ -360,14 +361,15 @@
     damageModifierSet: MetallicBradley
   - type: MobState
   - type: MovementAlwaysTouching
-  - type: Repairable #Rimstation
+  - type: Repairable
     fuelCost: 20
     doAfterDelay: 60
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
-    baseSprintSpeed: 5 #Rimstation
+    baseSprintSpeed: 6
     baseAcceleration: 0.4
     baseFriction: 1
+    frictionNoInput: 1
   - type: StaticPrice
     price: 3000
   - type: Tag
@@ -465,7 +467,7 @@
     mechToPilotDamageMultiplier: 0.05 #Rimstation
     airtight: true
     maxIntegrity: 1800
-    zoom: 4, 4
+    zoom: 4.5, 4.5
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -486,6 +488,7 @@
     baseSprintSpeed: 4 #Rimstation
     baseAcceleration: 0.35
     baseFriction: 1
+    frictionNoInput: 1
   - type: StaticPrice
     price: 3000
   - type: Tag
@@ -561,7 +564,7 @@
     mechToPilotDamageMultiplier: 0.08 #Rimstation
     airtight: true
     maxIntegrity: 2000
-    zoom: 4, 4
+    zoom: 4.5, 4.5
     maxEquipmentAmount: 4
     entryDelay: 10
     equipmentWhitelist:
@@ -582,6 +585,7 @@
     baseSprintSpeed: 3.4 #Rimstation
     baseAcceleration: 0.35
     baseFriction: 1
+    frictionNoInput: 1
   - type: StaticPrice
     price: 3000
   - type: Tag
@@ -685,7 +689,7 @@
     airtight: true
     maxIntegrity: 650
     maxEquipmentAmount: 3
-    zoom: 3, 3
+    zoom: 4, 4
     entryDelay: 7
     equipmentWhitelist:
       tags:
@@ -700,14 +704,15 @@
     damageModifierSet: MetallicBradley
   - type: MobState
   - type: MovementAlwaysTouching
-  - type: Repairable #Rimstation
+  - type: Repairable
     fuelCost: 20
     doAfterDelay: 60
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
-    baseSprintSpeed: 6 #Rimstation
+    baseSprintSpeed: 7
     baseAcceleration: 0.45
     baseFriction: 1
+    frictionNoInput: 1
   - type: StaticPrice
     price: 3000
   - type: Tag
@@ -793,13 +798,23 @@
   parent: BaseMechWeaponRange
   components:
   - type: Sprite
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_uac2
+    sprite: Objects/Weapons/Guns/LMGs/m60d.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
   - type: Gun
     projectileSpeed: 50
     fireRate: 9
-    minAngle: 3
-    maxAngle: 6
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 0.17
+    angleDecay: 1
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -1006,6 +1021,9 @@
     fireRate: 6.5
     minAngle: 2
     maxAngle: 5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
   - type: Sprite
     scale: 1.2, 1.2
     sprite: Objects/Weapons/Guns/HMGs/m242.rsi
