@@ -166,6 +166,22 @@
       curve: !type:BoolCurve
 
 - type: utilityQuery
+  id: NearbyMedicine
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: Healing
+          damage:
+            types:
+              Blunt: 0 #we usually need bruisepacks
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+
+- type: utilityQuery
   id: NearbyOnFire
   query:
     - !type:ComponentQuery

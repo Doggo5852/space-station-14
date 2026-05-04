@@ -81,7 +81,28 @@
         - !type:HTNCompoundTask
           task: IdleCompound
 
-# do not look at ts
+- type: htnCompound
+  id: HealSelf
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyMedicine
+      - !type:HTNPrimitiveTask
+        operator: !type:MoveToOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: InteractRange
+        operator: !type:InteractWithOperator
+          targetKey: Target
+      #do the thing, just interact again?
+      - !type:HTNPrimitiveTask
+        operator: !type:InteractWithOperator
+          targetKey: Target
 
 - type: htnCompound
   id: LeaderFollowCompound
@@ -129,10 +150,13 @@
           task: LeaderFollowCompoundBlue
     - tasks:
         - !type:HTNCompoundTask
-          task: RangedCombatCompound
+          task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: HealSelf
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
@@ -145,10 +169,13 @@
           task: LeaderFollowCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: RangedCombatCompound
+          task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: HealSelf
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound

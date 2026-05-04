@@ -9,7 +9,9 @@ namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators.Interactions;
 /// <summary>
 /// Swaps to any free hand.
 /// </summary>
-public sealed partial class SwapToFreeHandOperator : HTNOperator
+/// 
+/// This is also just a massive mess, i should probably make it cleaner
+public sealed partial class SwapToFullHandOperator : HTNOperator
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
 
@@ -27,7 +29,7 @@ public sealed partial class SwapToFreeHandOperator : HTNOperator
 
     var handsSystem = _entManager.System<HandsSystem>();
 
-    const string rightHand = "body_part_slot_left_hand";
+    const string rightHand = "body_part_slot_right_hand";
 
     
     handsSystem.SetActiveHand((owner, handsComp), rightHand);

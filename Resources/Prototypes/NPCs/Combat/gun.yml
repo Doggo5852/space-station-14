@@ -23,6 +23,9 @@
             jukeType: AdjacentTile
 
         - !type:HTNPrimitiveTask
+          operator: !type:SwapToFullHandOperator
+
+        - !type:HTNPrimitiveTask
           preconditions:
             - !type:KeyExistsPrecondition
               key: Target
