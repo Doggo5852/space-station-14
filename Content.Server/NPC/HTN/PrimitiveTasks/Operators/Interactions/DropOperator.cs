@@ -26,6 +26,6 @@ public sealed partial class DropOperator : HTNOperator
             return HTNOperatorStatus.Finished;
         }
 
-        return HTNOperatorStatus.Failed;
+        return HTNOperatorStatus.Finished;
     }
 }

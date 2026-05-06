@@ -38,6 +38,18 @@
             - !type:KeyExistsPrecondition
               key: IdleTime
 
+- type: htnCompound
+  id: IdleCompoundDropLeftAfter #idling makes AI stop using whatever utility they were using, assume that utility is NOT a grenade and just activate it after we stop.
+  branches:
+    - tasks:
+      - !type:HTNCompoundTask
+        task: IdleCompound
+      #afaik there isn't a way to activate whatever is in our hand, so instead drop it on the ground and hope some other compound makes this work lol
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+
 # Spin to a random rotation and idle.
 - type: htnCompound
   id: IdleSpinCompound

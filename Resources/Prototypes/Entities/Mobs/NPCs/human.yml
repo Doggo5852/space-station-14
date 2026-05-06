@@ -25,6 +25,8 @@
         - SalvageSpecialistGear
     - type: InputMover
     - type: MobMover
+    - type: Strippable
+      handStripDelay: 0.5
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompound
@@ -39,12 +41,14 @@
           30
         FollowRange: !type:Single
           4
+        HealTime: !type:Single
+          45
         NavClimb: !type:Bool
           true
 
 - type: entity
   name: salvager
-  parent: BaseMobHuman
+  parent: MobSalvager
   id: MobSalvagerColony
   suffix: Colony
   components:
@@ -70,6 +74,8 @@
           30
         FollowRange: !type:Single
           4
+        HealTime: !type:Single
+          45
         NavClimb: !type:Bool
           true
 

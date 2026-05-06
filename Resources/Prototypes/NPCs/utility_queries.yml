@@ -173,7 +173,8 @@
         - type: Healing
           damage:
             types:
-              Blunt: 0 #we usually need bruisepacks
+              Blunt: 0
+        - type: Item
   considerations:
     - !type:TargetDistanceCon
       curve: !type:PresetCurve
@@ -235,6 +236,17 @@
     - !type:ComponentQuery
       components:
         - type: NPCLeaderBlue
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+
+- type: utilityQuery
+  id: NearbyNPCLeaderRed
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: NPCLeaderRed
   considerations:
     - !type:TargetDistanceCon
       curve: !type:PresetCurve

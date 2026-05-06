@@ -46,7 +46,7 @@
   abstract: true
   parent: BaseWeaponRecipe
   id: BaseWeaponRecipeSidearm
-  completetime: 8
+  completetime: 7
 
 ## Recipes
 
@@ -350,6 +350,13 @@
   result: WeaponRifleLecter
   materials:
     Credit: 550
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: SmokeGrenadeCash
+  result: SmokeGrenade
+  materials:
+    Credit: 80
 
 - type: latheRecipe
   parent: BaseWeaponRecipe

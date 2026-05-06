@@ -80,7 +80,7 @@
   - type: Gun
     projectileSpeed: 28
     minAngle: 22
-    maxAngle: 34
+    maxAngle: 33
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider

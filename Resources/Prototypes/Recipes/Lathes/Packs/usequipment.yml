@@ -35,6 +35,8 @@
   - MagazineBoxLightRifleNATOCash
   - MagazineLightRifleBoxM249Cash
   - WeaponM249Cash
+  - MagazineBoxRifleCash
+  - SmokeGrenadeCash
 
 - type: latheRecipePack
   id: USVehicleStatic

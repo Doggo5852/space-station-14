@@ -274,10 +274,17 @@
 
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
+  id: MagazineBoxRifleCash
+  result: MagazineBoxRifle
+  materials:
+    Credit: 30
+
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
   id: MagazineLightRifleBoxM249Cash
   result: MagazineLightRifleBoxM249
   materials:
-    Credit: 60
+    Credit: 150
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

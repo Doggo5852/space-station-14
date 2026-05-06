@@ -23,7 +23,7 @@ public sealed partial class SwapToFreeHandOperator : HTNOperator
     var owner = blackboard.GetValue<EntityUid>(NPCBlackboard.Owner);
 
     if (!_entManager.TryGetComponent<HandsComponent>(owner, out var handsComp))
-        return HTNOperatorStatus.Failed;
+        return HTNOperatorStatus.Finished;
 
     var handsSystem = _entManager.System<HandsSystem>();
 
