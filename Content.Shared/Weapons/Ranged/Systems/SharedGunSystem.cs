@@ -7,6 +7,7 @@ using Content.Shared.Audio;
 using Content.Shared.CombatMode;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Mech.Components;
+using Content.Shared.Mech.Equipment.Components;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Hands;
@@ -134,6 +135,9 @@ public abstract partial class SharedGunSystem : EntitySystem
             user = mechPilot.Mech;
 
         if (!TryGetGun(user.Value, out var ent, out var gun))
+            return;
+    
+        if (TryComp<MechEquipmentComponent>(ent, out var mechEquipment) && !TryComp<MechComponent>(user.Value, out var vehicle))
             return;
 
         if (ent != GetEntity(msg.Gun))
