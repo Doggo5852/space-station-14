@@ -1,12 +1,18 @@
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Shared.NPC.Components;
 using Content.Server.NPC.Components;
+using Content.Shared.NPC.Systems;
 using Content.Shared.CombatMode;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Audio;
+using System.Numerics;
+using Content.Shared.Damage.Components;
 
 namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators.Combat.Ranged;
+
+
 
 public sealed partial class GunOperator : HTNOperator, IHtnConditionalShutdown
 {
@@ -58,7 +64,75 @@ public sealed partial class GunOperator : HTNOperator, IHtnConditionalShutdown
 
         return (true, null);
     }
+    private bool FriendlyInLineOfFire(EntityUid owner, EntityUid target)
+    {
+        var ownerPos = _entManager.GetComponent<TransformComponent>(owner).Coordinates;
 
+        var lookup = _entManager.System<EntityLookupSystem>();
+        
+        if (!_entManager.TryGetComponent<NpcFactionMemberComponent>(owner, out var ownerFaction))
+                return false;
+
+        foreach (var entity in lookup.GetEntitiesInRange(ownerPos, 10f))
+        {
+            if (entity == owner || entity == target)
+            continue;
+
+
+            if (!_entManager.TryGetComponent<NpcFactionMemberComponent>(entity, out var otherFaction))
+                continue;
+            if (!_entManager.System<NpcFactionSystem>().IsEntityFriendly(owner, entity))
+                continue;
+            
+            var ownerTransform = _entManager.GetComponent<TransformComponent>(owner);
+            var targetTransform = _entManager.GetComponent<TransformComponent>(target);
+            var entityTransform = _entManager.GetComponent<TransformComponent>(entity);
+
+            
+
+            // ignore less than alive friendlies... or atleast those who we literally can't hit anyway
+
+            var ownerWorld = ownerTransform.WorldPosition;
+            var targetWorld = targetTransform.WorldPosition;
+            var entityWorld = entityTransform.WorldPosition;
+
+            var targetDir = (targetWorld - ownerWorld).Normalized();
+            var entityDir = (entityWorld - ownerWorld).Normalized();
+
+            var dot = Vector2.Dot(targetDir, entityDir);
+
+            var targetDistance = (targetWorld - ownerWorld).Length();
+            var entityDistance = (entityWorld - ownerWorld).Length();
+
+
+            if (_entManager.TryGetComponent<RequireProjectileTargetComponent>(entity, out var projectileTargetComp))
+            {
+                var canHit = projectileTargetComp.Active;
+
+                if (entityDistance < 0.7f && !canHit)
+                {
+                    return true;
+                }
+                if (dot > 0.8f && entityDistance < targetDistance + 3 && !canHit)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (entityDistance < 0.7f)
+                {
+                    return true;
+                }
+                if (dot > 0.8f && entityDistance < targetDistance + 3)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
     public override void Startup(NPCBlackboard blackboard)
     {
         base.Startup(blackboard);
@@ -105,6 +179,11 @@ public sealed partial class GunOperator : HTNOperator, IHtnConditionalShutdown
             }
             else
             {
+                if (FriendlyInLineOfFire(owner, target))
+                {
+                    _entManager.RemoveComponent<NPCRangedCombatComponent>(owner);
+                    return HTNOperatorStatus.Failed;
+                }
                 switch (combat.Status)
                 {
                     case CombatStatus.TargetUnreachable:

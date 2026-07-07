@@ -126,6 +126,42 @@
         35
 
 - type: entity
+  parent: BaseWeaponTurretMoeStaticMG
+  id: BaseWeaponTurretM60D
+  name: M60D Turret
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - M60BigMag
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: null
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge762NATO
+  - type: Gun
+    fireRate: 7.5
+    selectedMode: FullAuto
+    shotsPerBurst: 15
+    burstCooldown: 3.5
+    availableModes:
+    - FullAuto
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+
+- type: entity
   parent: BaseWeaponTurret
   id: BaseWeaponBallisticTurret
   description: A ballistic machine gun auto-turret.

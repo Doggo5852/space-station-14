@@ -60,7 +60,7 @@
 
 - type: entity
   id: MagazineLightRifleBoxM249
-  name: "M249 magazine box (5.56x45mm)"
+  name: "M249 200rnd magazine box (5.56x45mm)"
   parent: BaseMagazineLightRifle
   description: Box containing a 200-round belt.
   components:
@@ -101,7 +101,7 @@
 
 - type: entity
   id: MoeM60Mag
-  name: "M60D magazine box (7.62x51mm)"
+  name: "M60 500rnd magazine box (7.62x51mm)"
   parent: MagazineLightRifleBox
   description: "A big and heavy magazine box for the M60D. If bullet doesn't work, use more bullet."
   components:
@@ -118,6 +118,26 @@
   - type: Tag
     tags:
       - M60BigMag
+
+- type: entity
+  id: M60Mag100rnd
+  parent: MoeM60Mag
+  name: "M60 100rnd magazine box (7.62x51mm)"
+  description: "Standard M60 belt"
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleNATO
+    capacity: 100
+    whitelist:
+      tags:
+        - Cartridge762NATO
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Tag
+    tags:
+      - M60100rnd
 
 - type: entity
   id: MagazineLightRifle

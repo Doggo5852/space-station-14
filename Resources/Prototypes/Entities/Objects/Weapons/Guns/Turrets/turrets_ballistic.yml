@@ -19,8 +19,14 @@
     - Syndicate
   - type: Gun
     fireRate: 6
-    minAngle: 6
-    maxAngle: 9
+    minAngle: 7
+    maxAngle: 10
+    shotsPerBurst: 7
+    burstCooldown: 3.5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - Burst
 
 - type: entity
   parent: [BaseWeaponTurretMoeStaticMG, BaseSyndicateContraband]
@@ -36,14 +42,34 @@
     fireRate: 7.5
     shotsPerBurst: 10
     burstCooldown: 3.5
-    minAngle: 3
-    maxAngle: 8
+    minAngle: 5
+    maxAngle: 9
     selectedMode: FullAuto
     availableModes:
     - FullAuto
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+
+- type: entity
+  parent: BaseWeaponTurretM60D
+  id: WeaponTurretM60DColony
+  suffix: Colony
+  name: M60D
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+- type: entity
+  parent: BaseWeaponTurretM60D
+  id: WeaponTurretM60DRaider
+  suffix: Raider
+  name: M60D
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
 
 - type: entity
   parent: BaseWeaponBallisticTurret

@@ -150,6 +150,73 @@
             - CartridgeRifle
 
 - type: entity
+  name: M60
+  id: WeaponM60
+  parent: WeaponLightMachineGunL6
+  description:
+  components:
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 17
+    pvsIncrease: 1.2
+  - type: Gun
+    minAngle: 20.1
+    maxAngle: 36
+    projectileSpeed: 50
+    angleIncrease: 0.15
+    angleDecay: 2
+    fireRate: 7
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.83
+    walkModifier: 0.83
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.25
+    walkModifier: 0.25
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: M60Mag100rnd
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - M60100rnd
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifleNATO
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge762NATO
+
+- type: entity
+  name: M60E6
+  id: WeaponM60E6
+  parent: WeaponM60
+  description:
+  components:
+  - type: EyeCursorOffset
+    maxOffset: 9
+    pvsIncrease: 0.9
+  - type: Gun
+    minAngle: 20.6
+    maxAngle: 38
+    projectileSpeed: 50
+    angleIncrease: 0.2
+    angleDecay: 2
+    fireRate: 7.5
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.86
+    walkModifier: 0.86
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.40
+    walkModifier: 0.40
+
+- type: entity
   name: L6C ROW
   id: WeaponLightMachineGunL6C
   parent: BaseItem

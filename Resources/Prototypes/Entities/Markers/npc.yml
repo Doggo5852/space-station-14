@@ -6,3 +6,33 @@
   - type: NPCPathfindPoint
   - type: Sprite
     state: pink
+
+#shitcode waypoints
+
+- type: entity
+  id: WaypointForced #ignored enemies, threats, everything.
+  parent: MarkerBase
+  name: Forced Waypoint
+  suffix: Permanent
+  components:
+  - type: Sprite
+    state: red
+  - type: NPCLeader
+
+- type: entity
+  id: WaypointForced2S
+  parent: WaypointForced
+  name: Forced Waypoint
+  suffix: Brief
+  components:
+  - type: TimedDespawn
+    lifetime: 2
+
+- type: entity
+  id: WaypointForced8S
+  parent: WaypointForced
+  name: Forced Waypoint
+  suffix: 8
+  components:
+  - type: TimedDespawn
+    lifetime: 8

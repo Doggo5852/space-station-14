@@ -439,21 +439,21 @@
   id: WeaponLauncherBGMLauncherColonyCash
   result: WeaponLauncherBGMLauncherColony
   materials:
-    Credit: 2750
+    Credit: 2000
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
   id: M72A3LAWCash
   result: M72A3LAW
   materials:
-    Credit: 680
+    Credit: 425
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
   id: GrenadeShrapnelCash
   result: GrenadeShrapnel
   materials:
-    Credit: 200
+    Credit: 125
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -497,14 +497,14 @@
   id: CartridgeMissileBGM71FCash
   result: CartridgeMissileBGM71F
   materials:
-    Credit: 1500
+    Credit: 1150
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: CartridgeMissileBGM71DCash
   result: CartridgeMissileBGM71D
   materials:
-    Credit: 800
+    Credit: 500
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -540,7 +540,7 @@
   id: WeaponMechBGMRackCash
   result: WeaponMechBGMRack
   materials:
-    Credit: 4500
+    Credit: 4000
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

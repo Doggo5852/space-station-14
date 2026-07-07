@@ -13,6 +13,16 @@ public sealed partial class MechColonyComponent : Component
 }
 
 [RegisterComponent]
+public sealed partial class AircraftOPFORComponent : Component
+{
+}
+
+[RegisterComponent]
+public sealed partial class AircraftBLUFOREComponent : Component
+{
+}
+
+[RegisterComponent]
 public sealed partial class GuidedMissileComponent : Component
 {
 }

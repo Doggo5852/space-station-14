@@ -390,6 +390,14 @@
     Steel: 565
 
 - type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineM60Small
+  result: M60Mag100rnd
+  materials:
+    Steel: 1565
+
+
+- type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineLightRifleCash
   result: MagazineLightRifle

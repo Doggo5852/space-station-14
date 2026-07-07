@@ -211,6 +211,25 @@
     zeroVisible: false
 
 - type: entity
+  id: ShuttleGun120mm
+  name: 120mm cannon
+  parent: ShuttleGunFriendship
+  description: 120mm cannon
+  components:
+  - type: Gun
+    projectileSpeed: 80
+    fireRate: 0.1
+    angleDecay: 45
+    minAngle: 0
+    maxAngle: 15
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Cartridge120mmShell
+    capacity: 3
+
+
+- type: entity
   id: ShuttleGunDuster
   parent: [ShuttleGunBase, ConstructibleMachine]
   name: EXP-2100g "Duster"
