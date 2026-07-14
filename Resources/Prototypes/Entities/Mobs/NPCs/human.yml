@@ -45,6 +45,8 @@
           45
         NavClimb: !type:Bool
           true
+        RangedRange: !type:Single
+          13
 
 - type: entity
   name: salvager
@@ -78,6 +80,8 @@
           45
         NavClimb: !type:Bool
           true
+        RangedRange: !type:Single
+          13
 
 - type: entity
   name: salvager

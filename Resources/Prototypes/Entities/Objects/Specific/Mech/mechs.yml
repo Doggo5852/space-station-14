@@ -810,10 +810,10 @@
     zeroVisible: true
   - type: Gun
     projectileSpeed: 50
-    fireRate: 9
+    fireRate: 8.5
     minAngle: 1
     maxAngle: 10
-    angleIncrease: 0.17
+    angleIncrease: 0.19
     angleDecay: 1
     selectedMode: FullAuto
     availableModes:
@@ -826,8 +826,8 @@
     tags:
     - M3
     - M1
-    - BMP2 #temporary
-    - T72 #temporary
+    #- BMP2 #temporary
+    #- T72 #temporary
   - type: AmmoCounter
   - type: ItemSlots
     slots:
@@ -848,6 +848,68 @@
         whitelist:
           tags:
             - Cartridge762NATO
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+
+- type: entity
+  id: WeaponMechPKMT
+  name: PKT
+  description: "a PK machinegun modified to be fit on vehicles. Can be fit on: Light, Heavy."
+  suffix: Mech Weapon, Gun, Combat, Rifle
+  parent: BaseMechWeaponRange
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/LMGs/pkt.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Gun
+    projectileSpeed: 60
+    fireRate: 9
+    minAngle: 2
+    maxAngle: 13
+    angleIncrease: 0.17
+    angleDecay: 1
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/m60shot.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: Appearance
+  - type: Tag
+    tags:
+    - BMP2
+    - T72
+    - BTR70
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - PKMBigMag
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: null
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMosin
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

@@ -41,12 +41,12 @@
   - type: UniqueWoundOnDamage
     wounds:
     - damageTypes: [Slash, Blunt, Piercing]
-      minimumDamage: 15
-      minimumTotalDamage: 25
+      minimumDamage: 20
+      minimumTotalDamage: 75
       woundPrototype: WoundArterialBleeding
       woundDamages:
         damageDict:
-          Slash: 5
+          Slash: 6
       damageProbabilityCoefficient: 0.01
       damageProbabilityConstant: 0
     - damageTypes: [Blunt]
@@ -55,7 +55,7 @@
       woundPrototype: WoundFracture
       woundDamages:
         damageDict:
-          Blunt: 10
+          Blunt: 25
       damageProbabilityCoefficient: 0.005
       damageProbabilityConstant: 0
     - damageTypes: [Heat]
@@ -113,8 +113,8 @@
     - Radiation
   - type: Pain
     painMultiplier: 1.25
-    maxShockIncreasePerSecond: 36
-    maxShockDecreasePerSecond: 12
+    maxShockIncreasePerSecond: 50
+    maxShockDecreasePerSecond: 6
     doubleShockRecoveryThreshold: 0.5
   - type: IntrinsicPain
     painCoefficients:
@@ -123,26 +123,26 @@
       Cellular: 0.7
   - type: ShockThresholds
     thresholds:
-      10: StatusEffectMinorPain
-      30: StatusEffectModeratePain
-      60: StatusEffectSeverePain
+      15: StatusEffectMinorPain
+      35: StatusEffectModeratePain
+      90: StatusEffectSeverePain
       120: StatusEffectBlackoutPain
     mobThresholds:
-      200: Critical
+      150: Critical
   - type: ShockAlerts
     alertCategory: Pain
     suppressedAlert: SuppressedPain
     thresholds:
       0: NoPain
-      10: MinorPain
-      30: ModeratePain
-      60: SeverePain
+      15: MinorPain
+      35: ModeratePain
+      90: SeverePain
       120: BlackoutPain
-      200: UnconsciousPain
+      150: UnconsciousPain
   - type: ShockGaspThresholds
     messageThresholds:
       120: DefaultPainslump
-      200: DefaultPaingasp
+      150: DefaultPaingasp
 
 - type: entity
   abstract: true
@@ -201,7 +201,7 @@
     effectDuration: 2.1
     doAfterDuration: 2
     wound: WoundFracture
-    woundProbability: 0.03
+    woundProbability: 0.02
   - type: IVTarget
   - type: HeartDamageOnDamage
     thresholds:
@@ -231,7 +231,7 @@
     oxygenDepletionThresholds:
       0.30: [0.6, 1]
     oxygenRegeneration: 1
-    maxPassivelyHealableDamage: 30
+    maxPassivelyHealableDamage: 50
     damageHealing: 1
   - type: BrainDamageThresholds
     damageStateThresholds:

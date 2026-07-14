@@ -809,9 +809,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 12
+    maxIntensity: 10
     intensitySlope: 6
-    totalIntensity: 150
+    totalIntensity: 120
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5
@@ -820,7 +820,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 75 # speed, i need this
+        Blunt: 100 # speed, i need this
 
 - type: entity
   id: BulletLAW72A3
@@ -830,14 +830,14 @@
   components:
   - type: Explosive
     explosionType: Default
-    maxIntensity: 12
+    maxIntensity: 10
     intensitySlope: 6
-    totalIntensity: 175
+    totalIntensity: 155
     maxTileBreak: 1
   - type: Projectile
     damage:
       types:
-        Blunt: 125
+        Blunt: 140
 
 
 #SmokeImpassable

@@ -24,6 +24,9 @@
   - Cartridge25mmAPDS
   - Cartridge25mmHEI
   - MagazineM60Small
+  - WeaponTurretMoeM2HBColony
+  - WeaponTurretM60DColony
+  - MagazineLightRifleBoxM249
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -164,11 +167,12 @@
   - WeaponM16A2Scoped
   - WeaponPistolMk58
   - MoeWeaponLMGL6
-  - CartridgeMissileBGM71I
+  - CartridgeMissileBGM71F
+  - CartridgeMissileBGM71D
   - WeaponLauncherBGMLauncherColony
   - CartridgeRocket
   - WeaponLauncherRocket
-  - WeaponMechSM6
+  - WeaponMechM250
   - WeaponMechM60D
   - SmokeScreenCartridge
   - WeaponMechM2HB
@@ -176,6 +180,7 @@
   - WeaponMechBGMRack
   - WeaponMechM242
   - WeaponMechM256
+  - M72A3LAW
 
 
 - type: latheRecipePack

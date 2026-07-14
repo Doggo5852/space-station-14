@@ -19,8 +19,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22
-        Blunt: 2
+        Piercing: 20
+        Blunt: 3
         
 
 - type: entity
@@ -32,8 +32,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
-        Blunt: 3
+        Piercing: 22
+        Blunt: 4
 
 - type: entity
   categories: [ HideSpawnMenu ]

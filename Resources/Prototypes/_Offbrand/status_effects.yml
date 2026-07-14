@@ -4,12 +4,12 @@
   name: 10 pain relief
   components:
   - type: PainkillerStatusEffect
-    effectiveness: 10
+    effectiveness: 15
   - type: MovementModStatusEffect
     sprintSpeedModifier: 0.95
     walkSpeedModifier: 0.95
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 5
+    angleRangeModifier: 2
 
 - type: entity
   parent: StatusEffectPainkillersNegligibleBicaridine
@@ -96,8 +96,9 @@
   components:
   - type: PainkillerStatusEffect
     effectiveness: 250
+  - type: PainSuppressionStatusEffect
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 12
+    angleRangeModifier: 7
 
 - type: entity
   parent: MobStatusEffectBase
@@ -279,7 +280,7 @@
     attackRateMultiplier: 0.9
     attackRateConstant: -0.05
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 3
+    angleRangeModifier: 1
   - type: CauseStatusEffectRandomlyStatusEffect
     probability: 0.3
     updateInterval: 5
@@ -301,7 +302,7 @@
     attackRateMultiplier: 0.8
     attackRateConstant: -0.05
   - type: GunAccuracyStatusEffect
-    angleRangeModifier: 8
+    angleRangeModifier: 4
 
 - type: entity
   parent: MobStatusEffectBase

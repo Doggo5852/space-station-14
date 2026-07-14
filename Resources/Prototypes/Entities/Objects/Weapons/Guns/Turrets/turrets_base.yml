@@ -108,7 +108,8 @@
           tags:
             - CartridgeAntiMaterielFMJ
   - type: Gun
-    fireRate: 7.5
+    fireRate: 5
+    burstFireRate: 5
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -151,9 +152,10 @@
           tags:
             - Cartridge762NATO
   - type: Gun
-    fireRate: 7.5
+    fireRate: 4
     selectedMode: FullAuto
-    shotsPerBurst: 15
+    shotsPerBurst: 12
+    burstFireRate: 4
     burstCooldown: 3.5
     availableModes:
     - FullAuto

@@ -425,6 +425,15 @@
     Plasma: 350
 
 - type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: M72A3LAW
+  result: M72A3LAW
+  materials:
+    Steel: 3000
+    Plasteel: 300
+    Plasma: 380
+
+- type: latheRecipe
   parent: BaseWeaponRecipe
   id: WeaponLauncherBGMLauncherColony
   result: WeaponLauncherBGMLauncherColony
@@ -488,9 +497,18 @@
   id: CartridgeMissileBGM71F
   result: CartridgeMissileBGM71F
   materials:
-    Steel: 2500
+    Steel: 3000
     Plasteel: 1000
     Plasma: 800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeMissileBGM71D
+  result: CartridgeMissileBGM71D
+  materials:
+    Steel: 2500
+    Plasteel: 500
+    Plasma: 600
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -578,6 +596,22 @@
   materials:
     Steel: 6500
     Plasteel: 1200
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponTurretMoeM2HBColony
+  result: WeaponTurretMoeM2HBColony
+  materials:
+    Steel: 7000
+    Plasteel: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponTurretM60DColony
+  result: WeaponTurretM60DColony
+  materials:
+    Steel: 6000
+    Plasteel: 1000
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

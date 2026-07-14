@@ -35,6 +35,24 @@
     lifetime: 0.25
 
 - type: entity
+  id: PelletShrapnel
+  name: pellet (ball, lethal)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    deleteOnCollide: true
+    damage:
+      types:
+        Piercing: 2
+        Slash: 1
+  - type: TimedDespawn
+    lifetime: 0.45
+
+- type: entity
   id: PelletClusterIncendiary
   name: pellet (ball, incendiary)
   categories: [ HideSpawnMenu ]

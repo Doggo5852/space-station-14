@@ -217,7 +217,8 @@
   cost: 8000
   recipeUnlocks:
   - CartridgeRocket
-  - WeaponLauncherRocket 
+  - WeaponLauncherRocket
+  - M72A3LAW
   technologyPrerequisites:
   - ExplosiveTechnology
 
@@ -245,6 +246,7 @@
   cost: 20000
   recipeUnlocks:
   - CartridgeMissileBGM71F
+  - CartridgeMissileBGM71D
   - WeaponLauncherBGMLauncherColony
   - WeaponMechBGMRack
   technologyPrerequisites:

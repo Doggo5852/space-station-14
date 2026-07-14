@@ -120,6 +120,26 @@
       - M60BigMag
 
 - type: entity
+  id: PKMMagBig
+  name: "PKM 200rnd magazine box (7.62x54mmR)"
+  parent: MagazineLightRifleBox
+  description: "A big and heavy magazine box for the PKM. If bullet doesn't work, use more bullet."
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMosin
+    capacity: 200
+    whitelist:
+      tags:
+        - CartridgeMosin
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,2,2
+  - type: Tag
+    tags:
+      - PKMBigMag
+
+- type: entity
   id: M60Mag100rnd
   parent: MoeM60Mag
   name: "M60 100rnd magazine box (7.62x51mm)"

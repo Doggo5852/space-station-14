@@ -19,10 +19,6 @@
             rangeKey: RangedRange
 
         - !type:HTNPrimitiveTask
-          operator: !type:JukeOperator
-            jukeType: AdjacentTile
-
-        - !type:HTNPrimitiveTask
           operator: !type:SwapToFullHandOperator
 
         - !type:HTNPrimitiveTask
@@ -36,6 +32,10 @@
               id: RangedService
               proto: NearbyGunTargets
               key: Target
+            
+        - !type:HTNPrimitiveTask
+          operator: !type:JukeOperator
+            jukeType: AdjacentTile
 
 # Selects ammo in range, then moves to it and picks it up
 - type: htnCompound

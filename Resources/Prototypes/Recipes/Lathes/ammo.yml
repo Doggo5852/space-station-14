@@ -185,12 +185,12 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: Cartridge25mmAPDS
-  result: Cartridge25mmAPDS
+  result: MagazineBoxAntiMateriel25mmAPDS
   materials:
-    Steel: 3000
-    Plasteel: 50
-    Gold: 20
-    Plasma: 5
+    Steel: 30000
+    Plasteel: 500
+    Gold: 200
+    Plasma: 50
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -202,12 +202,12 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: Cartridge25mmHEI
-  result: Cartridge25mmHEI
+  result: MagazineBoxAntiMateriel25mmHEI
   materials:
-    Steel: 4000
-    Plasteel: 150
-    Gold: 80
-    Plasma: 100
+    Steel: 40000
+    Plasteel: 1500
+    Gold: 800
+    Plasma: 1000
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -264,6 +264,13 @@
   result: MagazineRifle
   materials:
     Steel: 475
+
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
+  id: MagazineLightRifleBoxM249
+  result: MagazineLightRifleBoxM249
+  materials:
+    Steel: 3200
 
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
