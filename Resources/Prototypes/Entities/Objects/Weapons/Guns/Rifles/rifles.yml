@@ -378,6 +378,7 @@
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 7.62x39mm rifle magazine.
   components:
   - type: Gun
+    durabilityEnabled: false
     burstFireRate: 5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
@@ -411,6 +412,7 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    durabilityEnabled: false
     burstFireRate: 8
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg

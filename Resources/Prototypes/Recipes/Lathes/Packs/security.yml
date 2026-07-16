@@ -181,6 +181,8 @@
   - WeaponMechM242
   - WeaponMechM256
   - M72A3LAW
+  - WeaponM60
+  - WeaponM249
 
 
 - type: latheRecipePack

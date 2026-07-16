@@ -17,6 +17,8 @@ using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Weapons.Reflect;
 using Content.Shared.Damage.Components;
+using Content.Server.Popups;
+using Content.Shared.Popups;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
@@ -35,6 +37,7 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly SharedStaminaSystem _stamina = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
 
     private const float DamagePitchVariation = 0.05f;
 
@@ -75,12 +78,34 @@ public sealed partial class GunSystem : SharedGunSystem
                 return;
             }
         }
-
         var fromMap = TransformSystem.ToMapCoordinates(fromCoordinates);
         var toMap = TransformSystem.ToMapCoordinates(toCoordinates).Position;
         var mapDirection = toMap - fromMap.Position;
         var mapAngle = mapDirection.ToAngle();
         var angle = GetRecoilAngle(Timing.CurTime, gun, mapDirection.ToAngle());
+
+        var gunCoords = Transform(gunUid).Coordinates;
+        if (gun.DurabilityEnabled)
+        {
+        gun.Durability = gun.Durability - 1;
+        if (gun.Durability <= 0)
+        {
+            gun.FireRate = 0;
+            gun.FireRateModified = 0;
+        }
+        if (gun.Durability == 750 || gun.Durability == 1200 || gun.Durability == 90)
+        {
+            _popup.PopupCoordinates("The bolt lags a bit", gunCoords, PopupType.SmallCaution);
+        }
+        if (gun.Durability == 450 || gun.Durability == 250 || gun.Durability == 180)
+        {
+            _popup.PopupCoordinates("The gun locks up for a second", gunCoords, PopupType.SmallCaution);
+        }
+        if (gun.Durability == 120 || gun.Durability == 60 || gun.Durability == 45 || gun.Durability == 30 || gun.Durability == 25 || gun.Durability == 15 || gun.Durability == 10 || gun.Durability == 5)
+        {
+            _popup.PopupCoordinates("The gun makes a loud clicking noise", gunCoords, PopupType.SmallCaution);
+        }
+        }
 
         // If applicable, this ensures the projectile is parented to grid on spawn, instead of the map.
         var fromEnt = MapManager.TryFindGridAt(fromMap, out var gridUid, out _)

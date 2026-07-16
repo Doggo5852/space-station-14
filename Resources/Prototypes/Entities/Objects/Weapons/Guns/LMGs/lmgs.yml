@@ -22,6 +22,7 @@
     minAngle: -20
     maxAngle: -34
   - type: Gun
+    durability: 1500
     minAngle: 20.6
     maxAngle: 42
     angleIncrease: 0.17

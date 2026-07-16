@@ -498,7 +498,7 @@
   result: CartridgeMissileBGM71F
   materials:
     Steel: 3000
-    Plasteel: 1000
+    Plasteel: 900
     Plasma: 800
 
 - type: latheRecipe
@@ -507,7 +507,7 @@
   result: CartridgeMissileBGM71D
   materials:
     Steel: 2500
-    Plasteel: 500
+    Plasteel: 600
     Plasma: 600
 
 - type: latheRecipe
@@ -529,8 +529,24 @@
   id: WeaponMechM60D
   result: WeaponMechM60D
   materials:
-    Steel: 2000
+    Steel: 11500
     Plasteel: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponM60
+  result: WeaponM60
+  materials:
+    Steel: 18500
+    Plasteel: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponM249
+  result: WeaponM249
+  materials:
+    Steel: 14000
+    Plasteel: 1100
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

@@ -771,6 +771,114 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+
+- type: entity
+  id: BTR70
+  parent: [ BaseMech, Bradley, BaseRestrictedContraband ]
+  name: BTR-70
+  description: A pretty thin and long infantry wheeled transporter. It doesn't look very safe
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: false
+    scale: 1.7, 1.8
+    sprite: Objects/Specific/Mech/vehicles.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: btr70
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    baseState: btr70
+    openState: btr70
+    brokenState: btr70
+    mechToPilotDamageMultiplier: 0.22
+    airtight: true
+    maxIntegrity: 430
+    maxEquipmentAmount: 2
+    zoom: 3, 3
+    entryDelay: 4.5
+    equipmentWhitelist:
+      tags:
+      - BTR70
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
+  - type: CanMoveInAir
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: MetallicBTR
+  - type: MobState
+  - type: MovementAlwaysTouching
+  - type: Repairable
+    fuelCost: 15
+    doAfterDelay: 30
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 8
+    baseAcceleration: 0.45
+    baseFriction: 1
+    frictionNoInput: 1
+  - type: StaticPrice
+    price: 3000
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - Gygax
+  - type: ProximityBeeper
+  - type: ProximityDetector
+    range: 75
+    components:
+    - type: GuidedMissile
+  - type: Beeper
+    isMuted: true
+    minBeepInterval: 0.10
+    maxBeepInterval: 0.70
+    beepSound:
+      path: "/Audio/Items/locator_beep.ogg"
+      params:
+        maxDistance: 5
+        volume: -1
+        pitch: 2.2
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1
+        density: 2000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: ItemToggle
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: BTR70Russia
+  parent: BTR70
+  suffix: Russia
+  components:
+  - type: MechRaiders
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
 # Mech weapons
 
 
@@ -1146,6 +1254,7 @@
     tags:
     - BMP2
     - T72
+    - BTR70 #eh?
   - type: BallisticAmmoProvider
     capacity: 2
     proto: null

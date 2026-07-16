@@ -169,6 +169,12 @@ public sealed partial class GunComponent : Component
     [DataField, AutoNetworkedField]
     public float BurstFireRate = 8f;
 
+    [DataField, AutoNetworkedField]
+    public float Durability = 1000f;
+
+    [DataField, AutoNetworkedField]
+    public bool DurabilityEnabled = true;
+
     /// <summary>
     /// Whether the burst fire mode has been activated.
     /// </summary>

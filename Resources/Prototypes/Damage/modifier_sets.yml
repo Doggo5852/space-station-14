@@ -24,6 +24,19 @@
     Piercing: 11
 
 - type: damageModifierSet
+  id: MetallicBTR
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.9
+    Shock: 1.2
+    Structural: 0.5
+  flatReductions:
+    Blunt: 2
+    Heat: 5
+    Piercing: 9
+
+- type: damageModifierSet
   id: MetallicAbrams
   coefficients:
     Blunt: 0.7

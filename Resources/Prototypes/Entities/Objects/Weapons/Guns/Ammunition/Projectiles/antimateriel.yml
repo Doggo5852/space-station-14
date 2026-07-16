@@ -67,7 +67,7 @@
       projectile:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.19,-0.19,0.19,0.19"
+          bounds: "-0.25,-0.25,0.25,0.25"
         hard: false
         mask:
         - Impassable
@@ -75,13 +75,13 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
-        Structural: 5
+        Piercing: 2
+        Structural: 2
     penetrationThreshold: 50
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
-    damage: 75
+    damage: 20
   - type: Explosive
     explosionType: Default
     maxIntensity: 5
@@ -129,7 +129,7 @@
       projectile:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.19,-0.19,0.19,0.19"
+          bounds: "-0.25,-0.25,0.25,0.25"
         hard: false
         mask:
         - Impassable
@@ -137,13 +137,13 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
-        Structural: 5
+        Piercing: 3
+        Structural: 3
     penetrationThreshold: 50
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
-    damage: 75
+    damage: 30
   - type: Explosive
     explosionType: Default
     maxIntensity: 5

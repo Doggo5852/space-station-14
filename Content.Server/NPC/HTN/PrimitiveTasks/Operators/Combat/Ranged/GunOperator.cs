@@ -9,7 +9,6 @@ using Content.Shared.Mobs.Components;
 using Robust.Shared.Audio;
 using System.Numerics;
 using Content.Shared.Damage.Components;
-using Serilog;
 
 namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators.Combat.Ranged;
 
@@ -94,7 +93,6 @@ public sealed partial class GunOperator : HTNOperator, IHtnConditionalShutdown
             //var targetTransform = _entManager.GetComponent<TransformComponent>(target);
             if (!_entManager.TryGetComponent<TransformComponent>(entity, out var entityTransform))
                 {
-                Log.Warning("something went wrong somewhere, go figure");
                 continue;
                 }
             //var entityTransform = _entManager.GetComponent<TransformComponent>(entity);

@@ -130,12 +130,6 @@
       - !type:HTNPrimitiveTask
         operator: !type:UtilityOperator
           proto: NearbyNPCLeader
-    
-      #drop our medicine or whatever
-      - !type:HTNPrimitiveTask
-        operator: !type:SwapToFreeHandOperator
-      - !type:HTNPrimitiveTask
-        operator: !type:DropOperator
       
       - !type:HTNPrimitiveTask
         preconditions:
@@ -147,6 +141,18 @@
           targetKey: TargetCoordinates
           rangeKey: FollowCloseRange
           removeKeyOnFinish: false
+
+        #drop our medicine or whatever
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: FollowCloseRange
+          - !type:KeyExistsPrecondition
+            key: Target
+        operator: !type:DropOperator
 
 - type: htnCompound
   id: LeaderFollowCompoundBlue #Just different leaders
@@ -157,11 +163,6 @@
           proto: NearbyNPCLeaderBlue
       
       - !type:HTNPrimitiveTask
-        operator: !type:SwapToFreeHandOperator
-      - !type:HTNPrimitiveTask
-        operator: !type:DropOperator
-
-      - !type:HTNPrimitiveTask
         preconditions:
           - !type:CoordinatesNotInRangePrecondition
             targetKey: TargetCoordinates
@@ -171,6 +172,18 @@
           targetKey: TargetCoordinates
           rangeKey: FollowCloseRange
           removeKeyOnFinish: false
+
+        #drop our medicine or whatever
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: FollowCloseRange
+          - !type:KeyExistsPrecondition
+            key: Target
+        operator: !type:DropOperator
 
 - type: htnCompound
   id: LeaderFollowCompoundRed
@@ -181,11 +194,6 @@
           proto: NearbyNPCLeaderRed
       
       - !type:HTNPrimitiveTask
-        operator: !type:SwapToFreeHandOperator
-      - !type:HTNPrimitiveTask
-        operator: !type:DropOperator
-
-      - !type:HTNPrimitiveTask
         preconditions:
           - !type:CoordinatesNotInRangePrecondition
             targetKey: TargetCoordinates
@@ -195,6 +203,18 @@
           targetKey: TargetCoordinates
           rangeKey: FollowCloseRange
           removeKeyOnFinish: false
+
+        #drop our medicine or whatever
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: FollowCloseRange
+          - !type:KeyExistsPrecondition
+            key: Target
+        operator: !type:DropOperator
 
 - type: htnCompound
   id: SimpleHumanoidHostileCompoundBlue

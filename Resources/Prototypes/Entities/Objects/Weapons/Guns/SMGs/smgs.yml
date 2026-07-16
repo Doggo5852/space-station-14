@@ -134,6 +134,7 @@
   description: A burst-fire C-20r submachine gun for use by cyborgs. Creates 9x19mm caliber ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
   - type: Gun
+    durabilityEnabled: false
     minAngle: 1
     maxAngle: 3
     angleIncrease: 4
