@@ -26,15 +26,15 @@
     - type: InputMover
     - type: MobMover
     - type: Strippable
-      handStripDelay: 0.5
+      handStripDelay: 0.2
     - type: HTN
       rootTask:
-        task: SimpleHumanoidHostileCompound
+        task: AdvancedHumanoidHostileCompound
       blackboard:
         VisionRadius: !type:Single
-          17
+          125
         AggroVisionRadius: !type:Single
-          25
+          125
         MinimumIdleTime: !type:Single
           15
         MaximumIdleTime: !type:Single
@@ -42,11 +42,11 @@
         FollowRange: !type:Single
           4
         HealTime: !type:Single
-          45
+          12
         NavClimb: !type:Bool
           true
         RangedRange: !type:Single
-          13
+          15
 
 - type: entity
   name: salvager
@@ -67,9 +67,9 @@
         task: SimpleHumanoidHostileCompoundBlue
       blackboard:
         VisionRadius: !type:Single
-          17
+          125
         AggroVisionRadius: !type:Single
-          25
+          125
         MinimumIdleTime: !type:Single
           15
         MaximumIdleTime: !type:Single
@@ -77,21 +77,37 @@
         FollowRange: !type:Single
           4
         HealTime: !type:Single
-          45
+          12
         NavClimb: !type:Bool
           true
         RangedRange: !type:Single
-          13
+          18
 
 - type: entity
   name: salvager
   parent: MobSalvagerColony
-  id: MobSalvagerSMGColony
-  suffix: SMGColony
+  id: MobSalvagerSMGColonyBlue
+  suffix: SMGColonyBlue
   components:
     - type: Loadout
       prototypes:
-        - SalvagerSMG
+        - SalvagerSMGBlue
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompoundBlue
+
+- type: entity
+  name: salvager
+  parent: MobSalvagerColony
+  id: MobSalvagerSMGColonyRed
+  suffix: SMGColonyRed
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerSMGRed
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompoundRed
 
 - type: entity
   name: salvager
@@ -116,12 +132,32 @@
 - type: entity
   name: salvager
   parent: MobSalvager
+  id: MobSalvagerSMGHeavy
+  suffix: SMGHeavy
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerSMGHeavy
+
+- type: entity
+  name: salvager
+  parent: MobSalvager
   id: MobSalvagerAKMS
   suffix: AKMS
   components:
     - type: Loadout
       prototypes:
         - SalvagerAKMS
+
+- type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerAKMSHeavy
+  suffix: AKMSHeavy
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerAKMSHeavy
 
 - type: entity
   name: salvager

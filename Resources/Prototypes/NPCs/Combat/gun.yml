@@ -35,7 +35,7 @@
             
         - !type:HTNPrimitiveTask
           operator: !type:JukeOperator
-            jukeType: AdjacentTile
+            jukeType: Away
 
 # Selects ammo in range, then moves to it and picks it up
 - type: htnCompound

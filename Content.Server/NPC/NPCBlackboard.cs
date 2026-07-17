@@ -32,9 +32,12 @@ public sealed partial class NPCBlackboard : IEnumerable<KeyValuePair<string, obj
         {"MovementRange", 1.5f},
         {"RangedRange", 10f},
         {"RotateSpeed", float.MaxValue},
-        {"VisionRadius", 10f},
-        {"AggroVisionRadius", 10f},
-        {"HealTime", 45f},
+        {"VisionRadius", 125f},
+        {"AggroVisionRadius", 125f},
+        {"HealTime", 12f},
+        {"DefendRange", 20f},
+        {"AttackRange", 15f},
+        {"ForcedAttackRange", 45f}
     };
 
     /// <summary>

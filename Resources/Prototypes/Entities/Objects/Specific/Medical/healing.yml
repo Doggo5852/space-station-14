@@ -172,7 +172,7 @@
       - Biological
     damage:
       groups:
-        Brute: -15 # 5 for each type in the group
+        Brute: -25 # 5 for each type in the group
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -825,7 +825,7 @@
   - type: StorageFill
     contents:
     - id: PillBicaridine
-      amount: 5
+      amount: 10
 
 - type: entity
   name: pill

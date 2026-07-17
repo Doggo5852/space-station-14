@@ -435,7 +435,7 @@ public sealed class NPCUtilitySystem : EntitySystem
                 }
 
                 _entitySet.Clear();
-                _lookup.GetEntitiesInRange(compZero.Component.GetType(), mapPos, vision, _entitySet);
+                _lookup.GetEntitiesInRange(compZero.Component.GetType(), mapPos, 125f, _entitySet);
 
                 foreach (var comp in _entitySet)
                 {

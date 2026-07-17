@@ -99,6 +99,75 @@
     - ChemistryBottleEpinephrine
     - Brutepack
 
+- type: startingGear
+  id: SalvagerSMGBlue
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitColorBlue
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - WeaponSubMachineGunC20rROW
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - PillCanisterBicaridine
+
+- type: startingGear
+  id: SalvagerSMGRed
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitColorRed
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - WeaponSubMachineGunC20rROW
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - PillCanisterBicaridine
+
+- type: startingGear
+  id: SalvagerSMGHeavy
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest bulletproof (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - WeaponSubMachineGunC20rROW
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - PillCanisterBicaridine
+
 
 - type: startingGear
   id: SalvagerAKMS
@@ -123,6 +192,29 @@
     - Brutepack
 
 - type: startingGear
+  id: SalvagerAKMSHeavy
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest bulletproof (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - kubuakms
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - PillCanisterBicaridine
+
+- type: startingGear
   id: SalvagerM16
   equipment:
     head: ClothingHeadHelmetBasic
@@ -144,7 +236,27 @@
     - ChemistryBottleEpinephrine
     - Brutepack
 
-
+- type: startingGear
+  id: SalvagerM16Heavy
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest bulletproof (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - kubuM16
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
 
   #  head: ClothingHeadHatCargosoft
   #  eyes: ClothingEyesGlassesCheapSunglasses

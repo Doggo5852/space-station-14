@@ -113,15 +113,84 @@
         operator: !type:InteractWithOperator
           targetKey: Target
       #wait x time so that it doesn't idle away
-      #- !type:HTNPrimitiveTask
-      #  preconditions:
-      #    - !type:KeyExistsPrecondition
-      #      key: HealTime
-      #  operator: !type:WaitOperator
-      #    key: HealTime
+      - !type:HTNPrimitiveTask
+        operator: !type:WaitOperator
+          key: HealTime
+      #drop in hopes of resetting it
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
     - tasks:
       - !type:HTNPrimitiveTask
         operator: !type:NoOperator
+
+- type: htnCompound
+  id: ToHealMarkerCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarker
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:HurtPrecondition
+            minDamage: 65
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+
+- type: htnCompound
+  id: ToAttackMarkerCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyAttackMarker
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: AttackRange
+          - !type:NotHurtPrecondition
+            maxDamage: 20
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: AttackRange
+          removeKeyOnFinish: false
+
+- type: htnCompound
+  id: ForcedToAttackMarkerCompound #prevent AI wandering this far away
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyAttackMarker
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: ForcedAttackRange
+          - !type:NotHurtPrecondition
+            maxDamage: 30
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: AttackRange
+          removeKeyOnFinish: false
 
 - type: htnCompound
   id: LeaderFollowCompound
@@ -227,9 +296,6 @@
           task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: MeleeCombatCompound
-    - tasks:
-        - !type:HTNCompoundTask
           task: HealSelf
     - tasks:
         - !type:HTNCompoundTask
@@ -244,9 +310,6 @@
     - tasks:
         - !type:HTNCompoundTask
           task: GunCombatCompound
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf
@@ -265,7 +328,31 @@
           task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: MeleeCombatCompound
+          task: HealSelf
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompoundDropLeftAfter
+
+#maybe its a good idea to make an autonomous AI
+
+- type: htnCompound
+  id: AdvancedHumanoidHostileCompound
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask #follow a leader if able
+          task: LeaderFollowCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerCompound #retreat when hurt
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ForcedToAttackMarkerCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: GunCombatCompound #shoot bad guy
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToAttackMarkerCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf

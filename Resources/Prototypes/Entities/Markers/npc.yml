@@ -20,6 +20,37 @@
   - type: NPCLeader
 
 - type: entity
+  id: WaypointHeal
+  parent: MarkerBase
+  name: Heal Waypoint
+  suffix: Permanent
+  components:
+  - type: Sprite
+    state: blue
+  - type: NPCHealMarker
+
+- type: entity
+  id: WaypointAttack
+  parent: MarkerBase
+  name: Attack Waypoint
+  suffix: Permanent
+  components:
+  - type: Sprite
+    state: blue
+  - type: NPCAttackMarker
+
+
+- type: entity
+  id: WaypointDefend
+  parent: MarkerBase
+  name: Defend Waypoint
+  suffix: Permanent
+  components:
+  - type: Sprite
+    state: blue
+  - type: NPCDefendMarker
+
+- type: entity
   id: WaypointForced2S
   parent: WaypointForced
   name: Forced Waypoint

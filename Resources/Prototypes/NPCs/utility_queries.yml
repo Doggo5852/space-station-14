@@ -96,8 +96,8 @@
         preset: TargetHealth
     - !type:TargetAccessibleCon
       curve: !type:BoolCurve
-    - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
+    #- !type:TargetInLOSOrCurrentCon
+    #  curve: !type:BoolCurve
 
 - type: utilityQuery
   id: NearbyColdMeleeTargets
@@ -216,8 +216,8 @@
         preset: TargetDistance
     - !type:TargetAccessibleCon
       curve: !type:BoolCurve
-    - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
+    #- !type:TargetInLOSOrCurrentCon
+    #  curve: !type:BoolCurve
 
 - type: utilityQuery
   id: NearbyNPCLeader
@@ -251,6 +251,28 @@
     - !type:TargetDistanceCon
       curve: !type:PresetCurve
         preset: TargetDistance
+
+- type: utilityQuery
+  id: NearbyHealMarker
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: NPCHealMarker
+  #considerations:
+  #  - !type:TargetDistanceCon
+  #    curve: !type:PresetCurve
+  #      preset: TargetDistance
+
+- type: utilityQuery
+  id: NearbyAttackMarker
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: NPCAttackMarker
+  #considerations:
+  #  - !type:TargetDistanceCon
+  #    curve: !type:PresetCurve
+  #      preset: TargetDistance
 
 - type: utilityQuery
   id: NearbyGunTargets
