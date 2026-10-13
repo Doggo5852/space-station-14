@@ -37,6 +37,8 @@
   - WeaponM249Cash
   - MagazineBoxRifleCash
   - SmokeGrenadeCash
+  - WeaponLauncherM32Cash
+  - GrenadeFragM406Cash
 
 - type: latheRecipePack
   id: USVehicleStatic

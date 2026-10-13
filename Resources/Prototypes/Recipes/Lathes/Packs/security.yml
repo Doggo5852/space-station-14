@@ -183,6 +183,8 @@
   - M72A3LAW
   - WeaponM60
   - WeaponM249
+  - WeaponLauncherM32
+  - GrenadeFragM406
 
 
 - type: latheRecipePack

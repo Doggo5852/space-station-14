@@ -413,6 +413,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
+  id: GrenadeFragM406Cash
+  result: GrenadeFragM406
+  materials:
+    Credit: 75
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
   id: MagazineLightRifleIncendiary
   result: MagazineLightRifleIncendiary
   materials:

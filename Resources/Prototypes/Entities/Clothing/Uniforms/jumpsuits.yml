@@ -855,6 +855,29 @@
     sprite: Clothing/Uniforms/Jumpsuit/mercenary.rsi
 
 - type: entity
+  parent: ClothingUniformJumpsuitMercenary
+  id: ClothingUniformJumpsuitBDU
+  name: BDU uniform
+  description: Standard US Army uniform, it has numerous pockets.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/bdu.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/bdu.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+    maxItemSize: Normal
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+
+- type: entity
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformJumpsuitNinja
   name: ninja jumpsuit

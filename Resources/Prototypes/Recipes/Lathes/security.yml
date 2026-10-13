@@ -315,8 +315,8 @@
   result: WeaponRifleAk
   materials:
     Wood: 300
-    Steel: 12000
-    Plasteel: 1200
+    Steel: 9000
+    Plasteel: 1000
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -332,16 +332,24 @@
   id: WeaponLecter
   result: WeaponRifleLecter
   materials:
-    Steel: 15000
-    Plasteel: 2400
+    Steel: 10000
+    Plasteel: 1800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponLauncherM32
+  result: WeaponLauncherM32
+  materials:
+    Steel: 25000
+    Plasteel: 3200
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
   id: WeaponM16A2Scoped
   result: WeaponM16A2Scoped
   materials:
-    Steel: 16500
-    Plasteel: 2500
+    Steel: 12000
+    Plasteel: 2000
     Glass: 750
 
 - type: latheRecipe
@@ -425,6 +433,15 @@
     Plasma: 350
 
 - type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: GrenadeFragM406
+  result: GrenadeFragM406
+  materials:
+    Steel: 500
+    Plasteel: 20
+    Plasma: 30
+
+- type: latheRecipe
   parent: BaseWeaponRecipeSidearm
   id: M72A3LAW
   result: M72A3LAW
@@ -442,6 +459,7 @@
     Plasteel: 5000
     Glass: 1500
     Uranium: 200
+    Plasma: 800
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -459,10 +477,17 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
+  id: WeaponLauncherM32Cash
+  result: WeaponLauncherM32
+  materials:
+    Credit: 900
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
   id: GrenadeShrapnelCash
   result: GrenadeShrapnel
   materials:
-    Credit: 125
+    Credit: 40
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -545,8 +570,8 @@
   id: WeaponM249
   result: WeaponM249
   materials:
-    Steel: 14000
-    Plasteel: 1100
+    Steel: 20000
+    Plasteel: 3000
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
@@ -651,4 +676,4 @@
   result: WeaponMechM242
   materials:
     Steel: 4500
-    Plasteel: 2500
+    Plasteel: 4000

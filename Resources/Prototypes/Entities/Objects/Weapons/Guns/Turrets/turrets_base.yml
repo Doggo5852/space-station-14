@@ -152,11 +152,12 @@
           tags:
             - Cartridge762NATO
   - type: Gun
-    fireRate: 4
+    fireRate: 4.5
     selectedMode: FullAuto
     shotsPerBurst: 12
-    burstFireRate: 4
-    burstCooldown: 3.5
+    burstFireRate: 4.5
+    burstCooldown: 1.5
+    projectileSpeed: 35
     availableModes:
     - FullAuto
     - Burst

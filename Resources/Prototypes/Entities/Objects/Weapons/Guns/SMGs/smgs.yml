@@ -111,6 +111,7 @@
     minAngle: 21
     maxAngle: 34
     shotsPerBurst: 5
+    durability: 700
     availableModes:
     - Burst
     - FullAuto

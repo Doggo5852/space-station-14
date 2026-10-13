@@ -120,6 +120,7 @@
   - type: GunRequiresWield
   - type: Gun
     fireRate: 0.4
+    durability: 500
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

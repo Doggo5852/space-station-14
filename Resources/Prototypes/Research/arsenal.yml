@@ -225,6 +225,21 @@
   - ExplosiveTechnology
 
 - type: technology
+  id: GrenadeLaunchers
+  name: research-technology-grenade-launchers
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/m32.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - GrenadeFragM406
+  - WeaponLauncherM32
+  technologyPrerequisites:
+  - ExplosiveTechnology
+
+- type: technology
   id: Cannons
   name: research-technology-cannons
   icon:

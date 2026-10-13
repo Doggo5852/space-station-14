@@ -49,6 +49,7 @@ research-technology-launchers = Launchers
 research-technology-guided-launchers = Guided Missiles
 research-technology-mech-utilities = Mech Utilities
 research-technology-cannons = Cannons
+research-technology-grenade-launchers = Grenade Launchers
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research

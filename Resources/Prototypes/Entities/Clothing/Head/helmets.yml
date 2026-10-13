@@ -91,6 +91,26 @@
   - type: ClothingSpeedModifier
     sprintModifier: 0.97
 
+- type: entity
+  parent: ClothingHeadHelmetSwat
+  name: PASGT helmet
+  id: ClothingHeadHelmetPASGT
+  description: Standard US Army helmet
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/pasgt_helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/pasgt_helmet.rsi
+  - type: Armor #This is intentionally not spaceproof, when the time comes to port the values from SS13 this should be buffed from what it was.
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.60
+        Piercing: 0.80
+        Heat: 0.95
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.97
+
 #Syndicate SWAT Helmet
 - type: entity
   parent: ClothingHeadHelmetSwat

@@ -1041,6 +1041,31 @@
     capacity: 30
 
 - type: entity
+  id: BulletGrenade40mmM406
+  name: M406
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  #- type: ExplodeOnTrigger
+  - type: ProjectileGrenade
+    triggerKey: trigger
+    fillPrototype: PelletShrapnelHeavy
+    capacity: 30
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape: !type:PhysShapeCircle
+          radius: 0.34
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+
+- type: entity
   parent: BaseBulletTrigger
   id: BulletGrenadeCleanade
   name: cleanade grenade round

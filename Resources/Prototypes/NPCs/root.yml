@@ -89,6 +89,9 @@
         operator: !type:UtilityOperator
           proto: NearbyMedicine
       - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:HurtPrecondition
+            minDamage: 15
         operator: !type:MoveToOperator
           pathfindInPlanning: true
           removeKeyOnFinish: false
@@ -139,7 +142,7 @@
             targetKey: TargetCoordinates
             rangeKey: FollowRange
           - !type:HurtPrecondition
-            minDamage: 65
+            minDamage: 50
         operator: !type:MoveToOperator
           pathfindInPlanning: true
           targetKey: TargetCoordinates
@@ -157,6 +160,11 @@
       - !type:HTNPrimitiveTask
         operator: !type:UtilityOperator
           proto: NearbyAttackMarker
+
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
       
       - !type:HTNPrimitiveTask
         preconditions:
@@ -179,6 +187,11 @@
         operator: !type:UtilityOperator
           proto: NearbyAttackMarker
       
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+
       - !type:HTNPrimitiveTask
         preconditions:
           - !type:CoordinatesNotInRangePrecondition

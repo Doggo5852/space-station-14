@@ -203,6 +203,28 @@
     suffix: false
 
 - type: entity
+  id: GrenadeFragM406
+  name: 40mm M406
+  parent: BaseGrenade
+  description: Standard 40mm high-explosive grenade for most grenade launchers.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenade40mmM406
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+    - state: frag
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: frag
+    suffix: false
+  - type: Tag
+    tags:
+    - Grenade40mm
+
+- type: entity
   parent: BaseGrenade
   id: GrenadeCleanade
   name: cleanade grenade round

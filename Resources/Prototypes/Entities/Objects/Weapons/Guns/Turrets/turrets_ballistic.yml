@@ -17,6 +17,7 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: MechRaiders
   - type: Gun
     fireRate: 6
     minAngle: 7
@@ -38,6 +39,7 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: MechColony
   - type: Gun
     fireRate: 7.5
     shotsPerBurst: 10
@@ -60,6 +62,7 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: MechColony
 
 - type: entity
   parent: BaseWeaponTurretM60D
@@ -70,6 +73,7 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: MechRaiders
 
 - type: entity
   parent: BaseWeaponBallisticTurret
@@ -80,6 +84,7 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: MechRaiders
   - type: Destructible
     thresholds:
     - trigger:

@@ -181,6 +181,7 @@
     size: Ginormous
   - type: Gun
     projectileSpeed: 35
+    durability: 850
     fireRate: 8
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
@@ -212,6 +213,16 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+
+- type: entity
+  parent: WeaponRifleLecter
+  id: WeaponRifleLecterDamaged
+  name: M16
+  suffix: Damaged
+  components:
+  - type: Gun
+    projectileSpeed: 35
+    durability: 320
 
 - type: entity
   name: M16A2
@@ -414,6 +425,7 @@
   - type: Gun
     durabilityEnabled: false
     burstFireRate: 8
+    projectileSpeed: 38
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ProjectileBatteryAmmoProvider
