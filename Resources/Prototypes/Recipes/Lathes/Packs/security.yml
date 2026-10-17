@@ -185,6 +185,8 @@
   - WeaponM249
   - WeaponLauncherM32
   - GrenadeFragM406
+  - WeaponMP5
+  - WeaponLauncherFGM148JavelinColony
 
 
 - type: latheRecipePack

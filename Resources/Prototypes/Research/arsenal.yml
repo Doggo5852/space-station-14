@@ -72,12 +72,26 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 20000
+  cost: 16000
   recipeUnlocks:
-  - WeaponLecter
   - WeaponMechM60D
   - WeaponM60
   - WeaponM249
+  technologyPrerequisites:
+  - ModernisedGuns
+
+- type: technology
+  id: LightGuns
+  name: research-technology-light-guns
+  icon:
+    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - WeaponLecter
+  - WeaponMP5
   technologyPrerequisites:
   - ModernisedGuns
 
@@ -89,7 +103,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 1000
+  cost: 500
   recipeUnlocks:
   - WeaponPistolMk58
 
@@ -266,6 +280,7 @@
   - CartridgeMissileBGM71D
   - WeaponLauncherBGMLauncherColony
   - WeaponMechBGMRack
+  - WeaponLauncherFGM148JavelinColony
   technologyPrerequisites:
   - LauncherUnguided
 

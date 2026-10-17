@@ -859,7 +859,7 @@
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 70
+    maxChaseRadius: 90
   - type: Projectile
     damage:
       types:
@@ -884,6 +884,42 @@
   - type: GuidedMissile
   - type: TimedDespawn
     lifetime: 20
+
+- type: entity
+  parent: BulletBGM71F
+  name: missile
+  id: BulletFGM148
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    minSpeed: 11
+    maxSpeed: 11
+    riseTime: 0.3
+    turnRate: 1.1
+    canLoft: true
+    diveDistance: 3.5
+    smokeTrail: true
+    impulseInterval: 0.1
+    chasingComponent:
+    - type: MechRaiders
+    rotateWithImpulse: true
+    maxChaseRadius: 40
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 5
+    totalIntensity: 40
+    maxTileBreak: 1
+  
+- type: entity
+  parent: BulletFGM148
+  id: BulletFGM148Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+
 
 - type: entity
   id: BulletBGM71FRaider

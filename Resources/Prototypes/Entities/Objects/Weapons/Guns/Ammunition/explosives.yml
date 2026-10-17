@@ -87,6 +87,31 @@
     proto: BulletBGM71D
 
 - type: entity
+  id: CartridgeMissileFGM148
+  name: FGM-148
+  parent: CartridgeMissileBGM71F
+  description: American missile designed to destroy tanks from afar.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeFGM148
+  - type: CartridgeAmmo
+    proto: BulletFGM148
+
+- type: entity
+  id: CartridgeMissileFGM148Raider
+  name: FGM-148
+  parent: CartridgeMissileBGM71F
+  suffix: raider
+  description: American missile designed to destroy tanks from afar.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeFGM148
+  - type: CartridgeAmmo
+    proto: BulletFGM148Raider
+
+- type: entity
   id: CartridgeMissileBGM71FRaider
   suffix: Raider
   parent: CartridgeMissileBGM71F

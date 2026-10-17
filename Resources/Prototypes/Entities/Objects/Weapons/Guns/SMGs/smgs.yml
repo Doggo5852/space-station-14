@@ -21,6 +21,7 @@
     minAngle: 2
     maxAngle: 16
     fireRate: 8
+    durability: 700
     burstFireRate: 8
     angleIncrease: 3
     angleDecay: 16
@@ -231,6 +232,36 @@
       steps: 5
       zeroVisible: true
     - type: Appearance
+
+- type: entity
+  name: MP5
+  id: WeaponSubMachineGunMP5
+  parent: WeaponSubMachineGunDrozd
+  components:
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -16
+  - type: Gun
+    minAngle: 21
+    maxAngle: 26
+    fireRate: 13.3
+    durability: 660
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.87
+    walkModifier: 0.87
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.99
+    walkModifier: 0.99
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+
 
 - type: entity
   name: WT550

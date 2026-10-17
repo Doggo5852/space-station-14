@@ -255,11 +255,54 @@
         - CartridgeBGM71D
     proto: CartridgeMissileBGM71D
   - type: ClothingSpeedModifier
-    sprintModifier: 0.94
-    walkModifier: 0.94
+    sprintModifier: 0.92
+    walkModifier: 0.92
   - type: EyeCursorOffset
-    maxOffset: 40
+    maxOffset: 25
     pvsIncrease: 2.2
+
+- type: entity
+  name: FGM-148 Javelin
+  parent: WeaponLauncherBGMLauncherColony
+  id: WeaponLauncherFGM148JavelinColony
+  suffix: Colony
+  description: Soft launched ATGM with a top attack flight profile.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/javelin.rsi
+    scale: 1.0, 1.0
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 0.5
+    projectileSpeed: 15
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeFGM148
+    proto: CartridgeMissileFGM148
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.98
+    walkModifier: 0.98
+  - type: EyeCursorOffset
+    maxOffset: 18
+    pvsIncrease: 1.8
+
+- type: entity
+  name: FGM-148 Javelin
+  id: WeaponLauncherFGM148JavelinRaider
+  suffix: Raider
+  parent: WeaponLauncherFGM148JavelinColony
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeFGM148
+    proto: CartridgeMissileFGM148Raider
+
 
 - type: entity
   id: WeaponLauncherBGMLauncherRaider

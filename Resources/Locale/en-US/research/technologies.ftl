@@ -42,6 +42,7 @@ research-technology-thermal-weaponry = Thermal Weaponry
 research-technology-dual-wielding-technology = Dual Wielding Technology
 research-technology-primitive-guns = Early Weaponry
 research-technology-modernised-guns = Modernised Weaponry
+research-technology-light-guns = Light Weaponry
 research-technology-advanced-guns = Advanced Weaponry
 research-technology-optics = Scoped Weaponry
 research-technology-sidearms = Sidearms

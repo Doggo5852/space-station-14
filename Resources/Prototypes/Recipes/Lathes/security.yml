@@ -353,6 +353,15 @@
     Glass: 750
 
 - type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponMP5
+  result: WeaponSubMachineGunMP5
+  materials:
+    Steel: 4500
+    Plasteel: 350
+    Glass: 50
+
+- type: latheRecipe
   parent: BaseWeaponRecipe
   id: WeaponLecterCash
   result: WeaponRifleLecter
@@ -460,6 +469,17 @@
     Glass: 1500
     Uranium: 200
     Plasma: 800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: WeaponLauncherFGM148JavelinColony
+  result: WeaponLauncherFGM148JavelinColony
+  materials:
+    Steel: 9000
+    Plasteel: 200
+    Glass: 1000
+    Uranium: 5
+    Plasma: 250
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

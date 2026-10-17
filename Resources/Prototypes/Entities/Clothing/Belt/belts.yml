@@ -677,6 +677,24 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+  - type: Storage
+    grid:
+    - 0,0,4,2
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbing
+  id: ClothingAliceStandardChestrig
+  name: ALICE standard chestrig
+  description: Standard US Army rifleman chestrig
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/alicestandardchestrig.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/alicestandardchestrig.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+    - 0,3,4,4
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing
