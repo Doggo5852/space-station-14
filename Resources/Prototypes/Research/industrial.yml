@@ -37,7 +37,7 @@
     state: empty
   discipline: Industrial
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - PowerCellHigh
   - TurboItemRechargerCircuitboard

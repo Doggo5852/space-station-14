@@ -157,13 +157,13 @@
   - type: Item
     size: Ginormous
   - type: Gun
-    fireRate: 1.1
-    durability: 250
+    fireRate: 1.3
+    durability: 200
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: BallisticAmmoProvider
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: GunSpreadModifier
-    spread: 1.4
+    spread: 1.5
   - type: SpeedModifiedOnWield
     sprintModifier: 0.5
     walkModifier: 0.5
@@ -191,10 +191,10 @@
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 0.8
-    durability: 540
+    fireRate: 1
+    durability: 420
   - type: GunSpreadModifier
-    spread: 0.75
+    spread: 0.60
   - type: Tag
     tags:
     - WeaponShotgunKammerer

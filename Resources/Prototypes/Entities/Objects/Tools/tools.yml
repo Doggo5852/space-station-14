@@ -87,6 +87,9 @@
       Steel: 100
   - type: StaticPrice
     price: 30
+  - type: Construction
+    graph: Screwdriver
+    node: screwdriver
 
 - type: entity
   name: wrench
@@ -129,6 +132,9 @@
   - type: GuideHelp
     guides:
     - Construction
+  - type: Construction
+    graph: Wrench
+    node: wrench
 
 - type: entity
   name: multitool

@@ -116,8 +116,48 @@ public sealed class ChasingWalkSystem : VirtualController
         if (_potentialChaseTargets.Count <= 0)
             return;
 
-        //In the case of finding required components, we choose a random one of them and remember its uid.
-        component.ChasingEntity = _random.Pick(_potentialChaseTargets).Owner;
+        
+        //find the target closest to the missiles forward direction
+        EntityUid? bestTarget = null;
+        var bestAngle = float.MaxValue;
+
+        var missilePos = _transform.GetWorldPosition(uid);
+        var forward = (_transform.GetWorldRotation(uid) - Angle.FromDegrees(90)).ToVec();
+
+        foreach (var candidate in _potentialChaseTargets)
+        {
+            var targetPos = _transform.GetWorldPosition(candidate.Owner);
+            var direction = targetPos - missilePos;
+
+            
+            if (direction.LengthSquared() < 0.000001f)
+                continue;
+
+            direction = Vector2.Normalize(direction);
+
+            //Dot product tells us how closely the target
+            //aligns with the missiles forward direction
+            var dot = Vector2.Dot(forward, direction);
+            dot = Math.Clamp(dot, -1f, 1f);
+
+            
+            var angle = MathF.Acos(dot);
+
+            if (angle < bestAngle)
+            {
+                bestAngle = angle;
+                bestTarget = candidate.Owner;
+            }
+        }
+
+        //if we found a valid target use it
+        if (bestTarget == null)
+            return;
+
+        component.ChasingEntity = bestTarget;
+        component.Speed = _random.NextFloat(component.MinSpeed, component.MaxSpeed);
+
+
         component.Speed = _random.NextFloat(component.MinSpeed, component.MaxSpeed);
     }
 

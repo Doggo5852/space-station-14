@@ -7,6 +7,70 @@
   objectType: Item
 
 - type: construction
+  id: pickaxe
+  graph: Pickaxe
+  startNode: start
+  targetNode: pickaxe
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: wrench
+  graph: Wrench
+  startNode: start
+  targetNode: wrench
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: screwdriver
+  graph: Screwdriver
+  startNode: start
+  targetNode: screwdriver
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: mpart
+  graph: Machinepart
+  startNode: start
+  targetNode: mpart
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: cimprint
+  graph: CImprint
+  startNode: start
+  targetNode: cimprint
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: cable
+  graph: Cable
+  startNode: start
+  targetNode: cable
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: beaker
+  graph: Beaker
+  startNode: start
+  targetNode: beaker
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: cgen
+  graph: CGenerator
+  startNode: start
+  targetNode: cgenerator
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
   id: ghost_sheet
   graph: GhostSheet
   startNode: start

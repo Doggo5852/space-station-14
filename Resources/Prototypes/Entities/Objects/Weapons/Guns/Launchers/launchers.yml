@@ -80,7 +80,8 @@
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: Gun
     fireRate: 0.8
-    durability: 320
+    durability: 200
+    projectileSpeed: 15
   - type: Clothing
     sprite: Objects/Weapons/Guns/Launchers/m32.rsi
     slots:
@@ -161,10 +162,12 @@
     - suitStorage
   - type: Gun
     fireRate: 0.5
-    projectileSpeed: 30
+    projectileSpeed: 15
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
       maxDistance: 50
+    maxAngle: 8
+    minAngle: 5
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -216,7 +219,9 @@
     - Back
     - suitStorage
   - type: Gun
-    projectileSpeed: 25
+    projectileSpeed: 12
+    maxAngle: 8
+    minAngle: 4
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -284,6 +289,7 @@
       tags:
         - CartridgeFGM148
     proto: CartridgeMissileFGM148
+    cycleable: false
   - type: ClothingSpeedModifier
     sprintModifier: 0.98
     walkModifier: 0.98

@@ -266,3 +266,45 @@
   - type: ConditionalSpawner
     prototypes:
     - MobWatcherPride
+
+- type: entity
+  parent: MarkerBase
+  id: RaiderSpawnMobM16
+  name: Raider spawner m16
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSalvagerM16
+
+- type: entity
+  parent: MarkerBase
+  id: RaiderSpawnMobSMGHeavy
+  name: Raider spawner smg heavy
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSalvagerSMGHeavy
+
+- type: entity
+  parent: MarkerBase
+  id: RaiderSpawnMobAKHeavy
+  name: Raider spawner ak heavy
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSalvagerAKMSHeavy

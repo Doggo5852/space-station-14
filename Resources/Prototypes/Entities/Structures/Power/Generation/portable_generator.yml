@@ -169,7 +169,7 @@
       fuelMaterial: Plasma
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 3000
+      storageLimit: 12000
       materialWhiteList: [Plasma]
     - type: PortableGenerator
       startChance: 0.8
@@ -185,8 +185,8 @@
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen0
     - type: PowerSupplier
-      supplyRampRate: 5000
-      supplyRampTolerance: 1500
+      supplyRampRate: 8000
+      supplyRampTolerance: 8000
 
 - type: entity
   name: S.U.P.E.R.P.A.C.M.A.N.-type portable generator
@@ -230,7 +230,7 @@
       fuelMaterial: Uranium
       multiplier: 0.01
     - type: MaterialStorage
-      storageLimit: 3000
+      storageLimit: 12000
       materialWhiteList: [Uranium]
     - type: PortableGenerator
     - type: PowerMonitoringDevice
@@ -241,8 +241,8 @@
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen1
     - type: PowerSupplier
-      supplyRampRate: 7500
-      supplyRampTolerance: 2500
+      supplyRampRate: 10000
+      supplyRampTolerance: 10000
 
 - type: entity
   name: J.R.P.A.C.M.A.N.-type portable generator
@@ -290,25 +290,21 @@
 
     - type: Machine
       board: PortableGeneratorJrPacmanMachineCircuitboard
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: Coal
+      multiplier: 0.01
+    - type: MaterialStorage
+      storageLimit: 6000
+      materialWhiteList: [Coal]
     - type: FuelGenerator
       targetPower: 5000
       minTargetPower: 4000
-      optimalPower: 8000
-      maxTargetPower: 8000
+      optimalPower: 12000
+      maxTargetPower: 12000
       # 7.5 minutes at full tank.
       optimalBurnRate: 0.11111111
       # Shallow curve that allows you to just barely eek out 12 minutes at lowest.
       fuelEfficiencyConstant: 0.3
-    - type: ChemicalFuelGeneratorAdapter
-      solution: tank
-      reagents:
-        WeldingFuel: 1
-    - type: SolutionContainerManager
-      solutions:
-        tank:
-          maxVol: 50
-    - type: RefillableSolution
-      solution: tank
     - type: PortableGenerator
       # Unreliable bugger
       startChance: 0.5

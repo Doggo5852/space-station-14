@@ -29,8 +29,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
-        Heat: 6
+        Blunt: 3.5
+        Piercing: 3.5
+        Heat: 1
 
 - type: entity
   id: BulletPistolUranium
@@ -41,5 +42,5 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 3
-        Piercing: 4
+        Radiation: 1.2
+        Piercing: 4.5

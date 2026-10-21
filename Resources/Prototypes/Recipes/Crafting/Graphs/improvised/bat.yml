@@ -33,3 +33,118 @@
         
     - node: bat
       entity: BaseBallBat
+
+- type: constructionGraph
+  id: Pickaxe
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: pickaxe
+          steps:
+            - material: WoodPlank
+              amount: 5
+              doAfter: 6
+            - material: Steel
+              amount: 3
+              doAfter: 6
+    - node: pickaxe
+      entity: Pickaxe
+
+- type: constructionGraph
+  id: Machinepart
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: mpart
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+    - node: mpart
+      entity: MicroManipulatorStockPart
+
+- type: constructionGraph
+  id: Cable
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: cable
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 3
+    - node: cable
+      entity: CableApcStack1
+
+- type: constructionGraph
+  id: CImprint
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: cimprint
+          steps:
+            - material: Steel
+              amount: 80
+              doAfter: 20
+    - node: cimprint
+      entity: CircuitImprinterMachineCircuitboard
+
+- type: constructionGraph
+  id: CGenerator
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: cgenerator
+          steps:
+            - material: Steel
+              amount: 100
+              doAfter: 12
+    - node: cgenerator
+      entity: PortableGeneratorJrPacmanMachineCircuitboard
+
+- type: constructionGraph
+  id: Screwdriver
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: screwdriver
+          steps:
+            - material: Steel
+              amount: 15
+              doAfter: 5
+    - node: screwdriver
+      entity: Screwdriver
+
+- type: constructionGraph
+  id: Wrench
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: wrench
+          steps:
+            - material: Steel
+              amount: 15
+              doAfter: 5
+    - node: wrench
+      entity: Wrench
+
+- type: constructionGraph
+  id: Beaker
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: beaker
+          steps:
+            - material: Glass
+              amount: 25
+              doAfter: 5
+    - node: beaker
+      entity: LargeBeaker

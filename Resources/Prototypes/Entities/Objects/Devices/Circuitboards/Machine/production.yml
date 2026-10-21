@@ -141,6 +141,9 @@
       GlassBeaker:
         amount: 2
         defaultPrototype: Beaker
+  - type: Construction
+    graph: CImprint
+    node: cimprint
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -895,6 +898,9 @@
         Silicon: 20
     - type: StaticPrice
       price: 40
+    - type: Construction
+      graph: CGenerator
+      node: cgenerator
 
 - type: entity
   id: ReagentGrinderMachineCircuitboard

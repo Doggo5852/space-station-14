@@ -143,6 +143,7 @@
         whitelist:
           tags:
             - M60BigMag
+            - M60100rnd
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -163,6 +164,8 @@
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: true
 
 - type: entity
   parent: BaseWeaponTurret

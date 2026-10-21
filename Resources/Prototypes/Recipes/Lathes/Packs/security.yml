@@ -27,6 +27,7 @@
   - WeaponTurretMoeM2HBColony
   - WeaponTurretM60DColony
   - MagazineLightRifleBoxM249
+  - MagazineBoxLightRifleNATO
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -187,6 +188,7 @@
   - GrenadeFragM406
   - WeaponMP5
   - WeaponLauncherFGM148JavelinColony
+  - WeaponShotgunEnforcer
 
 
 - type: latheRecipePack

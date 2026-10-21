@@ -41,3 +41,17 @@
     - 2,3,5,8
     - 1,10,6,15
     - 13,2,16,15
+
+
+- type: dungeonRoomPack
+  id: RaiderBasePack
+  size: 22,15
+  rooms:
+    - 0,0,22,15
+    - 0,0,15,22
+
+- type: dungeonRoomPack
+  id: RaiderBasePackBig
+  size: 29,21
+  rooms:
+    - 0,0,29,21

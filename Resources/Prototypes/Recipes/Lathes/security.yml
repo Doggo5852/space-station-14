@@ -424,6 +424,14 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
+  id: WeaponShotgunEnforcer
+  result: WeaponShotgunEnforcer
+  materials:
+    Steel: 7500
+    Plasteel: 800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
   id: WeaponLauncherRocket
   result: WeaponLauncherRocket
   materials:

@@ -11,6 +11,11 @@
   - BorgChargerCircuitboard
   - SecurityTechFab
   - MedicalTechFab
+  - ResearchAndDevelopmentServerMachineCircuitboard
+  - ResearchComputerCircuitboard
+  - AnalysisComputerCircuitboard
+  - ArtifactAnalyzerMachineCircuitboard
+  - MaterialSiloMachineCircuitboard
 
 ## Dynamic
 
@@ -78,12 +83,10 @@
   - FlatpackerMachineCircuitboard
   - SheetifierMachineCircuitboard
   - PowerCageRechargerCircuitboard
-  - AnalysisComputerCircuitboard
   - AnomalyVesselCircuitboard
   - AnomalyVesselExperimentalCircuitboard
   - AnomalySynchronizerCircuitboard
   - APECircuitboard
-  - ArtifactAnalyzerMachineCircuitboard
   - ArtifactCrusherMachineCircuitboard
 
 - type: latheRecipePack

@@ -231,6 +231,9 @@
       Glass: 100
   - type: StaticPrice
     price: 20
+  - type: Construction
+    graph: Beaker
+    node: beaker
 
 - type: entity
   name: cryostasis beaker

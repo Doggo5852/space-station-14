@@ -680,6 +680,9 @@
   - type: Storage
     grid:
     - 0,0,4,2
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.9
+    walkModifier: 0.9
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing
@@ -695,6 +698,34 @@
     grid:
     - 0,0,4,1
     - 0,3,4,4
+    blacklist:
+      tags:
+      - Medkit
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.98
+    walkModifier: 0.98
+
+- type: entity
+  parent: ClothingAliceStandardChestrig
+  id: ClothingAliceMachinegunnerChestrig
+  name: ALICE machine gunner chestrig
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,2
+    - 4,0,6,2
+    - 0,4,2,6
+    - 4,4,6,6
+    whitelist:
+      tags:
+      - M60100rnd
+      - MagazineLightRifleBoxM249
+      - Medkit
+    blacklist:
+      tags:
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.93
+    walkModifier: 0.93
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing

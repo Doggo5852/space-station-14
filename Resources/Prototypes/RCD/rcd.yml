@@ -82,7 +82,7 @@
   mode: ConstructObject
   prototype: WallSolid
   cost: 4
-  delay: 2
+  delay: 1
   collisionMask: FullTileMask
   rotation: Fixed
   fx: EffectRCDConstruct2
@@ -94,7 +94,7 @@
   mode: ConstructObject
   prototype: Grille
   cost: 4
-  delay: 2
+  delay: 1
   collisionMask: Impassable
   rotation: Fixed
   fx: EffectRCDConstruct2
@@ -107,7 +107,7 @@
   mode: ConstructObject
   prototype: Window
   cost: 3
-  delay: 2
+  delay: 1
   collisionMask: Impassable
   rules:
     - IsWindow
@@ -166,7 +166,7 @@
   mode: ConstructObject
   prototype: Airlock
   cost: 4
-  delay: 4
+  delay: 2
   collisionMask: FullTileMask
   rotation: Camera
   fx: EffectRCDConstruct4
@@ -178,7 +178,7 @@
   mode: ConstructObject
   prototype: AirlockGlass
   cost: 4
-  delay: 4
+  delay: 3
   collisionMask: FullTileMask
   rotation: Camera
   fx: EffectRCDConstruct4

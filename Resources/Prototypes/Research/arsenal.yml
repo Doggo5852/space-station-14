@@ -44,7 +44,7 @@
     state: base
   discipline: Arsenal
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - WeaponMosin
 
@@ -56,7 +56,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 13000
+  cost: 10000
   recipeUnlocks:
   - WeaponAKMS
   - WeaponShotgunKammerer
@@ -72,11 +72,12 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 16000
+  cost: 8000
   recipeUnlocks:
   - WeaponMechM60D
   - WeaponM60
   - WeaponM249
+  - WeaponShotgunEnforcer
   technologyPrerequisites:
   - ModernisedGuns
 
@@ -88,7 +89,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 8000
+  cost: 5000
   recipeUnlocks:
   - WeaponLecter
   - WeaponMP5
@@ -193,7 +194,7 @@
     state: payload-explosive-armed
   discipline: Arsenal
   tier: 1
-  cost: 4000
+  cost: 2000
   recipeUnlocks:
   - SignallerAdvanced
   - SignalTrigger
@@ -217,7 +218,7 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 2
-  cost: 1500
+  cost: 750
   recipeUnlocks:
   - WeaponMechM250
   - SmokeScreenCartridge
@@ -230,7 +231,7 @@
     state: base
   discipline: Arsenal
   tier: 2
-  cost: 8000
+  cost: 5000
   recipeUnlocks:
   - CartridgeRocket
   - WeaponLauncherRocket
@@ -246,7 +247,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - GrenadeFragM406
   - WeaponLauncherM32
@@ -261,7 +262,7 @@
     state: mecha_uac2
   discipline: Arsenal
   tier: 3
-  cost: 30000
+  cost: 20000
   recipeUnlocks:
   - WeaponMechM256
   - WeaponMechM242
@@ -273,28 +274,41 @@
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     state: base
   discipline: Arsenal
-  tier: 3
-  cost: 20000
+  tier: 2
+  cost: 5000
   recipeUnlocks:
-  - CartridgeMissileBGM71F
   - CartridgeMissileBGM71D
   - WeaponLauncherBGMLauncherColony
   - WeaponMechBGMRack
-  - WeaponLauncherFGM148JavelinColony
   technologyPrerequisites:
   - LauncherUnguided
 
 - type: technology
-  id: SpecialMeans
-  name: research-technology-special-means
+  id: LauncherGuidedImproved
+  name: research-technology-improved-launchers
   icon:
-    sprite: Clothing/Back/Backpacks/electropack.rsi
-    state: icon
+    sprite: Objects/Weapons/Guns/Launchers/javelin.rsi
+    state: base
   discipline: Arsenal
-  tier: 1
-  cost: 400
+  tier: 3
+  cost: 8000
   recipeUnlocks:
-  - ClothingBackpackElectropack
+  - CartridgeMissileBGM71F
+  - WeaponLauncherFGM148JavelinColony
+  technologyPrerequisites:
+  - LauncherGuided
+
+#- type: technology
+#  id: SpecialMeans
+#  name: research-technology-special-means
+#  icon:
+#    sprite: Clothing/Back/Backpacks/electropack.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 1
+#  cost: 400
+#  recipeUnlocks:
+#  - ClothingBackpackElectropack
 
 # Tier 2
 
@@ -344,7 +358,7 @@
     state: full
   discipline: Arsenal
   tier: 2
-  cost: 5000
+  cost: 2000
   recipeUnlocks:
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
@@ -366,7 +380,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 5000
+  cost: 2000
   recipeUnlocks:
   - ClothingBackpackHarmpack
 
@@ -405,7 +419,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 3000
+  cost: 2500
   recipeUnlocks:
   - GrenadeEMP
   - PowerCageHigh

@@ -632,6 +632,7 @@
       idleState: icon
       runningState: building
       defaultProductionAmount: 10
+      materialUseMultiplier: 0.80
       staticPacks:
       - OreSmelting
       - RGlassSmelting
@@ -647,7 +648,7 @@
   - type: Machine
     board: OreProcessorIndustrialMachineCircuitboard
   - type: Lathe
-    materialUseMultiplier: 0.75
+    materialUseMultiplier: 0.25
     timeMultiplier: 0.5
     staticPacks:
     - OreSmelting

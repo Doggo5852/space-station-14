@@ -10,6 +10,7 @@
       tags:
         - CartridgePistol
     proto: CartridgePistol
+    fillDelay: 0.1
     capacity: 150
   - type: Item
     size: Small

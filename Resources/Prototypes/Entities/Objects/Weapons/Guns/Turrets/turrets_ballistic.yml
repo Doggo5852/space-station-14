@@ -74,6 +74,12 @@
     factions:
     - Syndicate
   - type: MechRaiders
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MoeM60Mag
+      gun_chamber:
+        startingItem: CartridgeLightRifleNATO
 
 - type: entity
   parent: BaseWeaponBallisticTurret

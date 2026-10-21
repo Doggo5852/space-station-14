@@ -820,7 +820,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 100 # speed, i need this
+        Blunt: 20 # speed, i need this
+        Structural: 80
 
 - type: entity
   id: BulletLAW72A3
@@ -837,7 +838,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 140
+        Blunt: 40
+        Structural: 100
 
 
 #SmokeImpassable
@@ -859,7 +861,7 @@
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 90
+    maxChaseRadius: 120
   - type: Projectile
     damage:
       types:
@@ -897,13 +899,13 @@
     riseTime: 0.3
     turnRate: 1.1
     canLoft: true
-    diveDistance: 3.5
+    diveDistance: 2.5
     smokeTrail: true
     impulseInterval: 0.1
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 40
+    maxChaseRadius: 60
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -951,7 +953,7 @@
     maxSpeed: 25
     canLoft: false
     turnRate: 1
-    maxChaseRadius: 40
+    maxChaseRadius: 70
   - type: Projectile
     damage:
       types:
@@ -969,7 +971,7 @@
     maxSpeed: 21
     canLoft: false
     turnRate: 0.9
-    maxChaseRadius: 40
+    maxChaseRadius: 70
   - type: Projectile
     damage:
       types:

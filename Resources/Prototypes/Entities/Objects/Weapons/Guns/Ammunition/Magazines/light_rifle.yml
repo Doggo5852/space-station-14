@@ -76,7 +76,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,2,1
+    - 0,0,2,2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
   - type: MagazineVisuals
@@ -97,7 +97,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,2,1
+    - 0,0,2,2
 
 - type: entity
   id: MoeM60Mag
@@ -154,7 +154,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,2,1
+    - 0,0,2,2
   - type: Tag
     tags:
       - M60100rnd

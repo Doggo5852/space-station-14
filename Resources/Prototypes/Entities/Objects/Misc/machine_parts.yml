@@ -26,3 +26,6 @@
       state: micro_mani
     - type: Stack
       stackType: Manipulator
+    - type: Construction
+      graph: Machinepart
+      node: mpart

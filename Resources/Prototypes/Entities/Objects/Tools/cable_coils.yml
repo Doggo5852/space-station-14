@@ -182,6 +182,9 @@
           Quantity: 3
         - ReagentId: Copper
           Quantity: 2
+  - type: Construction
+    graph: Cable
+    node: cable
 
 - type: entity
   parent: CableApcStack

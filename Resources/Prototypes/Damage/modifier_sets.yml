@@ -187,12 +187,12 @@
   id: Wood
   coefficients:
     Blunt: 0.5
-    Slash: 2.0
-    Piercing: 1.0
-    Heat: 2.0
-    Structural: 0.5
+    Slash: 6.0
+    Piercing: 0.5
+    Heat: 1.0
+    Structural: 0.2
   flatReductions:
-    Blunt: 5
+    Blunt: 1
 
 - type: damageModifierSet
   id: Card
@@ -246,8 +246,8 @@
 - type: damageModifierSet
   id: Moth # Slightly worse at everything but cold
   coefficients:
-    Cold: 0.7
-    Heat: 1.2
+    Cold: 1
+    Heat: 1
 
 - type: damageModifierSet
   id: Vox

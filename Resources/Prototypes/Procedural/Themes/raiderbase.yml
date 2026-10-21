@@ -1,0 +1,10 @@
+
+
+# - 7x7
+- type: dungeonRoom
+  id: Main22x15a
+  size: 29,21
+  atlas: /Maps/Dungeon/raiderbasemap.yml
+  offset: -3,31
+  tags:
+    - Raider

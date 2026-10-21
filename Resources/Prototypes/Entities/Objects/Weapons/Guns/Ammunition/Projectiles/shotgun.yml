@@ -47,7 +47,7 @@
         Piercing: 10
         Structural: 22
   - type: StaminaDamageOnCollide
-    damage: 5
+    damage: 6
 
 - type: entity
   id: SmokeScreenBullet

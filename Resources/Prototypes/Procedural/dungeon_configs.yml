@@ -388,3 +388,14 @@
       prob: 0.05
     - id: IntercomScience
       prob: 0.1
+
+
+- type: dungeonConfig
+  id: RaiderBase
+  layers:
+  - !type:PrefabDunGen
+    roomWhitelist:
+      tags:
+      - Raider
+    presets:
+    - BiggerRoom

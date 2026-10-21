@@ -22,6 +22,6 @@
 - type: latheRecipePack
   id: AdvancedSmelting
   recipes:
-  - SheetPlasteel1
+  #- SheetPlasteel1
   - SheetUGlass1
   - SheetRUGlass1
