@@ -75,6 +75,7 @@
   - MagazineBoxAntiMateriel
   - MagazineBoxAntiMaterielFMJ
   - MagazineBoxLightRifleMosin
+  - MagazineSVD
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
@@ -189,6 +190,7 @@
   - WeaponMP5
   - WeaponLauncherFGM148JavelinColony
   - WeaponShotgunEnforcer
+  - WeaponSniperSVD
 
 
 - type: latheRecipePack

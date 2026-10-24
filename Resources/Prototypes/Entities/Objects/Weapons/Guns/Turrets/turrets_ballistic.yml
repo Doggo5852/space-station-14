@@ -23,8 +23,8 @@
     minAngle: 7
     maxAngle: 10
     shotsPerBurst: 7
-    burstCooldown: 3.5
-    selectedMode: FullAuto
+    burstCooldown: 2.2
+    selectedMode: Burst
     availableModes:
     - FullAuto
     - Burst
@@ -43,7 +43,7 @@
   - type: Gun
     fireRate: 7.5
     shotsPerBurst: 10
-    burstCooldown: 3.5
+    burstCooldown: 2.2
     minAngle: 5
     maxAngle: 9
     selectedMode: FullAuto
@@ -73,13 +73,27 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
-  - type: MechRaiders
+  - type: MechRaiders 
   - type: ItemSlots
     slots:
       gun_magazine:
+        name: Magazine
         startingItem: MoeM60Mag
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - M60BigMag
+            - M60100rnd
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
+        name: Chamber
         startingItem: CartridgeLightRifleNATO
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge762NATO
 
 - type: entity
   parent: BaseWeaponBallisticTurret

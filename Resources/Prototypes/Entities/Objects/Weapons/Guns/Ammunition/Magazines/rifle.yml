@@ -154,3 +154,38 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#00cd42"
+
+
+- type: entity
+  id: MagazineSVD
+  name: "magazine (7.62x54mmR)"
+  parent: BaseMagazinePistolCaselessRifle
+  description: 10-round magazine for the SVD.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMosin
+    capacity: 10
+    whitelist:
+      tags:
+        - CartridgeMosin
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Tag
+    tags:
+      - MagazineSVD
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe

@@ -119,6 +119,52 @@
     walkModifier: 0.94
 
 - type: entity
+  name: SVD
+  parent: WeaponRifleAk
+  id: WeaponSniperSVD
+  description: For when you absolutely, positively need to make someone regret their life choices from a safe distance.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    layers:
+    - state: base
+    - state: base1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Gun
+    fireRate: 1.6
+    durability: 500
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+    projectileSpeed: 50
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineSVD
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineSVD
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMosin
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMosin
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 18
+    pvsIncrease: 0.9
+
+- type: entity
   name: M90 GL
   parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleM90GrenadeLauncher

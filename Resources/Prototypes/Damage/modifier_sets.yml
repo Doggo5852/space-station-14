@@ -11,6 +11,19 @@
     Heat: 5
 
 - type: damageModifierSet
+  id: RockPlanet
+  coefficients:
+    Blunt: 1.5
+    Slash: 0.2
+    Piercing: 0.1
+    Shock: 1.2
+    Structural: 5
+  flatReductions:
+    Blunt: 5
+    Heat: 5
+    Piercing: 10
+
+- type: damageModifierSet
   id: MetallicBradley
   coefficients:
     Blunt: 0.7

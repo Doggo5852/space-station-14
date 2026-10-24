@@ -855,7 +855,7 @@
     riseTime: 1.25
     turnRate: 0.8
     canLoft: true
-    diveDistance: 15
+    diveDistance: 10
     smokeTrail: true
     impulseInterval: 0.1
     chasingComponent:

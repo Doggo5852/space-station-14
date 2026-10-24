@@ -5,6 +5,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    penetrationThreshold: 70
     damage:
       types:
         Piercing: 16
@@ -17,6 +18,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    penetrationThreshold: 120
     damage:
       types:
         Piercing: 20
@@ -30,6 +32,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
+    penetrationThreshold: 160
     damage:
       types:
         Piercing: 22

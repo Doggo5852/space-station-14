@@ -54,6 +54,10 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             damageRequired -= damageableComponent.TotalDamage;
             damageRequired = FixedPoint2.Max(damageRequired, FixedPoint2.Zero);
         }
+        if (!TryComp<DestructibleComponent>(target, out var destructibleComponent))
+        {
+            damageRequired = 100f;
+        }
         var modifiedDamage = _damageableSystem.TryChangeDamage(target, ev.Damage, component.IgnoreResistances, damageable: damageableComponent, origin: component.Shooter);
         var deleted = Deleted(target);
 
@@ -91,7 +95,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             // If the object won't be destroyed, it "tanks" the penetration hit.
             if (modifiedDamage.GetTotal() < damageRequired)
             {
-                component.ProjectileSpent = true;
+                component.ProjectileSpent = false;
             }
 
             if (!component.ProjectileSpent)

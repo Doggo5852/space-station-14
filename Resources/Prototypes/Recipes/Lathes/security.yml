@@ -320,6 +320,16 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
+  id: WeaponSniperSVD
+  result: WeaponSniperSVD
+  materials:
+    Wood: 300
+    Steel: 7000
+    Plasteel: 1000
+    Glass: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
   id: WeaponMosin
   result: WeaponSniperMosin
   materials:

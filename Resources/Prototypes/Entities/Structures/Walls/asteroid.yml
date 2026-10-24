@@ -779,7 +779,7 @@
       tags:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: Metallic
+    damageModifierSet: RockPlanet
   - type: Destructible
     thresholds:
         - trigger:

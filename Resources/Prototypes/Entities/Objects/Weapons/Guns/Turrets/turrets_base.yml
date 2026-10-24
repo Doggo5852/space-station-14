@@ -109,7 +109,10 @@
             - CartridgeAntiMaterielFMJ
   - type: Gun
     fireRate: 5
+    projectileSpeed: 45
+    durability: 2500
     burstFireRate: 5
+    shotsPerBurst: 12
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -154,8 +157,9 @@
             - Cartridge762NATO
   - type: Gun
     fireRate: 4.5
-    selectedMode: FullAuto
-    shotsPerBurst: 12
+    selectedMode: Burst
+    shotsPerBurst: 22
+    durability: 2000
     burstFireRate: 4.5
     burstCooldown: 1.5
     projectileSpeed: 35

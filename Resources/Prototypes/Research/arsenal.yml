@@ -120,6 +120,7 @@
   recipeUnlocks:
   - MoeWeaponLMGL6
   - WeaponM16A2Scoped
+  - WeaponSniperSVD
   technologyPrerequisites:
   - AdvancedGuns
 

@@ -9,10 +9,8 @@
     damage:
       types:
         Piercing: 35
-        Structural: 100
-    penetrationThreshold: 150
-    penetrationDamageTypeRequirement:
-    - Structural
+        Structural: 5
+    penetrationThreshold: 600
     ignoreResistances: true
   - type: StaminaDamageOnCollide
     damage: 20
@@ -29,10 +27,8 @@
     damage:
       types:
         Piercing: 40
-        Structural: 15
-    penetrationThreshold: 50
-    penetrationDamageTypeRequirement:
-    - Structural
+        Structural: 2
+    penetrationThreshold: 500
   - type: StaminaDamageOnCollide
     damage: 45
 
@@ -48,9 +44,7 @@
       types:
         Piercing: 100
         Structural: 35
-    penetrationThreshold: 50
-    penetrationDamageTypeRequirement:
-    - Structural
+    penetrationThreshold: 1000
   - type: StaminaDamageOnCollide
     damage: 75
 
@@ -77,9 +71,7 @@
       types:
         Piercing: 2
         Structural: 2
-    penetrationThreshold: 50
-    penetrationDamageTypeRequirement:
-    - Structural
+    penetrationThreshold: 750
   - type: StaminaDamageOnCollide
     damage: 20
   - type: Explosive
@@ -110,9 +102,7 @@
       types:
         Piercing: 125   
         Structural: 40
-    penetrationThreshold: 80
-    penetrationDamageTypeRequirement:
-    - Structural
+    penetrationThreshold: 1200
   - type: StaminaDamageOnCollide
     damage: 75
 
@@ -139,9 +129,7 @@
       types:
         Piercing: 3
         Structural: 3
-    penetrationThreshold: 50
-    penetrationDamageTypeRequirement:
-    - Structural
+    penetrationThreshold: 800
   - type: StaminaDamageOnCollide
     damage: 30
   - type: Explosive
@@ -179,9 +167,6 @@
         Piercing: 500
         Structural: 1200
     penetrationThreshold: 1500
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -203,10 +188,7 @@
       types:
         Piercing: 600
         Structural: 1500
-    penetrationThreshold: 1500
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
+    penetrationThreshold: 6000
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -228,10 +210,7 @@
       types:
         Piercing: 850
         Structural: 1600
-    penetrationThreshold: 2000
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
+    penetrationThreshold: 12000
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -253,10 +232,7 @@
       types:
         Piercing: 900
         Structural: 1600
-    penetrationThreshold: 2000
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
+    penetrationThreshold: 10000
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -270,7 +246,7 @@
   - type: ExplodeOnTrigger
   - type: TriggerOnCollide
     fixtureID: projectile
-    maxTriggers: 3
+    maxTriggers: 6
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -290,10 +266,7 @@
       types:
         Piercing: 400
         Structural: 700
-    penetrationThreshold: 1500
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
+    penetrationThreshold: 7000
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -307,7 +280,7 @@
   - type: ExplodeOnTrigger
   - type: TriggerOnCollide
     fixtureID: projectile
-    maxTriggers: 3
+    maxTriggers: 8
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -327,10 +300,7 @@
       types:
         Piercing: 450
         Structural: 750
-    penetrationThreshold: 1500
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
+    penetrationThreshold: 8000
   - type: StaminaDamageOnCollide
     damage: 150
 
@@ -365,8 +335,5 @@
         Piercing: 500
         Structural: 600
     penetrationThreshold: 1500
-    penetrationDamageTypeRequirement:
-    - Structural
-    - Piercing
   - type: StaminaDamageOnCollide
     damage: 150

@@ -22,6 +22,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Shared.Mech.EntitySystems;
 
@@ -173,6 +174,7 @@ public abstract partial class SharedMechSystem : EntitySystem
         _mover.SetRelay(pilot, mech);
         _interaction.SetRelay(pilot, mech, irelay);
         _eyeSystem.SetZoom(pilot, component.Zoom, ignoreLimits: true);
+        _eyeSystem.SetMaxZoom(pilot, component.Zoom);
         rider.Mech = mech;
         Dirty(pilot, rider);
 
@@ -194,9 +196,10 @@ public abstract partial class SharedMechSystem : EntitySystem
             return;
         RemComp<RelayInputMoverComponent>(pilot);
         RemComp<InteractionRelayComponent>(pilot);
-
+        var defZoom = new Vector2(1.5f, 1.5f);
         _actions.RemoveProvidedActions(pilot, mech);
         _eyeSystem.ResetZoom(pilot);
+        _eyeSystem.SetMaxZoom(pilot, defZoom); // this is hardcoded to 1.5, 1.5 beware
     }
 
     /// <summary>

@@ -126,6 +126,9 @@ public sealed partial class MechComponent : Component
     [DataField("zoom")]
     public Vector2 Zoom = new(1.8f, 1.8f);
 
+
+    [DataField("defaultZoom")]
+    public Vector2 DefaultZoom = new(1.5f, 1.5f);
     /// <summary>
     /// Whether or not the mech is airtight.
     /// </summary>

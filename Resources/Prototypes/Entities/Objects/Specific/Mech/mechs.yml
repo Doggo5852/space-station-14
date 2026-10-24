@@ -117,7 +117,11 @@
     baseState: ripley
     openState: ripley-open
     brokenState: ripley-broken
-    mechToPilotDamageMultiplier: 0.75
+    maxIntegrity: 120
+    mechToPilotDamageMultiplier: 1
+    equipmentWhitelist:
+      tags:
+      - BTR70
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -130,6 +134,19 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.25
     baseSprintSpeed: 3.6
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   id: MechRipleyBattery
@@ -338,6 +355,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: EyeCursorOffset
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: Mech
     baseState: bradley
     openState: bradley
@@ -457,6 +477,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: EyeCursorOffset
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: MetallicAbrams
@@ -554,6 +577,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: EyeCursorOffset
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: MetallicAbrams
@@ -681,6 +707,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: EyeCursorOffset
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: Mech
     baseState: bmp2
     openState: bmp2
@@ -812,6 +841,9 @@
     damageModifierSet: MetallicBTR
   - type: MobState
   - type: MovementAlwaysTouching
+  - type: EyeCursorOffset
+    maxOffset: 30
+    pvsIncrease: 2.2
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 30
@@ -894,8 +926,8 @@
     size: Ginormous
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
-    walkModifier: 0.01
-    sprintModifier: 0.01
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: HeldSpeedModifier
 
 - type: entity
@@ -921,6 +953,7 @@
     fireRate: 8.5
     minAngle: 1
     maxAngle: 10
+    durability: 5000
     angleIncrease: 0.19
     angleDecay: 1
     selectedMode: FullAuto
@@ -984,6 +1017,7 @@
     fireRate: 9
     minAngle: 2
     maxAngle: 13
+    durability: 4000
     angleIncrease: 0.17
     angleDecay: 1
     selectedMode: FullAuto
@@ -1040,6 +1074,7 @@
     fireRate: 7.5
     minAngle: 6
     maxAngle: 8
+    durability: 3000
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -1091,6 +1126,7 @@
     projectileSpeed: 60
     fireRate: 0.1
     minAngle: 1
+    durability: 500
     maxAngle: 2
     selectedMode: SemiAuto
     availableModes:
@@ -1124,6 +1160,7 @@
     installDuration: 10
   - type: Gun
     projectileSpeed: 40
+    durability: 2200
     fireRate: 3.3
     minAngle: 1
     maxAngle: 2
@@ -1161,6 +1198,7 @@
     projectileSpeed: 65
     fireRate: 0.13
     minAngle: 3
+    durability: 1800
     maxAngle: 5
     selectedMode: SemiAuto
     availableModes:
@@ -1190,6 +1228,7 @@
     projectileSpeed: 35
     fireRate: 6.5
     minAngle: 2
+    durability: 500
     maxAngle: 5
     selectedMode: FullAuto
     availableModes:
