@@ -7,24 +7,22 @@
         - !type:HTNPrimitiveTask
           operator: !type:UtilityOperator
             proto: NearbyGunTargets
-
+        - !type:HTNPrimitiveTask
+          operator: !type:SwapToFullHandOperator
         - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
             shutdownState: PlanFinished
-            pathfindInPlanning: true
+            pathfindInPlanning: false
             removeKeyOnFinish: false
             targetKey: TargetCoordinates
             pathfindKey: TargetPathfind
             stopOnLineOfSight: true
             rangeKey: RangedRange
-
-        - !type:HTNPrimitiveTask
-          operator: !type:SwapToFullHandOperator
-
         - !type:HTNPrimitiveTask
           preconditions:
-            - !type:KeyExistsPrecondition
-              key: Target
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: RangedRange
           operator: !type:GunOperator
             targetKey: Target
           services:

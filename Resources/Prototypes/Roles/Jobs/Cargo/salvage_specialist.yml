@@ -213,6 +213,31 @@
     - ChemistryBottleEpinephrine
     - Brutepack
     - PillCanisterBicaridine
+    - ChemistryBottleMannitol
+
+- type: startingGear
+  id: SalvagerM60Heavy
+  equipment:
+    head: ClothingHeadHelmetSwatSyndicate
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest bulletproof (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - m60battery
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - PillCanisterBicaridine
+    - ChemistryBottleMannitol
 
 - type: startingGear
   id: SalvagerM16
@@ -235,6 +260,7 @@
     back:
     - ChemistryBottleEpinephrine
     - Brutepack
+    - ChemistryBottlePeridaxon
 
 - type: startingGear
   id: SalvagerM16Heavy

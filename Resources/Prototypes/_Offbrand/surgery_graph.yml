@@ -22,7 +22,7 @@
       to: Base
       steps:
       - tool: Cauterizing
-        doAfter: 1
+        doAfter: 0.5
         completed:
         - !type:RemoveStatusEffect
           effect: WoundClamped
@@ -37,7 +37,7 @@
     - to: ClampedBleeders
       steps:
       - tool: Clamping
-        doAfter: 1
+        doAfter: 0.5
         completed:
         - !type:AddWound
           wound: WoundClamped
@@ -50,7 +50,7 @@
     - to: RetractedIncision
       steps:
       - tool: Retracting
-        doAfter: 1
+        doAfter: 0.5
         completed:
         - !type:AddWound
           wound: WoundRetracted
@@ -76,7 +76,7 @@
         effect: WoundArterialBleeding
       steps:
       - tool: Recoupling
-        doAfter: 1
+        doAfter: 0.5
     - to: OpenRibCage
       completed:
       - !type:AddWound
@@ -92,7 +92,7 @@
     - to: WoundFractureBoneSetting
       steps:
       - tool: BoneSetting
-        doAfter: 1
+        doAfter: 0.5
   - node: WoundFractureBoneSetting
     edges:
     - to: WoundFractureTreatment
@@ -101,7 +101,7 @@
         effect: WoundFracture
       steps:
       - tool: BoneMending
-        doAfter: 1
+        doAfter: 0.5
   - node: WoundFractureTreatment
     header: construction-component-to-perform-header
     localizedName: surgery-wound-fracture-treatment-name
@@ -121,27 +121,27 @@
     - to: OpenRibCageMending
       steps:
       - tool: BoneMending
-        doAfter: 1
+        doAfter: 0.5
     - to: HeartTreatmentSuture
       conditions: &heart-damage-conditions
       - !type:HeartDamage
         min: 1
       completed:
       - !type:ChangeHeartDamage
-        amount: -10
+        amount: -15
       steps:
       - material: Suture
         amount: 1
-        doAfter: 5
+        doAfter: 1
     - to: HeartTreatmentMedicatedSuture
       conditions: *heart-damage-conditions
       completed:
       - !type:ChangeHeartDamage
-        amount: -20
+        amount: -50
       steps:
       - material: MedicatedSuture
         amount: 1
-        doAfter: 3
+        doAfter: 1
     - to: HuskingTreatment
       conditions: &husking-conditions
       - !type:HasStatusEffect
@@ -152,11 +152,11 @@
       steps:
       - material: RegenerativeMesh
         amount: 3
-        doAfter: 5
+        doAfter: 2
     - to: CavityManipulationOpen
       steps:
       - tool: Drilling
-        doAfter: 2
+        doAfter: 1
     - to: OpenRibCageRecoupling
       steps:
       - tool: Recoupling

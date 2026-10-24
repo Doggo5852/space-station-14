@@ -124,9 +124,53 @@
         operator: !type:SwapToFreeHandOperator
       - !type:HTNPrimitiveTask
         operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
     - tasks:
       - !type:HTNPrimitiveTask
         operator: !type:NoOperator
+
+- type: htnCompound
+  id: ToHealMarkerLowAmmoCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarker
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:GunAmmoPrecondition
+            maxPercent: 0.4
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+
+- type: htnCompound
+  id: ToHealMarkerCriticalLowAmmoCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarker
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:GunAmmoPrecondition
+            maxPercent: 0.08
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
 
 - type: htnCompound
   id: ToHealMarkerCompound
@@ -160,12 +204,6 @@
       - !type:HTNPrimitiveTask
         operator: !type:UtilityOperator
           proto: NearbyAttackMarker
-
-      - !type:HTNPrimitiveTask
-        operator: !type:SwapToFreeHandOperator
-      - !type:HTNPrimitiveTask
-        operator: !type:DropOperator
-      
       - !type:HTNPrimitiveTask
         preconditions:
           - !type:CoordinatesNotInRangePrecondition
@@ -173,6 +211,8 @@
             rangeKey: AttackRange
           - !type:NotHurtPrecondition
             maxDamage: 20
+          - !type:GunAmmoPrecondition
+            minPercent: 0.6
         operator: !type:MoveToOperator
           pathfindInPlanning: true
           targetKey: TargetCoordinates
@@ -186,12 +226,6 @@
       - !type:HTNPrimitiveTask
         operator: !type:UtilityOperator
           proto: NearbyAttackMarker
-      
-      - !type:HTNPrimitiveTask
-        operator: !type:SwapToFreeHandOperator
-      - !type:HTNPrimitiveTask
-        operator: !type:DropOperator
-
       - !type:HTNPrimitiveTask
         preconditions:
           - !type:CoordinatesNotInRangePrecondition
@@ -199,6 +233,8 @@
             rangeKey: ForcedAttackRange
           - !type:NotHurtPrecondition
             maxDamage: 30
+          - !type:GunAmmoPrecondition
+            minPercent: 0.6
         operator: !type:MoveToOperator
           pathfindInPlanning: true
           targetKey: TargetCoordinates
@@ -359,10 +395,16 @@
           task: ToHealMarkerCompound #retreat when hurt
     - tasks:
         - !type:HTNCompoundTask
+          task: ToHealMarkerCriticalLowAmmoCompound
+    - tasks:
+        - !type:HTNCompoundTask
           task: ForcedToAttackMarkerCompound
     - tasks:
         - !type:HTNCompoundTask
           task: GunCombatCompound #shoot bad guy
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerLowAmmoCompound
     - tasks:
         - !type:HTNCompoundTask
           task: ToAttackMarkerCompound

@@ -26,6 +26,7 @@
   id: CartridgeLAW72A3
   parent: CartridgeRocket
   name: LAW72A3 rocket
+  description: You're not supposed to see this.
   components:
   - type: CartridgeAmmo
     proto: BulletLAW72A3
@@ -33,6 +34,10 @@
   - type: Tag
     tags:
       - M72A3LAW
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,7,7
 
 
 - type: entity

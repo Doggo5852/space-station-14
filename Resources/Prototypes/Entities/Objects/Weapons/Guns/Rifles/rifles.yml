@@ -437,6 +437,7 @@
   - type: Gun
     durabilityEnabled: false
     burstFireRate: 5
+    shotsPerBurst: 6
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: Sprite
@@ -449,10 +450,40 @@
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeLightRifle
   - type: ClothingSpeedModifier
-    sprintModifier: 0.90
-    walkModifier: 0.90
+    sprintModifier: 0.83
+    walkModifier: 0.83
   - type: HeldSpeedModifier
 
+
+- type: entity
+  id: m60battery
+  suffix: Battery
+  parent: WeaponSubMachineGunC20rROW
+  name: M60
+  description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from 7.62x39mm rifle magazine.
+  components:
+  - type: Gun
+    durabilityEnabled: false
+    burstFireRate: 7
+    shotsPerBurst: 12
+    burstCooldown: 0.6
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/LMGs/l6.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeLightRifleNATO
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.75
+    walkModifier: 0.75
+  - type: HeldSpeedModifier
+  - type: Battery
+    maxCharge: 10000
 
 - type: entity
   id: kubuM16
@@ -471,12 +502,13 @@
   - type: Gun
     durabilityEnabled: false
     burstFireRate: 8
+    shotsPerBurst: 9
     projectileSpeed: 38
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeRifle 
   - type: ClothingSpeedModifier
-    sprintModifier: 0.92
-    walkModifier: 0.92
+    sprintModifier: 0.88
+    walkModifier: 0.88
   - type: HeldSpeedModifier

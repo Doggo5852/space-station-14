@@ -41,7 +41,7 @@
   - type: UniqueWoundOnDamage
     wounds:
     - damageTypes: [Slash, Blunt, Piercing]
-      minimumDamage: 20
+      minimumDamage: 50
       minimumTotalDamage: 75
       woundPrototype: WoundArterialBleeding
       woundDamages:
@@ -50,7 +50,7 @@
       damageProbabilityCoefficient: 0.01
       damageProbabilityConstant: 0
     - damageTypes: [Blunt]
-      minimumDamage: 20
+      minimumDamage: 40
       minimumTotalDamage: 40
       woundPrototype: WoundFracture
       woundDamages:
@@ -80,7 +80,7 @@
       damageProbabilityConstant: 0
     - damageTypes: [Slash, Blunt, Piercing]
       minimumDamage: 1
-      minimumTotalDamage: 300
+      minimumTotalDamage: 350
       woundPrototype: WoundBoneDeath
       woundDamages:
         damageDict:
@@ -201,7 +201,7 @@
     effectDuration: 2.1
     doAfterDuration: 2
     wound: WoundFracture
-    woundProbability: 0.02
+    woundProbability: 0.0
   - type: IVTarget
   - type: HeartDamageOnDamage
     thresholds:

@@ -45,6 +45,8 @@
           12
         NavClimb: !type:Bool
           true
+        NavInteract: !type:Bool
+          true
         RangedRange: !type:Single
           15
 
@@ -158,6 +160,16 @@
     - type: Loadout
       prototypes:
         - SalvagerAKMSHeavy
+
+- type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerM60Heavy
+  suffix: M60Heavy
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerM60Heavy
 
 - type: entity
   name: salvager

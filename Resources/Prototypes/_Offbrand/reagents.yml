@@ -168,7 +168,7 @@
         amount: -0.4
         conditions:
         - !type:HeartDamage
-          max: 50
+          max: 70
       - !type:ModifyLungDamage
         amount: -0.4
         conditions:

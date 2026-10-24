@@ -27,3 +27,19 @@
         reagents:
         - ReagentId: Paracetamol
           Quantity: 30
+
+
+- type: entity
+  id: ChemistryBottlePeridaxon
+  suffix: peridaxon
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: peridaxon
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Peridaxon
+          Quantity: 30
