@@ -724,8 +724,8 @@
     blacklist:
       tags:
   - type: ClothingSpeedModifier
-    sprintModifier: 0.93
-    walkModifier: 0.93
+    sprintModifier: 0.91
+    walkModifier: 0.91
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing

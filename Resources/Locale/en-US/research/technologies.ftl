@@ -52,6 +52,8 @@ research-technology-improved-launchers = Improved Missiles
 research-technology-mech-utilities = Mech Utilities
 research-technology-cannons = Cannons
 research-technology-grenade-launchers = Grenade Launchers
+research-technology-type-three = Type III Armor
+research-technology-type-four = Type IV Armor
 
 research-technology-basic-robotics = Basic Robotics
 research-technology-basic-anomalous-research = Basic Anomalous Research

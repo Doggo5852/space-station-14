@@ -42,9 +42,10 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
+    penetrationThreshold: 105
     damage:
       types:
-        Piercing: 10
+        Piercing: 12
         Structural: 22
   - type: StaminaDamageOnCollide
     damage: 6

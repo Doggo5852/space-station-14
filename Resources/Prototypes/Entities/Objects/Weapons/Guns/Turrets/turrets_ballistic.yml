@@ -65,6 +65,28 @@
   - type: MechColony
 
 - type: entity
+  parent: BaseWeaponTurretM249
+  id: WeaponTurretM249Colony
+  suffix: Colony
+  name: M249 turret
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  #- type: MechColony # no killing it with guided stuff
+
+- type: entity
+  parent: BaseWeaponTurretM249
+  id: WeaponTurretM249Raider
+  suffix: Raider
+  name: M249 turret
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  #- type: MechRaiders
+
+- type: entity
   parent: BaseWeaponTurretM60D
   id: WeaponTurretM60DRaider
   suffix: Raider

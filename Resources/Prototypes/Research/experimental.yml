@@ -8,7 +8,7 @@
     state: fab-idle
   discipline: Experimental
   tier: 1
-  cost: 1500
+  cost: 250
   recipeUnlocks:
   - ProximitySensor
 
@@ -20,7 +20,7 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 2500
+  cost: 750
   recipeUnlocks:
   - AnomalyScanner
   - AnomalyLocator
@@ -36,7 +36,7 @@
     state: display
   discipline: Experimental
   tier: 1
-  cost: 2000
+  cost: 250
   recipeUnlocks:
   - NodeScanner
   - AnalysisComputerCircuitboard
@@ -50,7 +50,7 @@
     state: display
   discipline: Experimental
   tier: 1
-  cost: 750
+  cost: 250
   recipeUnlocks:
   - TechDiskComputerCircuitboard
 
@@ -62,10 +62,10 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 750
+  cost: 500
   recipeUnlocks:
   - ClothingShoesBootsMagSci
-  - ClothingShoesBootsMoon
+  #- ClothingShoesBootsMoon
 
 - type: technology
   id: AnomalyCoreHarnessing
@@ -75,7 +75,7 @@
     state: icon
   discipline: Experimental
   tier: 1
-  cost: 5000
+  cost: 1500
   recipeUnlocks:
   - WeaponGauntletGorilla
 
@@ -89,7 +89,7 @@
     state: icon
   discipline: Experimental
   tier: 2
-  cost: 2000
+  cost: 1250
   recipeUnlocks:
   - ArtifactCrusherMachineCircuitboard
 
@@ -100,8 +100,8 @@
     sprite: Structures/Machines/anomaly_sync.rsi
     state: base
   discipline: Experimental
-  tier: 2
-  cost: 15000
+  tier: 3
+  cost: 5000
   recipeUnlocks:
   - WeaponPistolCHIMP
   - AnomalySynchronizerCircuitboard
@@ -109,31 +109,31 @@
   technologyPrerequisites:
   - BasicAnomalousResearch
 
-- type: technology
-  id: DeterrenceTechnologies
-  name: research-technology-deterrence
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
-    state: base
-  discipline: Experimental
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - WeaponParticleDecelerator
-  - HoloprojectorField
+#- type: technology
+#  id: DeterrenceTechnologies
+#  name: research-technology-deterrence
+#  icon:
+#    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+#    state: base
+#  discipline: Experimental
+#  tier: 2
+#  cost: 7500
+#  recipeUnlocks:
+#  - WeaponParticleDecelerator
+#  - HoloprojectorField
 
-- type: technology
-  id: GravityManipulation
-  name: research-technology-gravity-manipulation
-  icon:
-    sprite: Objects/Weapons/Guns/Launchers/tether_gun.rsi
-    state: base
-  discipline: Experimental
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-    - WeaponForceGun
-    - WeaponTetherGun
+#- type: technology
+#  id: GravityManipulation
+#  name: research-technology-gravity-manipulation
+#  icon:
+#    sprite: Objects/Weapons/Guns/Launchers/tether_gun.rsi
+#    state: base
+#  discipline: Experimental
+#  tier: 2
+#  cost: 10000
+#  recipeUnlocks:
+#    - WeaponForceGun
+#    - WeaponTetherGun
 
 # Tier 3
 
@@ -145,18 +145,18 @@
     state: icon
   discipline: Experimental
   tier: 3
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - DeviceQuantumSpinInverter
 
-- type: technology
-  id: BluespaceTimeManipulation
-  name: research-technology-bluespace-time-manipulation
-  icon:
-    sprite: Objects/Devices/desynchronizer.rsi
-    state: icon
-  discipline: Experimental
-  tier: 3
-  cost: 15000
-  recipeUnlocks:
-  - DeviceDesynchronizer
+#- type: technology
+#  id: BluespaceTimeManipulation
+#  name: research-technology-bluespace-time-manipulation
+#  icon:
+#    sprite: Objects/Devices/desynchronizer.rsi
+#    state: icon
+#  discipline: Experimental
+#  tier: 3
+#  cost: 30000
+#  recipeUnlocks:
+#  - DeviceDesynchronizer

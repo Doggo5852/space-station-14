@@ -81,7 +81,7 @@ public sealed partial class NPCSteeringSystem
             var isClimbable = (poly.Data.Flags & PathfindingBreadcrumbFlag.Climb) != 0x0;
 
             // Just walk into it stupid
-            if (isDoor && !isAccessRequired)
+            if (isDoor) // && !isAccessRequired
             {
                 var doorQuery = GetEntityQuery<DoorComponent>();
 
@@ -91,7 +91,7 @@ public sealed partial class NPCSteeringSystem
                     if (!doorQuery.TryGetComponent(ent, out var door))
                         continue;
 
-                    if (!door.BumpOpen && (component.Flags & PathFlags.Interact) != 0x0)
+                    if (door.BumpOpen && (component.Flags & PathFlags.Interact) != 0x0)
                     {
                         if (door.State != DoorState.Opening)
                         {

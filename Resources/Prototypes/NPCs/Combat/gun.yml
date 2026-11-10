@@ -23,6 +23,10 @@
             - !type:TargetInRangePrecondition
               targetKey: Target
               rangeKey: RangedRange
+            - !type:TargetInLOSPrecondition
+              targetKey: Target
+              rangeKey: RangedRange
+              opaqueKey: true
           operator: !type:GunOperator
             targetKey: Target
           services:

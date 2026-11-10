@@ -196,6 +196,133 @@
         operator: !type:SwapToFreeHandOperator
       - !type:HTNPrimitiveTask
         operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
+
+- type: htnCompound
+  id: ToHealMarkerColonyCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarkerColony
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:HurtPrecondition
+            minDamage: 50
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
+
+- type: htnCompound
+  id: ToHealMarkerLowAmmoColonyCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarkerColony
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:GunAmmoPrecondition
+            maxPercent: 0.4
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
+
+- type: htnCompound
+  id: ToHealMarkerCriticalLowAmmoColonyCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyHealMarkerColony
+      
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:GunAmmoPrecondition
+            maxPercent: 0.08
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: FollowCloseRange
+          removeKeyOnFinish: false
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
+
+- type: htnCompound
+  id: ToDefendMarkerColonyCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyDefendMarkerColony
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: FollowRange
+          - !type:NotHurtPrecondition
+            maxDamage: 20
+          - !type:GunAmmoPrecondition
+            minPercent: 0.6
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: MovementRangeClose
+          removeKeyOnFinish: false
+
+- type: htnCompound
+  id: ToDefendMarkerForcedColonyCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyDefendMarkerColony
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:CoordinatesNotInRangePrecondition
+            targetKey: TargetCoordinates
+            rangeKey: ForcedAttackRange
+          - !type:NotHurtPrecondition
+            maxDamage: 50
+          - !type:GunAmmoPrecondition
+            minPercent: 0.6
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          targetKey: TargetCoordinates
+          rangeKey: MovementRangeClose
+          removeKeyOnFinish: false
 
 - type: htnCompound
   id: ToAttackMarkerCompound
@@ -342,7 +469,22 @@
           task: LeaderFollowCompoundBlue
     - tasks:
         - !type:HTNCompoundTask
+          task: ToHealMarkerColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerCriticalLowAmmoColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToDefendMarkerForcedColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
           task: GunCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerLowAmmoColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToDefendMarkerColonyCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf
@@ -358,7 +500,22 @@
           task: LeaderFollowCompoundRed
     - tasks:
         - !type:HTNCompoundTask
+          task: ToHealMarkerColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerCriticalLowAmmoColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToDefendMarkerForcedColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
           task: GunCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToHealMarkerLowAmmoColonyCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: ToDefendMarkerColonyCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf

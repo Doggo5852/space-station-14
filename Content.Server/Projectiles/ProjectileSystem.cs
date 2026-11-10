@@ -9,6 +9,9 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
+using Content.Shared.Weapons.Ranged.Components;
+using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
+using Content.Shared.Mobs.Components;
 
 namespace Content.Server.Projectiles;
 
@@ -44,6 +47,21 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             return;
         }
 
+        if (TryComp<TimedDespawnComponent>(component.Owner, out var despawn))
+        {
+            var lifetime = despawn.Lifetime;
+            Random rnd = new Random();
+            var chance = rnd.Next(0, 101);
+            if (lifetime < component.CritMinTime)
+            {
+                var gun = component.Weapon;
+                if (TryComp<GunComponent>(gun, out var guncomp) && guncomp.CritsAllowed && chance < component.CritChance && TryComp<MobStateComponent>(target, out var targetMobComp))
+                {
+                    component.Damage *= component.CritDamageMultiplier; // only applies to mobs
+                }
+
+            }
+        }
         var ev = new ProjectileHitEvent(component.Damage * _damageableSystem.UniversalProjectileDamageModifier, target, component.Shooter);
         RaiseLocalEvent(uid, ref ev);
 
@@ -56,7 +74,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
         }
         if (!TryComp<DestructibleComponent>(target, out var destructibleComponent))
         {
-            damageRequired = 100f;
+            damageRequired = 100f; // hardcoded penetration value for anything we can't destroy, this includes mobs
         }
         var modifiedDamage = _damageableSystem.TryChangeDamage(target, ev.Damage, component.IgnoreResistances, damageable: damageableComponent, origin: component.Shooter);
         var deleted = Deleted(target);

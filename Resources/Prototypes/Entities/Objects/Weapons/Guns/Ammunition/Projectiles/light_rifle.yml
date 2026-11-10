@@ -8,8 +8,11 @@
     penetrationThreshold: 70
     damage:
       types:
-        Piercing: 16
+        Piercing: 17
         Blunt: 3
+    critDamageMultiplier: 1.90
+    critChance: 35
+    critMinTime: 9.77
 
 - type: entity
   id: BulletLightRifleNATO
@@ -32,11 +35,14 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
-    penetrationThreshold: 160
+    penetrationThreshold: 210
     damage:
       types:
-        Piercing: 22
+        Piercing: 30
         Blunt: 4
+    critDamageMultiplier: 2.50
+    critMinTime: 9.77
+    critChance: 80
 
 - type: entity
   categories: [ HideSpawnMenu ]

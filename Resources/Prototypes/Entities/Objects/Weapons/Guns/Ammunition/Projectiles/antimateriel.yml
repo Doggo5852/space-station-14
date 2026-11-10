@@ -8,10 +8,13 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 25
         Structural: 5
-    penetrationThreshold: 600
+    penetrationThreshold: 1200
     ignoreResistances: true
+    critChance: 90
+    critDamageMultiplier: 1.15
+    critMinTime: 9.75
   - type: StaminaDamageOnCollide
     damage: 20
 
@@ -26,9 +29,12 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 29
         Structural: 2
     penetrationThreshold: 500
+    critChance: 90
+    critDamageMultiplier: 6.5
+    critMinTime: 9.75
   - type: StaminaDamageOnCollide
     damage: 45
 
@@ -44,7 +50,7 @@
       types:
         Piercing: 100
         Structural: 35
-    penetrationThreshold: 1000
+    penetrationThreshold: 1900
   - type: StaminaDamageOnCollide
     damage: 75
 
@@ -102,7 +108,7 @@
       types:
         Piercing: 125   
         Structural: 40
-    penetrationThreshold: 1200
+    penetrationThreshold: 2100
   - type: StaminaDamageOnCollide
     damage: 75
 

@@ -115,6 +115,9 @@ namespace Content.Shared.Containers.ItemSlots
         [ViewVariables(VVAccess.ReadWrite)]
         public bool Locked = false;
 
+        [DataField]
+        public TimeSpan InsertDelay = TimeSpan.FromSeconds(0.5);
+
         /// <summary>
         /// Prevents adding the eject alt-verb, but still lets you swap items.
         /// </summary>

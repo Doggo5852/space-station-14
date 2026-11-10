@@ -51,6 +51,26 @@
   - type: NPCDefendMarker
 
 - type: entity
+  id: WaypointDefendColony
+  parent: MarkerBase
+  name: Defend Waypoint
+  suffix: Permanent Colony
+  components:
+  - type: Sprite
+    state: pink
+  - type: NPCDefendMarkerColony
+
+- type: entity
+  id: WaypointHealColony
+  parent: MarkerBase
+  name: Heal Waypoint
+  suffix: Permanent Colony
+  components:
+  - type: Sprite
+    state: pink
+  - type: NPCHealMarkerColony
+
+- type: entity
   id: WaypointForced2S
   parent: WaypointForced
   name: Forced Waypoint

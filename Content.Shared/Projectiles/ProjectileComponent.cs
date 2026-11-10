@@ -45,6 +45,14 @@ public sealed partial class ProjectileComponent : Component
     [DataField(required: true)] [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier Damage = new();
 
+    [DataField]
+    public float CritMinTime = 9.5f;
+
+    [DataField]
+    public float CritChance = 75f;
+
+    [DataField]
+    public float CritDamageMultiplier = 1.25f;
     /// <summary>
     ///     If the projectile should be deleted on collision.
     /// </summary>

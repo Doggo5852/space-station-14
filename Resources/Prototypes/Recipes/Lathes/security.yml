@@ -605,6 +605,14 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm
+  id: WeaponM60E6
+  result: WeaponM60E6
+  materials:
+    Steel: 19000
+    Plasteel: 4000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
   id: WeaponM249
   result: WeaponM249
   materials:
@@ -691,6 +699,14 @@
   materials:
     Steel: 6000
     Plasteel: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponTurretM249Colony
+  result: WeaponTurretM249Colony
+  materials:
+    Steel: 4500
+    Plasteel: 500
 
 - type: latheRecipe
   parent: BaseWeaponRecipeSidearm

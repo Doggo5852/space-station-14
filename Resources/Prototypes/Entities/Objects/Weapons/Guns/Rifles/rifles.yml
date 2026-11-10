@@ -55,8 +55,8 @@
   - type: StaticPrice
     price: 500
   - type: SpeedModifiedOnWield
-    sprintModifier: 0.5
-    walkModifier: 0.5
+    sprintModifier: 0.77
+    walkModifier: 0.77
   - type: ClothingSpeedModifier
     sprintModifier: 0.97
     walkModifier: 0.97
@@ -78,9 +78,13 @@
   - type: Item
     size: Ginormous
   - type: Gun
-    projectileSpeed: 28
-    minAngle: 22
-    maxAngle: 33
+    critsAllowed: true
+    angleDecay: 10
+    angleIncrease: 2
+    projectileSpeed: 29
+    minAngle: 20
+    maxAngle: 43
+    fireRate: 7
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: ChamberMagazineAmmoProvider
@@ -132,7 +136,8 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Gun
-    fireRate: 1.6
+    fireRate: 1.7
+    critsAllowed: true
     durability: 500
     selectedMode: SemiAuto
     availableModes:
@@ -161,7 +166,7 @@
             - CartridgeMosin
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 18
+    maxOffset: 30
     pvsIncrease: 0.9
 
 - type: entity
@@ -228,7 +233,8 @@
   - type: Gun
     projectileSpeed: 35
     durability: 850
-    fireRate: 8
+    critsAllowed: true
+    fireRate: 11
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
   - type: ItemSlots
@@ -286,6 +292,7 @@
   - type: Gun
     burstFireRate: 10
     projectileSpeed: 40
+    critsAllowed: true
     shotsPerBurst: 3
     availableModes:
     - Burst
@@ -293,7 +300,7 @@
     selectedMode: SemiAuto
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 8
+    maxOffset: 10
     pvsIncrease: 0.8
 
 - type: entity
@@ -464,9 +471,12 @@
   components:
   - type: Gun
     durabilityEnabled: false
-    burstFireRate: 7
+    burstFireRate: 5
     shotsPerBurst: 12
     burstCooldown: 0.6
+    fireRate: 4.8
+    projectileSpeed: 40
+    selectedMode: FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
   - type: Sprite
@@ -479,8 +489,8 @@
   - type: ProjectileBatteryAmmoProvider
     proto: CartridgeLightRifleNATO
   - type: ClothingSpeedModifier
-    sprintModifier: 0.75
-    walkModifier: 0.75
+    sprintModifier: 0.72
+    walkModifier: 0.72
   - type: HeldSpeedModifier
   - type: Battery
     maxCharge: 10000

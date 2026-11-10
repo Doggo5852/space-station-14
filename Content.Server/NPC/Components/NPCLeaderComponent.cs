@@ -24,11 +24,22 @@ public sealed partial class NPCLeaderRedComponent : Component
 public sealed partial class NPCHealMarkerComponent : Component
 {
 }
+
+[RegisterComponent]
+public sealed partial class NPCHealMarkerColonyComponent : Component
+{
+}
+
 [RegisterComponent]
 public sealed partial class NPCAttackMarkerComponent : Component
 {
 }
 [RegisterComponent]
 public sealed partial class NPCDefendMarkerComponent : Component
+{
+}
+
+[RegisterComponent]
+public sealed partial class NPCDefendMarkerColonyComponent : Component
 {
 }

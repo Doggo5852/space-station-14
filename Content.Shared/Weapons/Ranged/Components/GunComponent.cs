@@ -157,6 +157,9 @@ public sealed partial class GunComponent : Component
     [AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
     public int ShotsPerBurstModified = 3;
 
+    [DataField, AutoNetworkedField]
+    public bool CritsAllowed = false;
+
     /// <summary>
     /// How long time must pass between burstfire shots.
     /// </summary>

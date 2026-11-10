@@ -108,7 +108,7 @@
     state: ripley
   discipline: Industrial
   tier: 1
-  cost: 2000
+  cost: 1000
   recipeUnlocks:
   - RipleyHarness
   - RipleyLArm
@@ -160,7 +160,7 @@
     state: icon
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
     - WelderExperimental
     - PowerDrill

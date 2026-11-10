@@ -121,6 +121,7 @@
   - type: Gun
     fireRate: 0.4
     durability: 500
+    critsAllowed: true
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

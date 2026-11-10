@@ -15,7 +15,6 @@
   - MoeM60Mag
   - MoeM2BrowningMagEmpty
   - moe armor vest (15 slow)
-  - moe armor vest bulletproof (20 slow)
   - Moe90MMAPCR
   - Moe90MMHEATFS
   - Cartridge120mmHEATFS
@@ -28,6 +27,11 @@
   - WeaponTurretM60DColony
   - MagazineLightRifleBoxM249
   - MagazineBoxLightRifleNATO
+  - WeaponTurretM249Colony
+  - ClothingUniformJumpsuitBDU
+  - ClothingHeadHelmetPASGT
+  - ClothingAliceStandardChestrig
+  - ClothingAliceMachinegunnerChestrig
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -191,6 +195,9 @@
   - WeaponLauncherFGM148JavelinColony
   - WeaponShotgunEnforcer
   - WeaponSniperSVD
+  - moe armor vest bulletproof (20 slow)
+  - moe armor webvest (20 slow)
+  - WeaponM60E6
 
 
 - type: latheRecipePack

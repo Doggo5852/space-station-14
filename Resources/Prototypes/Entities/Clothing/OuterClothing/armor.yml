@@ -14,13 +14,17 @@
     sprite: Clothing/OuterClothing/Armor/security.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/security.rsi
-  - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
+        Slash: 0.40
+        Piercing: 0.75
         Heat: 0.80
+      flatReductions:
+        Piercing: 0.8
+        Slash: 6
+        Blunt: 4.5
   - type: ExplosionResistance
     damageCoefficient: 0.90
 
@@ -33,6 +37,17 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.40
+        Piercing: 0.75
+        Heat: 0.80
+      flatReductions:
+        Piercing: 0.8
+        Slash: 6
+        Blunt: 4.5
 
 #Alternate / slim basic armor vest
 - type: entity
@@ -60,10 +75,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.9
+        Blunt: 0.8
         Slash: 0.9
         Piercing: 0.4
         Heat: 0.4
+      flatReductions: 
+        Piercing: 3.5
   - type: ExplosionResistance
     damageCoefficient: 0.80
 
@@ -167,6 +184,9 @@
         Slash: 0.6
         Piercing: 0.3
         Heat: 0.9
+      flatReductions: 
+        Piercing: 6.5
+        Blunt: 1.5
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: StaticPrice
@@ -523,11 +543,11 @@
 - type: entity
   parent: ClothingOuterArmorBase
   id: moe armor vest (15 slow)
-  suffix: 15%
+  suffix: 12%
   components:
   - type: ClothingSpeedModifier
-    sprintModifier: 0.85
-    walkModifier: 0.85
+    sprintModifier: 0.87
+    walkModifier: 0.87
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -553,11 +573,11 @@
 - type: entity
   parent: ClothingOuterArmorBulletproof
   id: moe armor vest bulletproof (20 slow)
-  suffix: 20%
+  suffix: 18%
   components:
   - type: ClothingSpeedModifier
-    sprintModifier: 0.8
-    walkModifier: 0.8
+    sprintModifier: 0.82
+    walkModifier: 0.82
 
 - type: entity
   parent: ClothingOuterArmorBulletproof

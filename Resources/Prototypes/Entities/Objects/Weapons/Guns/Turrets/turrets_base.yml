@@ -172,6 +172,55 @@
     boltClosed: true
 
 - type: entity
+  parent: BaseWeaponTurretM60D
+  id: BaseWeaponTurretM249
+  name: M249 Turret
+  description: A small M249 turret. Builds up far less heat to avoid detection from missiles
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBoxM249
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: Gun
+    fireRate: 4
+    selectedMode: Burst
+    shotsPerBurst: 8
+    durability: 2000
+    burstFireRate: 4
+    burstCooldown: 1.2
+    projectileSpeed: 30
+    availableModes:
+    - FullAuto
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: HTN
+    blackboard:
+      VisionRadius: !type:Single
+        10
+      AggroVisionRadius: !type:Single
+        10
+      RangedRange: !type:Single
+        10
+    
+
+
+- type: entity
   parent: BaseWeaponTurret
   id: BaseWeaponBallisticTurret
   description: A ballistic machine gun auto-turret.

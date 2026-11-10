@@ -223,6 +223,7 @@
   result: moe armor vest (15 slow)
   materials:
     Steel: 5500
+    Cloth: 600
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -240,6 +241,51 @@
   materials:
     Steel: 8500
     Plasteel: 700
+    Cloth: 200
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: moe armor webvest (20 slow)
+  result: moe armor webvest (20 slow)
+  materials:
+    Steel: 9000
+    Plasteel: 2000
+    Cloth: 2500
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: ClothingUniformJumpsuitBDU
+  result: ClothingUniformJumpsuitBDU
+  materials:
+    Cloth: 2000
+
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: ClothingHeadHelmetPASGT
+  result: ClothingHeadHelmetPASGT
+  materials:
+    Steel: 1000
+    Plasteel: 500
+    Cloth: 30
+
+
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: ClothingAliceStandardChestrig
+  result: ClothingAliceStandardChestrig
+  materials:
+    Steel: 500
+    Cloth: 1200
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: ClothingAliceMachinegunnerChestrig
+  result: ClothingAliceMachinegunnerChestrig
+  materials:
+    Steel: 750
+    Cloth: 1800
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
