@@ -403,9 +403,14 @@
   components:
   - type: Stack
     stackType: SaltOre
+  - type: NPCSiloItem
   - type: Sprite
     state: salt
   - type: Material
+  - type: Tag
+    tags:
+    - Ore
+    - Salt
   - type: PhysicalComposition
     materialComposition:
       RawSalt: 100

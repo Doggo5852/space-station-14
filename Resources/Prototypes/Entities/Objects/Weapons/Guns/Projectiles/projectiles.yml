@@ -809,9 +809,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 10
+    maxIntensity: 2
     intensitySlope: 6
-    totalIntensity: 120
+    totalIntensity: 150
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5
@@ -820,8 +820,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 20 # speed, i need this
-        Structural: 80
+        Blunt: 50 # speed, i need this
+        Structural: 800
 
 - type: entity
   id: BulletLAW72A3
@@ -831,15 +831,15 @@
   components:
   - type: Explosive
     explosionType: Default
-    maxIntensity: 10
+    maxIntensity: 2
     intensitySlope: 6
-    totalIntensity: 155
+    totalIntensity: 180
     maxTileBreak: 1
   - type: Projectile
     damage:
       types:
-        Blunt: 40
-        Structural: 100
+        Blunt: 70
+        Structural: 950
 
 
 #SmokeImpassable
@@ -868,7 +868,7 @@
         Blunt: 600
   - type: Explosive
     explosionType: Default
-    maxIntensity: 100
+    maxIntensity: 8
     intensitySlope: 5
     totalIntensity: 150
     maxTileBreak: 1
@@ -897,9 +897,9 @@
     minSpeed: 11
     maxSpeed: 11
     riseTime: 0.3
-    turnRate: 1.1
+    turnRate: 1.0
     canLoft: true
-    diveDistance: 2.5
+    diveDistance: 2.7
     smokeTrail: true
     impulseInterval: 0.1
     chasingComponent:
@@ -908,11 +908,55 @@
     maxChaseRadius: 60
   - type: Explosive
     explosionType: Default
-    maxIntensity: 100
+    maxIntensity: 5
     intensitySlope: 5
     totalIntensity: 40
     maxTileBreak: 1
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 450
   
+- type: entity
+  parent: BulletBGM71F
+  name: missile
+  id: BulletSPIKESR
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    minSpeed: 7.5
+    maxSpeed: 7.5
+    riseTime: 0.3
+    turnRate: 0.8
+    missileFeedback: true
+    canLoft: true
+    diveDistance: 3.2
+    smokeTrail: false
+    impulseInterval: 0.1
+    chasingComponent:
+    - type: MechRaiders
+    rotateWithImpulse: true
+    maxChaseRadius: 80
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 5
+    intensitySlope: 5
+    totalIntensity: 20
+    maxTileBreak: 1
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 200
+
+- type: entity
+  parent: BulletSPIKESR
+  id: BulletSPIKESRRaider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+
 - type: entity
   parent: BulletFGM148
   id: BulletFGM148Raider
@@ -939,7 +983,9 @@
   components:
   - type: ChasingWalk
     canLoft: false
-    turnRate: 0.6
+    turnRate: 1.15
+    minSpeed: 12.5
+    maxSpeed: 12.5
 
 - type: entity
   id: Bullet9K111M

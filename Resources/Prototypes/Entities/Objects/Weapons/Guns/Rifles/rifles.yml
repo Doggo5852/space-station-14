@@ -121,6 +121,10 @@
   - type: ClothingSpeedModifier
     sprintModifier: 0.94
     walkModifier: 0.94
+  - type: EyeCursorOffset
+    maxOffset: 9
+    pvsIncrease: 0.8
+  - type: CursorOffsetRequiresWield
 
 - type: entity
   name: SVD
@@ -233,6 +237,9 @@
   - type: Gun
     projectileSpeed: 35
     durability: 850
+    angleDecay: 11
+    angleIncrease: 1.2
+    maxAngle: 41
     critsAllowed: true
     fireRate: 11
     soundGunshot:
@@ -300,7 +307,7 @@
     selectedMode: SemiAuto
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 10
+    maxOffset: 12
     pvsIncrease: 0.8
 
 - type: entity

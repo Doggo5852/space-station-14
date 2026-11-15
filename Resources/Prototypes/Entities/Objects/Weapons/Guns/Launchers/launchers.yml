@@ -166,8 +166,8 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
       maxDistance: 50
-    maxAngle: 8
-    minAngle: 5
+    maxAngle: 3
+    minAngle: 2.5
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -220,8 +220,8 @@
     - suitStorage
   - type: Gun
     projectileSpeed: 12
-    maxAngle: 8
-    minAngle: 4
+    maxAngle: 2
+    minAngle: 1
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -252,19 +252,54 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 0.2
+    durability: 15
     projectileSpeed: 20
   - type: BallisticAmmoProvider
     whitelist:
       tags:
         - CartridgeBGM71F
         - CartridgeBGM71D
-    proto: CartridgeMissileBGM71D
+    proto: null
   - type: ClothingSpeedModifier
     sprintModifier: 0.92
     walkModifier: 0.92
   - type: EyeCursorOffset
     maxOffset: 25
     pvsIncrease: 2.2
+
+- type: entity
+  name: Spike Launcher
+  parent: WeaponLauncherRocket
+  suffix: Colony
+  id: WeaponLauncherSpikeLauncherColony
+  description: A reusable launcher designed to launch Spike SR missiles.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/bgmrocket.rsi
+    scale: 1.0, 1.0
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 0.2
+    projectileSpeed: 12
+    durability: 15
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeSpikeSR
+    proto: null
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.96
+    walkModifier: 0.96
+  - type: EyeCursorOffset
+    maxOffset: 22
+    pvsIncrease: 2.2
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.70
+    walkModifier: 0.70
 
 - type: entity
   name: FGM-148 Javelin
@@ -296,6 +331,9 @@
   - type: EyeCursorOffset
     maxOffset: 18
     pvsIncrease: 1.8
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.75
+    walkModifier: 0.75
 
 - type: entity
   name: FGM-148 Javelin

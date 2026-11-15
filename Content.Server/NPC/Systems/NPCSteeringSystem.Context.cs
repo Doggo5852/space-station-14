@@ -12,6 +12,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using ClimbingComponent = Content.Shared.Climbing.Components.ClimbingComponent;
+using Content.Shared.Doors.Components;
 
 namespace Content.Server.NPC.Systems;
 
@@ -212,11 +213,11 @@ public sealed partial class NPCSteeringSystem
                 // Breaking behaviours and the likes.
                 lock (_obstacles)
                 {
-                    // We're still coming to a stop so wait for the do_after.
+                    /* We're still coming to a stop so wait for the do_after.
                     if (body.LinearVelocity.LengthSquared() > 0.01f)
                     {
                         return true;
-                    }
+                    }  */
 
                     status = TryHandleFlags(uid, steering, node);
                 }
@@ -513,6 +514,7 @@ public sealed partial class NPCSteeringSystem
         {
             // TODO: If we can access the door or smth.
             if (!_physicsQuery.TryGetComponent(ent, out var otherBody) ||
+                TryComp<DoorComponent>(ent, out var doorComp) ||
                 !otherBody.Hard ||
                 !otherBody.CanCollide ||
                 otherBody.BodyType == BodyType.KinematicController ||

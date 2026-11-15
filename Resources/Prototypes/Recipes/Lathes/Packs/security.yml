@@ -32,6 +32,7 @@
   - ClothingHeadHelmetPASGT
   - ClothingAliceStandardChestrig
   - ClothingAliceMachinegunnerChestrig
+  - PKMMag
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
@@ -198,6 +199,9 @@
   - moe armor vest bulletproof (20 slow)
   - moe armor webvest (20 slow)
   - WeaponM60E6
+  - WeaponPKMN
+  - WeaponLauncherSpikeLauncherColony
+  - CartridgeMissileSpikeSR
 
 
 - type: latheRecipePack

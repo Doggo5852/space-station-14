@@ -243,12 +243,12 @@
   - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
     allowedStates:
     - Alive
-    damageCap: 80
+    damageCap: 100
     damage:
       types:
         Heat: -0.06
       groups:
-        Brute: -0.25
+        Brute: -0.45
   - type: Fingerprint
   - type: Blindable
   # Other

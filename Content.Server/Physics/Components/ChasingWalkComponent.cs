@@ -106,6 +106,18 @@ public sealed partial class ChasingWalkComponent : Component
     [DataField]
     public bool CanLoft;
 
+
+    [DataField]
+    public bool MissileFeedback = false;
+
+    [DataField]
+    public bool MissileFeedbackLastCheck = false;
+
+    [DataField]
+    public float FeedbackDistanceStep = 5f;
+
+    [DataField]
+    public float PreviousFeedbackDistance = 500f;
     /// <summary>
     /// Delay after which the missile goes up. Changes InAir to true
     /// </summary>

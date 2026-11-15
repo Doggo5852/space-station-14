@@ -10,6 +10,7 @@ using Content.Server.Popups;
 using Robust.Server.Player;
 using Content.Shared.Popups;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Projectiles;
 
 
 namespace Content.Server.Physics.Controllers;
@@ -237,6 +238,30 @@ public sealed class ChasingWalkSystem : VirtualController
         {
             var ang = velocityToIntercept.ToAngle() + Angle.FromDegrees(90); // we want "Up" to be forward, bullet convention.
             //_transform.SetWorldRotation(uid, currentAngle + Angle.FromDegrees(90));
+        }
+
+
+        // Missile feedback
+
+        if (TryComp<ProjectileComponent>(component.Owner, out var projectileComp) && component.MissileFeedback)
+        {
+            var launcher = projectileComp.Weapon;
+
+            if (launcher == null)
+                return;
+
+            var launchercoords = Transform((EntityUid)launcher).Coordinates;
+            if (component.PreviousFeedbackDistance > distance + component.FeedbackDistanceStep)
+            {
+                component.PreviousFeedbackDistance = distance;
+                _popup.PopupCoordinates(distance.ToString("F1"), launchercoords, PopupType.Small);
+            }
+            
+            if (distance < 2 && !component.MissileFeedbackLastCheck)
+            {
+                _popup.PopupCoordinates(distance.ToString("F1"), launchercoords, PopupType.SmallCaution);
+                component.MissileFeedbackLastCheck = true;
+            }
         }
     }
 }

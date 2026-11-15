@@ -52,12 +52,14 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             var lifetime = despawn.Lifetime;
             Random rnd = new Random();
             var chance = rnd.Next(0, 101);
+            
             if (lifetime < component.CritMinTime)
             {
                 var gun = component.Weapon;
-                if (TryComp<GunComponent>(gun, out var guncomp) && guncomp.CritsAllowed && chance < component.CritChance && TryComp<MobStateComponent>(target, out var targetMobComp))
+                if (TryComp<GunComponent>(gun, out var guncomp) && guncomp.CritsAllowed && chance < component.CritChance && TryComp<MobStateComponent>(target, out var targetMobComp) && !component.AlreadyMultiplied)
                 {
                     component.Damage *= component.CritDamageMultiplier; // only applies to mobs
+                    component.AlreadyMultiplied = true;
                 }
 
             }

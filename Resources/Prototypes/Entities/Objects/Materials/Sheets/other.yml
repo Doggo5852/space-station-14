@@ -146,6 +146,7 @@
     - Sheet
     - ConstructionMaterial
   - type: Material
+  - type: NPCSiloItem
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100

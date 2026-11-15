@@ -399,3 +399,13 @@
       - Raider
     presets:
     - BiggerRoom
+
+- type: dungeonConfig
+  id: ColonyBase
+  layers:
+  - !type:PrefabDunGen
+    roomWhitelist:
+      tags:
+      - Colony
+    presets:
+    - BiggerRoom

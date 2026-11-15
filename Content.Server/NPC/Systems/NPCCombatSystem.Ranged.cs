@@ -21,7 +21,7 @@ public sealed partial class NPCCombatSystem
     private EntityQuery<TransformComponent> _xformQuery;
 
     // TODO: Don't predict for hitscan
-    private const float ShootSpeed = 20f;
+    private const float ShootSpeed = 28f;
 
     /// <summary>
     /// Cooldown on raycasting to check LOS.

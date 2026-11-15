@@ -80,7 +80,7 @@
 - type: entity
   parent: BaseWeaponTurret
   id: BaseWeaponTurretMoeStaticMG
-  description: A ballistic machine gun auto-turret.
+  description: Machine gun mounted on a circular base, fitted with an electro-optical tracking system allowing it to track and identify targets from distance. This one has additional armor plates.
   name: ballistic turret
   abstract: true
   components:
@@ -128,11 +128,38 @@
         35
       RangedRange: !type:Single
         35
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+       # TODO: Construction graph
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 3
+            max: 5
 
 - type: entity
   parent: BaseWeaponTurretMoeStaticMG
   id: BaseWeaponTurretM60D
   name: M60D Turret
+  description: Machine gun mounted on a circular base, fitted with an electro-optical tracking system allowing it to track and identify targets from distance.
   abstract: true
   components:
   - type: ItemSlots
@@ -175,7 +202,7 @@
   parent: BaseWeaponTurretM60D
   id: BaseWeaponTurretM249
   name: M249 Turret
-  description: A small M249 turret. Builds up far less heat to avoid detection from missiles
+  description: A small M249 turret. Builds up far less heat to avoid detection from missiles.
   abstract: true
   components:
   - type: ItemSlots

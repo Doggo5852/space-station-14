@@ -8,3 +8,11 @@
   offset: -3,31
   tags:
     - Raider
+
+- type: dungeonRoom
+  id: Main22x15aColony
+  size: 29,21
+  atlas: /Maps/Dungeon/colonybase.yml
+  offset: -3,31
+  tags:
+    - Colony

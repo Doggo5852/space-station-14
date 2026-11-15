@@ -117,7 +117,7 @@
   components:
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
+    maxOffset: 5
     pvsIncrease: 0.4
   - type: Gun
     minAngle: 20.8
@@ -130,6 +130,7 @@
     sprintModifier: 0.89
     walkModifier: 0.89
   - type: HeldSpeedModifier
+  - type: GunRequiresWield
   - type: SpeedModifiedOnWield
     sprintModifier: 0.5
     walkModifier: 0.5
@@ -158,10 +159,11 @@
   parent: WeaponLightMachineGunL6
   description:
   components:
-  #- type: CursorOffsetRequiresWield
-  #- type: EyeCursorOffset
-  #  maxOffset: 16
-  #  pvsIncrease: 1.2
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 8
+    pvsIncrease: 0.9
+  - type: GunRequiresWield
   - type: Gun
     minAngle: 20.1
     maxAngle: 36
@@ -196,14 +198,69 @@
             - Cartridge762NATO
 
 - type: entity
+  name: PKMN
+  id: WeaponPKMN
+  parent: WeaponLightMachineGunL6
+  description:
+  components:
+  - type: CursorOffsetRequiresWield
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/LMGs/pkt.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: EyeCursorOffset
+    maxOffset: 12
+    pvsIncrease: 0.9
+  - type: Gun
+    minAngle: 20.4
+    maxAngle: 42
+    projectileSpeed: 55
+    angleIncrease: 1
+    angleDecay: 5
+    fireRate: 6
+  - type: GunRequiresWield
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.84
+    walkModifier: 0.84
+  - type: HeldSpeedModifier
+  - type: SpeedModifiedOnWield
+    sprintModifier: 0.25
+    walkModifier: 0.25
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: PKMMag
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - PKMMag
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMosin
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMosin
+
+- type: entity
   name: M60E6
   id: WeaponM60E6
   parent: WeaponM60
   description:
   components:
-  #- type: EyeCursorOffset
-  #  maxOffset: 9
-  #  pvsIncrease: 0.9
+  - type: EyeCursorOffset
+    maxOffset: 5
+    pvsIncrease: 0.9
   - type: Gun
     minAngle: 20.6
     maxAngle: 38
@@ -211,6 +268,7 @@
     angleIncrease: 0.25
     angleDecay: 2
     fireRate: 5.8
+  - type: GunRequiresWield
   - type: ClothingSpeedModifier
     sprintModifier: 0.82
     walkModifier: 0.82

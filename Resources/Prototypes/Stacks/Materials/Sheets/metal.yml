@@ -3,7 +3,7 @@
   name: stack-steel
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: steel }
   spawn: SheetSteel1
-  maxCount: 100
+  maxCount: 50
 
 - type: stack
   id: Plasteel

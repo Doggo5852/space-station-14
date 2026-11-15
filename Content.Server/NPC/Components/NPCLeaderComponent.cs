@@ -43,3 +43,13 @@ public sealed partial class NPCDefendMarkerComponent : Component
 public sealed partial class NPCDefendMarkerColonyComponent : Component
 {
 }
+
+[RegisterComponent]
+public sealed partial class NPCSiloItemComponent : Component
+{
+}
+
+[RegisterComponent]
+public sealed partial class NPCOreItemComponent : Component
+{
+}

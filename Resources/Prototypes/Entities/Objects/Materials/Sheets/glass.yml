@@ -55,6 +55,7 @@
   id: SheetGlass
   suffix: Full
   components:
+  - type: NPCSiloItem
   - type: PhysicalComposition
     materialComposition:
       Glass: 100

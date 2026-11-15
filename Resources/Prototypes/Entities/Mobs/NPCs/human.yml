@@ -42,13 +42,15 @@
         FollowRange: !type:Single
           4
         HealTime: !type:Single
-          12
+          7
         NavClimb: !type:Bool
           true
         NavInteract: !type:Bool
           true
         RangedRange: !type:Single
-          15
+          20
+        ForcedAttackRange: !type:Single
+          90
 
 - type: entity
   name: salvager
@@ -79,13 +81,13 @@
         FollowRange: !type:Single
           4
         HealTime: !type:Single
-          12
+          7
         NavClimb: !type:Bool
           true
         NavInteract: !type:Bool
           true
         RangedRange: !type:Single
-          18
+          28
 
 - type: entity
   name: salvager
@@ -99,6 +101,25 @@
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompoundBlue
+      blackboard:
+        VisionRadius: !type:Single
+          125
+        AggroVisionRadius: !type:Single
+          125
+        MinimumIdleTime: !type:Single
+          15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        HealTime: !type:Single
+          7
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
+        RangedRange: !type:Single
+          28
 
 - type: entity
   name: salvager
@@ -112,6 +133,25 @@
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompoundRed
+      blackboard:
+        VisionRadius: !type:Single
+          125
+        AggroVisionRadius: !type:Single
+          125
+        MinimumIdleTime: !type:Single
+          15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        HealTime: !type:Single
+          7
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
+        RangedRange: !type:Single
+          28
 
 - type: entity
   name: salvager
@@ -172,6 +212,12 @@
     - type: Loadout
       prototypes:
         - SalvagerM60Heavy
+    - type: HTN
+      rootTask:
+        task: AdvancedHumanoidHostileCompound
+      blackboard:
+        RangedRange: !type:Single
+          28
 
 - type: entity
   name: salvager

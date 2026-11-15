@@ -42,6 +42,7 @@
   suffix: Full
   components:
   - type: Material
+  - type: NPCSiloItem
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -166,6 +167,7 @@
   suffix: Full
   components:
   - type: Material
+  - type: NPCSiloItem
   - type: PhysicalComposition
     materialComposition:
       Plasteel: 100

@@ -104,6 +104,35 @@
     proto: BulletFGM148
 
 - type: entity
+  id: CartridgeMissileSpikeSR
+  name: Spike SR
+  parent: CartridgeMissileBGM71F
+  description: Short range variant of the Spike missile. It features a low-visibility smoke motor at the cost of maximum velocity.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeSpikeSR
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,4,0
+  - type: CartridgeAmmo
+    proto: BulletSPIKESR
+
+- type: entity
+  id: CartridgeMissileSpikeSRRaider
+  name: Spike SR
+  suffix: raider
+  parent: CartridgeMissileBGM71F
+  description: Short range variant of the Spike missile. It features a low-visibility smoke motor at the cost of maximum velocity.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeSpikeSR
+  - type: CartridgeAmmo
+    proto: BulletSPIKESRRaider
+
+- type: entity
   id: CartridgeMissileFGM148Raider
   name: FGM-148
   parent: CartridgeMissileBGM71F

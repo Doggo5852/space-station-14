@@ -458,6 +458,13 @@
 
 
 - type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: PKMMag
+  result: PKMMag
+  materials:
+    Steel: 2265
+
+- type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineLightRifleCash
   result: MagazineLightRifle

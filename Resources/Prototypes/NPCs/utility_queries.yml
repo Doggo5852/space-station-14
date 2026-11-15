@@ -46,6 +46,43 @@
       curve: !type:BoolCurve
 
 - type: utilityQuery
+  id: NearbySiloItem
+  query:
+    - !type:ComponentQuery
+      components:
+      - type: NPCSiloItem
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    
+
+- type: utilityQuery
+  id: NearbyOreItem
+  query:
+    - !type:ComponentQuery
+      components:
+      - type: NPCOreItem
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+
+
+- type: utilityQuery
+  id: NearbySiloMachine
+  query:
+    - !type:ComponentQuery
+      components:
+      - type: OreSilo
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+
+- type: utilityQuery
   id: NearbyDrink
   query:
   - !type:ComponentQuery

@@ -82,6 +82,74 @@
           task: IdleCompound
 
 - type: htnCompound
+  id: PutMaterialInSilo
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbySiloItem
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:NotHurtPrecondition
+            maxDamage: 35
+          - !type:KeyExistsPrecondition
+            key: Target
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: RangedRange
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          removeKeyOnFinish: false
+          targetKey: TargetCoordinates
+          rangeKey: InteractRange
+          pathfindKey: TargetPathfind
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: InteractRange
+          - !type:KeyExistsPrecondition
+            key: Target
+        operator: !type:InteractWithOperator
+          targetKey: Target
+      #find ore silo
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbySiloMachine
+      - !type:HTNPrimitiveTask
+        operator: !type:MoveToOperator
+          pathfindInPlanning: true
+          removeKeyOnFinish: false
+          targetKey: TargetCoordinates
+          pathfindKey: TargetPathfind
+          rangeKey: InteractRange
+        preconditions:
+          - !type:NotHurtPrecondition
+            maxDamage: 35
+          - !type:KeyExistsPrecondition
+            key: Target
+      #put the thing inside
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFreeHandOperator
+      - !type:HTNPrimitiveTask
+        preconditions:
+          - !type:TargetInRangePrecondition
+            targetKey: Target
+            rangeKey: InteractRange
+          - !type:KeyExistsPrecondition
+            key: Target
+        operator: !type:InteractWithOperator
+          targetKey: Target
+      - !type:HTNPrimitiveTask
+        operator: !type:DropOperator
+      - !type:HTNPrimitiveTask
+        operator: !type:SwapToFullHandOperator
+
+- type: htnCompound
   id: HealSelf
   branches:
     - tasks:
@@ -126,9 +194,6 @@
         operator: !type:DropOperator
       - !type:HTNPrimitiveTask
         operator: !type:SwapToFullHandOperator
-    - tasks:
-      - !type:HTNPrimitiveTask
-        operator: !type:NoOperator
 
 - type: htnCompound
   id: ToHealMarkerLowAmmoCompound
@@ -365,7 +430,7 @@
         operator: !type:MoveToOperator
           pathfindInPlanning: true
           targetKey: TargetCoordinates
-          rangeKey: AttackRange
+          rangeKey: ForcedAttackRange
           removeKeyOnFinish: false
 
 - type: htnCompound
@@ -475,22 +540,19 @@
           task: ToHealMarkerCriticalLowAmmoColonyCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: ToDefendMarkerForcedColonyCompound
-    - tasks:
-        - !type:HTNCompoundTask
           task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: ToHealMarkerLowAmmoColonyCompound
     - tasks:
         - !type:HTNCompoundTask
+          task: PutMaterialInSilo
+    - tasks:
+        - !type:HTNCompoundTask
           task: ToDefendMarkerColonyCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompoundDropLeftAfter
 
 - type: htnCompound
   id: SimpleHumanoidHostileCompoundRed
@@ -506,22 +568,19 @@
           task: ToHealMarkerCriticalLowAmmoColonyCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: ToDefendMarkerForcedColonyCompound
-    - tasks:
-        - !type:HTNCompoundTask
           task: GunCombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: ToHealMarkerLowAmmoColonyCompound
     - tasks:
         - !type:HTNCompoundTask
+          task: PutMaterialInSilo
+    - tasks:
+        - !type:HTNCompoundTask
           task: ToDefendMarkerColonyCompound
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompoundDropLeftAfter
     
 - type: htnCompound
   id: SimpleHumanoidHostileCompound
@@ -568,6 +627,4 @@
     - tasks:
         - !type:HTNCompoundTask
           task: HealSelf
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompoundDropLeftAfter
+    

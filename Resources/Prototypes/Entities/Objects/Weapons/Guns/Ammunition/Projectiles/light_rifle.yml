@@ -10,7 +10,7 @@
       types:
         Piercing: 17
         Blunt: 3
-    critDamageMultiplier: 1.90
+    critDamageMultiplier: 1.95
     critChance: 35
     critMinTime: 9.77
 

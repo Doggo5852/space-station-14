@@ -15,15 +15,15 @@
     painCoefficients:
       Blunt: 0.8
       Slash: 0.8
-      Piercing: 0.8
+      Piercing: 0.7
       Heat: 0.8
       Shock: 0.8
       Cold: 0.8
       Caustic: 0.8
     freshPainCoefficients:
       Blunt: 0.2
-      Slash: 0.2
-      Piercing: 0.2
+      Slash: 0.5
+      Piercing: 0.55
       Heat: 0.2
       Shock: 0.2
       Cold: 0.2

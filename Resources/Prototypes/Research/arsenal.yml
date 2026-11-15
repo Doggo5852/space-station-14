@@ -55,8 +55,8 @@
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
     state: icon
   discipline: Arsenal
-  tier: 2
-  cost: 25000
+  tier: 1
+  cost: 20000
   recipeUnlocks:
   - WeaponAKMS
   - WeaponShotgunKammerer
@@ -72,12 +72,13 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 25000
+  cost: 22000
   recipeUnlocks:
   - WeaponMechM60D
   - WeaponM60
   - WeaponM249
   - WeaponShotgunEnforcer
+  - WeaponPKMN
   technologyPrerequisites:
   - ModernisedGuns
 
@@ -172,7 +173,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 50000
+  cost: 30000
   recipeUnlocks:
   - moe armor webvest (20 slow)
 
@@ -256,7 +257,7 @@
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     state: base
   discipline: Arsenal
-  tier: 2
+  tier: 1
   cost: 5000
   recipeUnlocks:
   - CartridgeRocket
@@ -300,7 +301,7 @@
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     state: base
   discipline: Arsenal
-  tier: 2
+  tier: 1
   cost: 5000
   recipeUnlocks:
   - CartridgeMissileBGM71D
@@ -316,11 +317,26 @@
     sprite: Objects/Weapons/Guns/Launchers/javelin.rsi
     state: base
   discipline: Arsenal
-  tier: 3
+  tier: 2
   cost: 8000
   recipeUnlocks:
   - CartridgeMissileBGM71F
   - WeaponLauncherFGM148JavelinColony
+  technologyPrerequisites:
+  - LauncherGuided
+
+- type: technology
+  id: LauncherGuidedAdvanced
+  name: research-technology-advanced-launchers
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/javelin.rsi
+    state: base
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - CartridgeMissileSpikeSR
+  - WeaponLauncherSpikeLauncherColony
   technologyPrerequisites:
   - LauncherGuided
 

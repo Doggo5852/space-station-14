@@ -34,10 +34,10 @@ public sealed partial class NPCBlackboard : IEnumerable<KeyValuePair<string, obj
         {"RotateSpeed", float.MaxValue},
         {"VisionRadius", 125f},
         {"AggroVisionRadius", 125f},
-        {"HealTime", 12f},
+        {"HealTime", 7f},
         {"DefendRange", 20f},
         {"AttackRange", 15f},
-        {"ForcedAttackRange", 45f}
+        {"ForcedAttackRange", 90f}
     };
 
     /// <summary>

@@ -721,6 +721,7 @@
       - M60100rnd
       - MagazineLightRifleBoxM249
       - Medkit
+      - PKMMag
     blacklist:
       tags:
   - type: ClothingSpeedModifier

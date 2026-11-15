@@ -47,7 +47,7 @@
       woundDamages:
         damageDict:
           Slash: 6
-      damageProbabilityCoefficient: 0.01
+      damageProbabilityCoefficient: 0.00
       damageProbabilityConstant: 0
     - damageTypes: [Blunt]
       minimumDamage: 40
@@ -87,7 +87,7 @@
           Blunt: 50
           Slash: 50
           Piercing: 50
-      damageProbabilityCoefficient: 0.25
+      damageProbabilityCoefficient: 0.0
       damageProbabilityConstant: 0
     - damageTypes: [Slash, Blunt, Piercing]
       minimumDamage: 120
@@ -98,7 +98,7 @@
           Blunt: 50
           Slash: 50
           Piercing: 50
-      damageProbabilityCoefficient: 1
+      damageProbabilityCoefficient: 0
       damageProbabilityConstant: 0
 
 - type: entity

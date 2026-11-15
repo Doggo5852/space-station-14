@@ -8,7 +8,7 @@
     damage:
       types:
         Piercing: 16
-    critDamageMultiplier: 1.75
+    critDamageMultiplier: 1.8
     critMinTime: 9.8
     critChance: 55
 

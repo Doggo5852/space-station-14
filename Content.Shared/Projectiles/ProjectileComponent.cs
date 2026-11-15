@@ -53,6 +53,8 @@ public sealed partial class ProjectileComponent : Component
 
     [DataField]
     public float CritDamageMultiplier = 1.25f;
+
+    public bool AlreadyMultiplied = false;
     /// <summary>
     ///     If the projectile should be deleted on collision.
     /// </summary>
