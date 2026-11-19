@@ -1160,7 +1160,7 @@
     installDuration: 10
   - type: Gun
     projectileSpeed: 40
-    durability: 2200
+    durability: 5000
     fireRate: 3.3
     minAngle: 1
     maxAngle: 2
@@ -1175,7 +1175,7 @@
     - M3
   - type: AmmoCounter
   - type: BallisticAmmoProvider
-    capacity: 150
+    capacity: 450
     proto: null
     whitelist:
       tags:
@@ -1228,7 +1228,7 @@
     projectileSpeed: 35
     fireRate: 6.5
     minAngle: 2
-    durability: 500
+    durability: 4000
     maxAngle: 5
     selectedMode: FullAuto
     availableModes:
@@ -1241,7 +1241,7 @@
     tags:
     - BMP2
   - type: BallisticAmmoProvider
-    capacity: 100
+    capacity: 640
     proto: null
     whitelist:
       tags:
@@ -1369,20 +1369,21 @@
     whitelist:
       tags:
       - Cartridge9K111M
+      - Cartridge9K113
 
 - type: entity
-  id: WeaponMech9M113
-  name: 9M113 Launcher
-  description: "Guided missile launcher designed to fit a single 9K113 Konkurs missile"
-  parent: WeaponMech9P135M
+  id: WeaponMechKh35
+  name: Kh35 Launcher
+  description: "test"
+  parent: WeaponMechBGMRack
   components:
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_uac2
   - type: MechEquipment
-    installDuration: 5
+    installDuration: 6
   - type: Gun
-    projectileSpeed: 22
+    projectileSpeed: 25
     fireRate: 0.7
     minAngle: 1
     maxAngle: 2
@@ -1399,4 +1400,4 @@
     proto: null
     whitelist:
       tags:
-      - Cartridge9K113
+      - CartridgeKh35

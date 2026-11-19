@@ -78,6 +78,97 @@
     - 0,0,4,1
   - type: CartridgeAmmo
     proto: BulletBGM71F
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: bgm71blue
+
+- type: entity
+  id: CartridgeMissileFIM92C
+  suffix: Colony
+  name: FIM-92C
+  parent: CartridgeRocket
+  description: American made missile to combat aerial targets.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeFIM92C
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,7,0
+  - type: CartridgeAmmo
+    proto: BulletFIM92C
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: fim92red
+
+- type: entity
+  id: CartridgeMissileFIM92CRaider
+  suffix: Raider
+  name: FIM-92C
+  parent: CartridgeMissileFIM92C
+  description: American made missile to combat aerial targets.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletFIM92CRaider
+
+- type: entity
+  id: CartridgeMissileFIM92E
+  suffix: Colony
+  parent: CartridgeMissileFIM92C
+  name: FIM-92E
+  components:
+  - type: Tag
+    tags:
+      - CartridgeFIM92E
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,7,0
+  - type: CartridgeAmmo
+    proto: BulletFIM92E
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: fim92orange
+
+- type: entity
+  id: CartridgeMissileFIM92ERaider
+  suffix: Raider
+  name: FIM-92E
+  parent: CartridgeMissileFIM92E
+  description: American made missile to combat aerial targets.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletFIM92ERaider
+
+- type: entity
+  id: CartridgeMissileFIM92K
+  suffix: Colony
+  parent: CartridgeMissileFIM92C
+  name: FIM-92K
+  components:
+  - type: Tag
+    tags:
+      - CartridgeFIM92K
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,7,0
+  - type: CartridgeAmmo
+    proto: BulletFIM92K
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: fim92blue
+
+- type: entity
+  id: CartridgeMissileFIM92KRaider
+  suffix: Raider
+  name: FIM-92K
+  parent: CartridgeMissileFIM92K
+  description: American made missile to combat aerial targets.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletFIM92KRaider
 
 - type: entity
   id: CartridgeMissileBGM71D
@@ -90,6 +181,9 @@
       - CartridgeBGM71D
   - type: CartridgeAmmo
     proto: BulletBGM71D
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: bgm71red
 
 - type: entity
   id: CartridgeMissileFGM148
@@ -118,12 +212,15 @@
     - 0,0,4,0
   - type: CartridgeAmmo
     proto: BulletSPIKESR
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: spikesr
 
 - type: entity
   id: CartridgeMissileSpikeSRRaider
   name: Spike SR
   suffix: raider
-  parent: CartridgeMissileBGM71F
+  parent: CartridgeMissileSpikeSR
   description: Short range variant of the Spike missile. It features a low-visibility smoke motor at the cost of maximum velocity.
   components:
   - type: Tag
@@ -177,6 +274,19 @@
   - type: CartridgeAmmo
     proto: Bullet9K113
 
+
+- type: entity
+  id: CartridgeMissileKh35
+  name: Kh35
+  parent: CartridgeMissile9K111M
+  description: Cruise missile
+  suffix: Raider
+  components:
+  - type: Tag
+    tags:
+      - CartridgeKh35
+  - type: CartridgeAmmo
+    proto: BulletKh35
 
 # Grenades
 

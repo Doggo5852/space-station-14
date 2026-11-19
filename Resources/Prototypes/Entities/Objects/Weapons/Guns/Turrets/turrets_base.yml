@@ -109,7 +109,7 @@
             - CartridgeAntiMaterielFMJ
   - type: Gun
     fireRate: 5
-    projectileSpeed: 45
+    projectileSpeed: 55
     durability: 2500
     burstFireRate: 5
     shotsPerBurst: 12
@@ -123,11 +123,11 @@
   - type: HTN
     blackboard:
       VisionRadius: !type:Single
-        35
+        50
       AggroVisionRadius: !type:Single
-        35
+        50
       RangedRange: !type:Single
-        35
+        50
   - type: Destructible
     thresholds:
     - trigger:
@@ -195,8 +195,32 @@
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+       # TODO: Construction graph
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 3
+            max: 5
 
 - type: entity
   parent: BaseWeaponTurretM60D
@@ -218,7 +242,7 @@
             - MagazineLightRifleBoxM249
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: null
         priority: 1
         whitelist:
           tags:

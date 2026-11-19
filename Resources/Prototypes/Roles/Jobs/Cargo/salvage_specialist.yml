@@ -238,6 +238,8 @@
     - Brutepack
     - PillCanisterBicaridine
     - ChemistryBottleMannitol
+    - ResearchDisk10000
+    - ResearchDisk10000
 
 - type: startingGear
   id: SalvagerM16
@@ -261,6 +263,33 @@
     - ChemistryBottleEpinephrine
     - Brutepack
     - ChemistryBottlePeridaxon
+
+- type: startingGear
+  id: SalvagerRPG7
+  equipment:
+    head: ClothingHeadHelmetBasic
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    eyes: ClothingEyesGlassesCheapSunglasses
+    #mask: ClothingMaskGasExplorer
+    outerClothing: moe armor vest (20 slow)
+    neck: ClothingNeckScarfStripedBrown
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpack
+    ears: ClothingHeadsetCargo
+    belt: ClothingBeltMilitaryWebbing
+    id: SalvagePDA
+  inhand:
+    - rpg7battery
+  storage:
+    back:
+    - ChemistryBottleEpinephrine
+    - Brutepack
+    - ChemistryBottlePeridaxon
+    - PillCanisterBicaridine
+    - ChemistryBottleMannitol
+    - ResearchDisk10000
+    - ResearchDisk10000
 
 - type: startingGear
   id: SalvagerM16Heavy

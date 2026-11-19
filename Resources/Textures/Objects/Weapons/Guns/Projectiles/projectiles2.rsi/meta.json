@@ -77,6 +77,15 @@
       "name": "frag"
     },
     {
+      "name": "bgm71"
+    },
+    {
+      "name": "fim92"
+    },
+    {
+      "name": "spikesr"
+    },
+    {
       "name": "grenade",
       "delays": [
         [

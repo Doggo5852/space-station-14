@@ -88,8 +88,8 @@
         - to: cimprint
           steps:
             - material: Steel
-              amount: 80
-              doAfter: 20
+              amount: 50
+              doAfter: 8
     - node: cimprint
       entity: CircuitImprinterMachineCircuitboard
 
@@ -102,8 +102,8 @@
         - to: cgenerator
           steps:
             - material: Steel
-              amount: 100
-              doAfter: 12
+              amount: 50
+              doAfter: 6
     - node: cgenerator
       entity: PortableGeneratorJrPacmanMachineCircuitboard
 
@@ -117,7 +117,7 @@
           steps:
             - material: Steel
               amount: 15
-              doAfter: 5
+              doAfter: 4
     - node: screwdriver
       entity: Screwdriver
 
@@ -131,7 +131,7 @@
           steps:
             - material: Steel
               amount: 15
-              doAfter: 5
+              doAfter: 4
     - node: wrench
       entity: Wrench
 

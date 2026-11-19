@@ -307,6 +307,8 @@
   - CartridgeMissileBGM71D
   - WeaponLauncherBGMLauncherColony
   - WeaponMechBGMRack
+  - WeaponLauncherFIM92LauncherColony
+  - CartridgeMissileFIM92C
   technologyPrerequisites:
   - LauncherUnguided
 
@@ -322,6 +324,7 @@
   recipeUnlocks:
   - CartridgeMissileBGM71F
   - WeaponLauncherFGM148JavelinColony
+  - CartridgeMissileFIM92E
   technologyPrerequisites:
   - LauncherGuided
 
@@ -337,6 +340,7 @@
   recipeUnlocks:
   - CartridgeMissileSpikeSR
   - WeaponLauncherSpikeLauncherColony
+  - CartridgeMissileFIM92K
   technologyPrerequisites:
   - LauncherGuided
 

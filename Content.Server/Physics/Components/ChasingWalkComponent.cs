@@ -117,7 +117,7 @@ public sealed partial class ChasingWalkComponent : Component
     public float FeedbackDistanceStep = 5f;
 
     [DataField]
-    public float PreviousFeedbackDistance = 500f;
+    public float PreviousFeedbackDistance = 676767f;
     /// <summary>
     /// Delay after which the missile goes up. Changes InAir to true
     /// </summary>
@@ -145,6 +145,9 @@ public sealed partial class ChasingWalkComponent : Component
 
     [DataField]
     public bool InAir;
+
+    [DataField]
+    public bool AttackAir = false;
     /// <summary>
     /// Sprite rotation offset.
     /// </summary>

@@ -75,6 +75,8 @@
         mask:
         - Impassable
         - BulletImpassable
+        layer:
+        - BulletImpassable
       fly-by: &flybyfixture
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -83,6 +85,7 @@
         - MidImpassable
         - HighImpassable
         - LowImpassable
+        - BulletImpassable
         hard: False
   - type: Projectile
     impactEffect: BulletImpactEffect
@@ -797,9 +800,50 @@
 
 # Launcher projectiles (grenade / rocket)
 - type: entity
-  id: BulletRocket
+  id: BulletRocketBase
   name: rocket
   parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: frag
+  - type: ExplodeOnTrigger
+  - type: GuidedMissile
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 2
+    intensitySlope: 6
+    totalIntensity: 150
+    maxTileBreak: 1
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: true
+        mask:
+        - Impassable
+        - BulletImpassable
+        - Opaque
+        layer:
+        - BulletImpassable
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 70 # speed, i need this
+        Structural: 800
+
+- type: entity
+  id: BulletRocket
+  name: rocket
+  parent: BulletRocketBase
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -811,8 +855,10 @@
     explosionType: Default
     maxIntensity: 2
     intensitySlope: 6
-    totalIntensity: 150
+    totalIntensity: 180
     maxTileBreak: 1
+  - type: AircraftBLUFOR
+  - type: AircraftOPFOR
   - type: PointLight
     radius: 3.5
     color: orange
@@ -820,33 +866,36 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 50 # speed, i need this
+        Blunt: 70 # speed, i need this
         Structural: 800
 
 - type: entity
   id: BulletLAW72A3
   name: missile
-  parent: BulletRocket
+  parent: BulletRocketBase
   categories: [ HideSpawnMenu ]
   components:
   - type: Explosive
     explosionType: Default
     maxIntensity: 2
     intensitySlope: 6
-    totalIntensity: 180
+    totalIntensity: 200
     maxTileBreak: 1
+  - type: AircraftBLUFOR
+  - type: AircraftOPFOR
   - type: Projectile
     damage:
       types:
-        Blunt: 70
+        Blunt: 120
         Structural: 950
 
 
 #SmokeImpassable
+# - base
 - type: entity
-  id: BulletBGM71F
-  name: missile
-  parent: BulletRocket
+  id: BulletBGM71FBase
+  name: BGM-71F
+  parent: BulletRocketBase
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
@@ -866,10 +915,16 @@
     damage:
       types:
         Blunt: 600
+  - type: WarpPoint
+    follow: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: bgm71
   - type: Explosive
     explosionType: Default
-    maxIntensity: 8
-    intensitySlope: 5
+    maxIntensity: 3
+    intensitySlope: 2.5
     totalIntensity: 150
     maxTileBreak: 1
   - type: Fixtures
@@ -878,19 +933,27 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.1,-0.1,0.1,0.1"
-        hard: false
+        hard: true
         mask:
         - Impassable
         - BulletImpassable
-        - Opaque #smoke now has opaque layer, giving this projectile opaque as mask gives the illusion that the missile auto-destructs when it flies into smoke
+        - Opaque
+        layer:
+        - BulletImpassable
   - type: GuidedMissile
   - type: TimedDespawn
-    lifetime: 20
+    lifetime: 45
+  - type: PointLight
+    radius: 1.2
+    color: red
+    energy: 60
+    offset: 0,0.4
+
 
 - type: entity
-  parent: BulletBGM71F
-  name: missile
-  id: BulletFGM148
+  parent: BulletBGM71FBase
+  name: FGM-148
+  id: BulletFGM148Base
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
@@ -906,6 +969,8 @@
     - type: MechRaiders
     rotateWithImpulse: true
     maxChaseRadius: 60
+  - type: WarpPoint
+    follow: true
   - type: Explosive
     explosionType: Default
     maxIntensity: 5
@@ -916,13 +981,15 @@
     damage:
       types:
         Blunt: 450
-  
+
 - type: entity
-  parent: BulletBGM71F
-  name: missile
-  id: BulletSPIKESR
+  parent: BulletBGM71FBase
+  name: Spike SR
+  id: BulletSPIKESRBase
   categories: [ HideSpawnMenu ]
   components:
+  - type: WarpPoint
+    follow: true
   - type: ChasingWalk
     minSpeed: 7.5
     maxSpeed: 7.5
@@ -936,7 +1003,7 @@
     chasingComponent:
     - type: MechRaiders
     rotateWithImpulse: true
-    maxChaseRadius: 80
+    maxChaseRadius: 125
   - type: Explosive
     explosionType: Default
     maxIntensity: 5
@@ -947,49 +1014,15 @@
     damage:
       types:
         Blunt: 200
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: spikesr
 
 - type: entity
-  parent: BulletSPIKESR
-  id: BulletSPIKESRRaider
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ChasingWalk
-    chasingComponent:
-    - type: MechColony
-
-- type: entity
-  parent: BulletFGM148
-  id: BulletFGM148Raider
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ChasingWalk
-    chasingComponent:
-    - type: MechColony
-
-
-- type: entity
-  id: BulletBGM71FRaider
-  parent: BulletBGM71F
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ChasingWalk
-    chasingComponent:
-    - type: MechColony
-
-- type: entity
-  id: BulletBGM71D
-  parent: BulletBGM71F
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ChasingWalk
-    canLoft: false
-    turnRate: 1.15
-    minSpeed: 12.5
-    maxSpeed: 12.5
-
-- type: entity
-  id: Bullet9K111M
-  parent: BulletBGM71F
+  id: Bullet9K111MBase
+  name: 9K111M
+  parent: BulletBGM71FBase
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
@@ -1000,14 +1033,17 @@
     canLoft: false
     turnRate: 1
     maxChaseRadius: 70
+  - type: WarpPoint
+    follow: true
   - type: Projectile
     damage:
       types:
         Blunt: 450
 
 - type: entity
-  id: Bullet9K113
-  parent: Bullet9K111M
+  id: Bullet9K113Base
+  parent: Bullet9K111MBase
+  name: 9K113
   categories: [ HideSpawnMenu ]
   components:
   - type: ChasingWalk
@@ -1018,10 +1054,246 @@
     canLoft: false
     turnRate: 0.9
     maxChaseRadius: 70
+  - type: WarpPoint
+    follow: true
   - type: Projectile
     damage:
       types:
         Blunt: 600
+# - base
+- type: entity
+  id: BulletBGM71F
+  name: BGM-71F
+  parent: BulletBGM71FBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AircraftBLUFOR
+
+- type: entity
+  parent: BulletFGM148Base
+  name: FGM-148
+  id: BulletFGM148
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AircraftBLUFOR
+  
+- type: entity
+  parent: BulletSPIKESRBase
+  name: Spike SR
+  id: BulletSPIKESR
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AircraftBLUFOR
+
+- type: entity
+  parent: BulletSPIKESRBase
+  id: BulletSPIKESRRaider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+  - type: AircraftOPFOR
+
+- type: entity
+  parent: BulletFGM148Base
+  id: BulletFGM148Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+  - type: AircraftOPFOR
+
+
+- type: entity
+  id: BulletBGM71FRaider
+  parent: BulletBGM71FBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: MechColony
+  - type: AircraftOPFOR
+
+- type: entity
+  id: BulletBGM71D
+  parent: BulletBGM71FBase
+  name: BGM-71D
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    canLoft: false
+    turnRate: 1.3
+    minSpeed: 13
+    maxSpeed: 13
+  - type: WarpPoint
+    follow: true
+  - type: AircraftBLUFOR
+  
+
+- type: entity
+  id: Bullet9K111M
+  name: 9K111M
+  parent: Bullet9K111MBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AircraftOPFOR
+  
+
+- type: entity
+  id: Bullet9K113
+  parent: Bullet9K113Base
+  name: 9K113
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AircraftOPFOR
+
+#air defense
+- type: entity
+  id: BulletFIM92C
+  parent: BulletBGM71FBase
+  name: FIM-92C
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    canLoft: true
+    turnRate: 0.6
+    minSpeed: 45
+    maxSpeed: 45
+    maxChaseRadius: 700
+    feedbackDistanceStep: 8
+    riseTime: 0.25
+    missileFeedback: false
+    attackAir: true
+    chasingComponent:
+    - type: AircraftOPFOR
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: fim92
+  - type: WarpPoint
+    follow: true
+  - type: PointLight
+    radius: 33
+    color: orange
+    mask: /Textures/Effects/LightMasks/cone_inverted.png
+    autoRot: true
+    energy: 60
+    offset: 0,0.8
+    falloff: 4400
+    curveFactor: 0.5
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        hard: true
+        mask:
+        - Impassable
+        - BulletImpassable
+        - Opaque
+        layer:
+        - BulletImpassable
+
+- type: entity
+  id: BulletFIM92E
+  parent: BulletFIM92C
+  name: FIM-92E
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    riseTime: 0.2
+    turnRate: 1
+    attackAir: true
+    chasingComponent:
+    - type: AircraftOPFOR
+
+- type: entity
+  id: BulletFIM92K
+  parent: BulletFIM92C
+  name: FIM-92K
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    riseTime: 0.1
+    turnRate: 1.3
+    missileFeedback: true
+    attackAir: true
+    chasingComponent:
+    - type: AircraftOPFOR
+
+
+- type: entity
+  id: BulletFIM92CRaider
+  parent: BulletFIM92C
+  name: FIM-92C
+  suffix: Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: AircraftBLUFOR
+
+- type: entity
+  id: BulletFIM92ERaider
+  parent: BulletFIM92E
+  name: FIM-92E
+  suffix: Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: AircraftBLUFOR
+
+- type: entity
+  id: BulletFIM92KRaider
+  parent: BulletFIM92K
+  name: FIM-92K
+  suffix: Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    chasingComponent:
+    - type: AircraftBLUFOR
+#cruise missiles (scuffed)
+- type: entity
+  id: BulletKh35
+  name: Kh-35
+  parent: BulletBGM71F
+  suffix: Raider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ChasingWalk
+    minSpeed: 10
+    maxSpeed: 10
+    riseTime: 0.75
+    turnRate: 0.3
+    canLoft: true
+    diveDistance: 18
+    smokeTrail: true
+    impulseInterval: 0.1
+    chasingComponent:
+    - type: CruiseMissileTargetColony
+    rotateWithImpulse: true
+    maxChaseRadius: 2000
+  - type: WarpPoint
+    follow: true
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 4000
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 7
+    intensitySlope: 1
+    totalIntensity: 1200
+    maxTileBreak: 1
+  - type: GuidedMissile
+  - type: AircraftOPFOR
+  - type: TimedDespawn
+    lifetime: 300
 
 - type: entity
   id: BulletWeakRocket

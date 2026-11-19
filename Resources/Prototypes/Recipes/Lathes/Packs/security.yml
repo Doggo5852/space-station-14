@@ -202,6 +202,10 @@
   - WeaponPKMN
   - WeaponLauncherSpikeLauncherColony
   - CartridgeMissileSpikeSR
+  - WeaponLauncherFIM92LauncherColony
+  - CartridgeMissileFIM92C
+  - CartridgeMissileFIM92E
+  - CartridgeMissileFIM92K
 
 
 - type: latheRecipePack

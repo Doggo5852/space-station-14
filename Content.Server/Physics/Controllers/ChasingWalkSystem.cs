@@ -93,11 +93,25 @@ public sealed class ChasingWalkSystem : VirtualController
     {
         if (args.Cancelled)
             return;
-        if (component.InAir)
+        if (component.InAir && !component.AttackAir)
         {
             args.Cancelled = true;
         }
-
+        if (component.InAir && component.AttackAir && args.OtherEntity != component.ChasingEntity)
+        {
+            args.Cancelled = true;
+        }
+        if (component.InAir && component.AttackAir && args.OtherEntity == component.ChasingEntity)
+        {
+            args.Cancelled = false;
+        }
+        if (component.InAir && TryComp<ChasingWalkComponent>(args.OtherEntity, out var othercomp))
+        {
+            if (othercomp.InAir)
+            {
+                args.Cancelled = false;
+            }
+        }
     }
 
 
@@ -199,7 +213,7 @@ public sealed class ChasingWalkSystem : VirtualController
         if (distance <= 0.001f)
             return;
 
-        if (distance <= component.DiveDistance && component.InAir)
+        if (distance <= component.DiveDistance && component.InAir && !component.AttackAir)
         {
             component.InAir = false;
             component.CanLoft = false;

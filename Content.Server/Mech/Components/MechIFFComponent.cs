@@ -18,11 +18,20 @@ public sealed partial class AircraftOPFORComponent : Component
 }
 
 [RegisterComponent]
-public sealed partial class AircraftBLUFOREComponent : Component
+public sealed partial class AircraftBLUFORComponent : Component
 {
 }
 
 [RegisterComponent]
 public sealed partial class GuidedMissileComponent : Component
+{
+}
+[RegisterComponent]
+public sealed partial class CruiseMissileTargetColonyComponent : Component
+{
+}
+
+[RegisterComponent]
+public sealed partial class CruiseMissileTargetRaiderComponent : Component
 {
 }

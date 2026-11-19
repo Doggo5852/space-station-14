@@ -216,8 +216,60 @@
       rootTask:
         task: AdvancedHumanoidHostileCompound
       blackboard:
+        VisionRadius: !type:Single
+          125
+        AggroVisionRadius: !type:Single
+          125
+        MinimumIdleTime: !type:Single
+          15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        HealTime: !type:Single
+          7
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
         RangedRange: !type:Single
           28
+        ForcedAttackRange: !type:Single
+          90
+
+- type: entity
+  name: salvager
+  parent: MobSalvager
+  id: MobSalvagerRPG7
+  suffix: RPG
+  components:
+    - type: Loadout
+      prototypes:
+        - SalvagerRPG7
+    - type: HTN
+      rootTask:
+        task: AdvancedHumanoidHostileCompound
+      blackboard:
+        VisionRadius: !type:Single
+          125
+        AggroVisionRadius: !type:Single
+          125
+        MinimumIdleTime: !type:Single
+          15
+        MaximumIdleTime: !type:Single
+          30
+        FollowRange: !type:Single
+          4
+        HealTime: !type:Single
+          7
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
+        RangedRange: !type:Single
+          33
+        ForcedAttackRange: !type:Single
+          90
 
 - type: entity
   name: salvager

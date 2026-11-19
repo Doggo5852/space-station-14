@@ -18,16 +18,37 @@
     factions:
     - Syndicate
   - type: MechRaiders
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: true
   - type: Gun
-    fireRate: 6
-    minAngle: 7
-    maxAngle: 10
+    fireRate: 7.5
+    minAngle: 3
+    maxAngle: 5
     shotsPerBurst: 7
     burstCooldown: 2.2
     selectedMode: Burst
     availableModes:
     - FullAuto
     - Burst
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MoeM2BrowningMag
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - M2MagBelt
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMaterielFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMaterielFMJ
 
 - type: entity
   parent: [BaseWeaponTurretMoeStaticMG, BaseSyndicateContraband]
@@ -44,8 +65,8 @@
     fireRate: 7.5
     shotsPerBurst: 10
     burstCooldown: 2.2
-    minAngle: 5
-    maxAngle: 9
+    minAngle: 3
+    maxAngle: 5
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -84,6 +105,26 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: true
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleBoxM249
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBoxM249
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
   #- type: MechRaiders
 
 - type: entity
@@ -95,7 +136,9 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
-  - type: MechRaiders 
+  - type: MechRaiders
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: true
   - type: ItemSlots
     slots:
       gun_magazine:

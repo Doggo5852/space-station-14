@@ -490,6 +490,45 @@
 
 - type: latheRecipe
   parent: BaseWeaponRecipe
+  id: WeaponLauncherFIM92LauncherColony
+  result: WeaponLauncherFIM92LauncherColony
+  materials:
+    Steel: 12000
+    Plasteel: 5000
+    Glass: 1500
+    Uranium: 200
+    Plasma: 800
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeMissileFIM92C
+  result: CartridgeMissileFIM92C
+  materials:
+    Steel: 6000
+    Plasteel: 500
+    Plasma: 400
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeMissileFIM92E
+  result: CartridgeMissileFIM92E
+  materials:
+    Steel: 9000
+    Plasteel: 900
+    Plasma: 600
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: CartridgeMissileFIM92K
+  result: CartridgeMissileFIM92K
+  materials:
+    Steel: 12000
+    Plasteel: 1000
+    Plasma: 800
+    Gold: 200
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
   id: WeaponLauncherFGM148JavelinColony
   result: WeaponLauncherFGM148JavelinColony
   materials:
